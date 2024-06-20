@@ -1,2 +1,3 @@
 # SWE208
-Repo for building a clocking app
+Repo for building an ecommerce web application
+
