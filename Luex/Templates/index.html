@@ -1,9 +1,9 @@
-{%load static%}
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Travello</title>
+    <title>{% block title %} Main Page {% endblock %}</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="Travello template project" />
@@ -11,37 +11,42 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="{% static 'styles/bootstrap4/bootstrap.min.css'%}"
+      href="{% static 'styles/bootstrap4/bootstrap.min.css' %}"
     />
     <link
-      href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css'%}"
+      href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css '%}"
       rel="stylesheet"
       type="text/css"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css'%}"
+      href="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css '%}"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="{%static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css'%}"
+      href="{% static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="{%static 'plugins/OwlCarousel2-2.2.1/animate.css'%}"
+      href="{% static 'plugins/OwlCarousel2-2.2.1/animate.css' %}"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="{%static 'styles/main_styles.css'%}"
+      href="{% static 'styles/elements.css' %}"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="{%static 'styles/responsive.css'%}"
+      href="{% static 'styles/ed.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'styles/elements_responsive.css' %}"
     />
   </head>
   <body>
@@ -58,14 +63,16 @@
                 <div
                   class="header_content_inner d-flex flex-row align-items-end justify-content-start"
                 >
-                  <div class="logo"><a href="index.html">Travello</a></div>
+                  <div class="logo"><a href="{%url 'index'%}">Luex</a></div>
                   <nav class="main_nav">
                     <ul
                       class="d-flex flex-row align-items-start justify-content-start"
                     >
-                      <li class="active"><a href="index.html">Home</a></li>
-                      <li><a href="about.html">About us</a></li>
-                      <li><a href="#">Services</a></li>
+                      <li class="active"><a href="{%url 'index'%}">Home</a></li>
+                      <li><a href="{%url 'about'%}">About us</a></li>
+                      <li>
+                        <a href="{%url 'ProductDetails'%}">Product Details</a>
+                      </li>
                       <li><a href="news.html">News</a></li>
                       <li><a href="contact.html">Contact</a></li>
                     </ul>
@@ -126,7 +133,7 @@
         </div>
         <div class="menu_content">
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="inex.html">Home</a></li>
             <li><a href="about.html">About us</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="news.html">News</a></li>
@@ -161,91 +168,10 @@
       <!-- Home -->
 
       <div class="home">
-        <!-- Home Slider -->
-        <div class="home_slider_container">
-          <div class="owl-carousel owl-theme home_slider">
-            <!-- Slide -->
-            <div class="owl-item">
-              <div
-                class="background_image"
-                style="background-image: url(images/home_slider.jpg)"
-              ></div>
-              <div class="home_slider_content_container">
-                <div class="container">
-                  <div class="row">
-                    <div class="col">
-                      <div class="home_slider_content">
-                        <div class="home_title">
-                          <h2>Let us take you away</h2>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide -->
-            <div class="owl-item">
-              <div
-                class="background_image"
-                style="background-image: url(images/home_slider.jpg)"
-              ></div>
-              <div class="home_slider_content_container">
-                <div class="container">
-                  <div class="row">
-                    <div class="col">
-                      <div class="home_slider_content">
-                        <div class="home_title">
-                          <h2>Let us take you away</h2>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide -->
-            <div class="owl-item">
-              <div
-                class="background_image"
-                style="background-image: url(images/home_slider.jpg)"
-              ></div>
-              <div class="home_slider_content_container">
-                <div class="container">
-                  <div class="row">
-                    <div class="col">
-                      <div class="home_slider_content">
-                        <div class="home_title">
-                          <h2>Let us take you away</h2>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="home_page_nav">
-            <ul class="d-flex flex-column align-items-end justify-content-end">
-              <li>
-                <a href="#" data-scroll-to="#destinations"
-                  >Offers<span>01</span></a
-                >
-              </li>
-              <li>
-                <a href="#" data-scroll-to="#testimonials"
-                  >Testimonials<span>02</span></a
-                >
-              </li>
-              <li>
-                <a href="#" data-scroll-to="#news">Latest<span>03</span></a>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <div
+          class="background_image"
+          style="background-image: url('{%static 'images/elements.jpg'%}')"
+        ></div>
       </div>
 
       <!-- Search -->
@@ -271,7 +197,24 @@
                         placeholder="City"
                         required="required"
                       />
-                      
+                      <input
+                        type="text"
+                        class="search_input search_input_2"
+                        placeholder="Departure"
+                        required="required"
+                      />
+                      <input
+                        type="text"
+                        class="search_input search_input_3"
+                        placeholder="Arrival"
+                        required="required"
+                      />
+                      <input
+                        type="text"
+                        class="search_input search_input_4"
+                        placeholder="Budget"
+                        required="required"
+                      />
                       <button class="home_search_button">search</button>
                     </div>
                   </form>
@@ -282,331 +225,18 @@
         </div>
       </div>
 
-      <!-- Intro -->
+      <!-- Elements -->
+      {% block content %}
 
-      <div class="intro">
-        <div
-          class="intro_background"
-          style="background-image: url(images/intro.png)"
-        ></div>
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <div class="intro_container">
-                <div class="row">
-                  <!-- Intro Item -->
-                  <div class="col-lg-4 intro_col">
-                    <div
-                      class="intro_item d-flex flex-row align-items-end justify-content-start"
-                    >
-                      <div class="intro_icon">
-                        <img src="{%static 'images/beach.svg'%}" alt="" />
-                      </div>
-                      <div class="intro_content">
-                        <div class="intro_title">Top Destinations</div>
-                        <div class="intro_subtitle">
-                          <p>Nulla pretium tincidunt felis, nec.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Intro Item -->
-                  <div class="col-lg-4 intro_col">
-                    <div
-                      class="intro_item d-flex flex-row align-items-end justify-content-start"
-                    >
-                      <div class="intro_icon">
-                        <img src="{static 'images/wallet.svg'%}" alt="" />
-                      </div>
-                      <div class="intro_content">
-                        <div class="intro_title">The Best Prices</div>
-                        <div class="intro_subtitle">
-                          <p>Sollicitudin mauris lobortis in.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Intro Item -->
-                  <div class="col-lg-4 intro_col">
-                    <div
-                      class="intro_item d-flex flex-row align-items-end justify-content-start"
-                    >
-                      <div class="intro_icon">
-                        <img src="{%static 'images/suitcase.svg'%}" alt="" />
-                      </div>
-                      <div class="intro_content">
-                        <div class="intro_title">Amazing Services</div>
-                        <div class="intro_subtitle">
-                          <p>Nulla pretium tincidunt felis, nec.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Destinations -->
-
-      <div class="destinations" id="destinations">
-        <div class="container">
-          <div class="row">
-            <div class="col text-center">
-              <div class="section_subtitle">simply amazing places</div>
-              <div class="section_title"><h2>Popular Destinations</h2></div>
-            </div>
-          </div>
-          <div class="row destinations_row">
-            <div class="col">
-              <div class="destinations_container item_grid">
-                <!-- Destination -->
-                <div class="destination item">
-                  <div class="destination_image">
-                    <img src="{%static 'images/destination_1.jpg'%}" alt="" />
-                    <div class="spec_offer text-center">
-                      <a href="#">Special Offer</a>
-                    </div>
-                  </div>
-                  <div class="destination_content">
-                    <div class="destination_title">
-                      <a href="destinations.html">Bali</a>
-                    </div>
-                    <div class="destination_subtitle">
-                      <p>Nulla pretium tincidunt felis, nec.</p>
-                    </div>
-                    <div class="destination_price">From $679</div>
-                  </div>
-                </div>
-
-                <!-- Destination -->
-                <div class="destination item">
-                  <div class="destination_image">
-                    <img src="{%static 'images/destination_2.jpg'%}" alt="" />
-                  </div>
-                  <div class="destination_content">
-                    <div class="destination_title">
-                      <a href="destinations.html">Indonesia</a>
-                    </div>
-                    <div class="destination_subtitle">
-                      <p>Nulla pretium tincidunt felis, nec.</p>
-                    </div>
-                    <div class="destination_price">From $679</div>
-                  </div>
-                </div>
-
-                <!-- Destination -->
-                <div class="destination item">
-                  <div class="destination_image">
-                    <img src="{%static 'images/destination_3.jpg'%}" alt="" />
-                  </div>
-                  <div class="destination_content">
-                    <div class="destination_title">
-                      <a href="destinations.html">San Francisco</a>
-                    </div>
-                    <div class="destination_subtitle">
-                      <p>Nulla pretium tincidunt felis, nec.</p>
-                    </div>
-                    <div class="destination_price">From $679</div>
-                  </div>
-                </div>
-
-                <!-- Destination -->
-                <div class="destination item">
-                  <div class="destination_image">
-                    <img src="{%static 'images/destination_4.jpg'%}" alt="" />
-                  </div>
-                  <div class="destination_content">
-                    <div class="destination_title">
-                      <a href="destinations.html">Paris</a>
-                    </div>
-                    <div class="destination_subtitle">
-                      <p>Nulla pretium tincidunt felis, nec.</p>
-                    </div>
-                    <div class="destination_price">From $679</div>
-                  </div>
-                </div>
-
-                <!-- Destination -->
-                <div class="destination item">
-                  <div class="destination_image">
-                    <img src="{% static 'images/destination_5.jpg'%}" alt="" />
-                  </div>
-                  <div class="destination_content">
-                    <div class="destination_title">
-                      <a href="destinations.html">Phi Phi Island</a>
-                    </div>
-                    <div class="destination_subtitle">
-                      <p>Nulla pretium tincidunt felis, nec.</p>
-                    </div>
-                    <div class="destination_price">From $679</div>
-                  </div>
-                </div>
-
-                <!-- Destination -->
-                <div class="destination item">
-                  <div class="destination_image">
-                    <img src="{% static 'images/destination_6.jpg'%}" alt="" />
-                  </div>
-                  <div class="destination_content">
-                    <div class="destination_title">
-                      <a href="destinations.html">Mykonos</a>
-                    </div>
-                    <div class="destination_subtitle">
-                      <p>Nulla pretium tincidunt felis, nec.</p>
-                    </div>
-                    <div class="destination_price">From $679</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Testimonials -->
-
-      <div class="testimonials" id="testimonials">
-        <div
-          class="parallax_background parallax-window"
-          data-parallax="scroll"
-          data-image-src="{%static 'images/testimonials.jpg'%}"
-          data-speed="0.8"
-        ></div>
-        <div class="container">
-          <div class="row">
-            <div class="col text-center">
-              <div class="section_subtitle">simply amazing places</div>
-              <div class="section_title"><h2>Testimonials</h2></div>
-            </div>
-          </div>
-          <div class="row testimonials_row">
-            <div class="col">
-              <!-- Testimonials Slider -->
-              <div class="testimonials_slider_container">
-                <div class="owl-carousel owl-theme testimonials_slider">
-                  <!-- Slide -->
-                  <div class="owl-item text-center">
-                    <div class="testimonial">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      lobortis dolor. Cras placerat lectus a posuere aliquet.
-                      Curabitur quis vehicula odio.
-                    </div>
-                    <div class="testimonial_author">
-                      <div
-                        class="testimonial_author_content d-flex flex-row align-items-end justify-content-start"
-                      >
-                        <div>john turner,</div>
-                        <div>client</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Slide -->
-                  <div class="owl-item text-center">
-                    <div class="testimonial">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      lobortis dolor. Cras placerat lectus a posuere aliquet.
-                      Curabitur quis vehicula odio.
-                    </div>
-                    <div class="testimonial_author">
-                      <div
-                        class="testimonial_author_content d-flex flex-row align-items-end justify-content-start"
-                      >
-                        <div>john turner,</div>
-                        <div>client</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Slide -->
-                  <div class="owl-item text-center">
-                    <div class="testimonial">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      lobortis dolor. Cras placerat lectus a posuere aliquet.
-                      Curabitur quis vehicula odio.
-                    </div>
-                    <div class="testimonial_author">
-                      <div
-                        class="testimonial_author_content d-flex flex-row align-items-end justify-content-start"
-                      >
-                        <div>john turner,</div>
-                        <div>client</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="test_nav">
-          <ul class="d-flex flex-column align-items-end justify-content-end">
-            <li>
-              <a href="#">City Breaks Clients<span>01</span></a>
-            </li>
-            <li>
-              <a href="#">Cruises Clients<span>02</span></a>
-            </li>
-            <li>
-              <a href="#">All Inclusive Clients<span>03</span></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- News -->
-
-      <div class="news" id="news">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-8">
-              <div class="news_container">
-                <!-- News Post -->
-                
-            <!-- News Sidebar -->
-            <div class="col-xl-4">
-              <div class="travello">
-                <div
-                  class="background_image"
-                  style="background-image: url(images/travello.jpg)"
-                ></div>
-                <div class="travello_content">
-                  <div class="travello_content_inner">
-                    <div></div>
-                    <div></div>
-                  </div>
-                </div>
-                <div class="travello_container">
-                  <a href="#">
-                    <div
-                      class="d-flex flex-column align-items-center justify-content-end"
-                    >
-                      <span class="travello_title">Get a 20% Discount</span>
-                      <span class="travello_subtitle"
-                        >Buy Your Vacation Online Now</span
-                      >
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>Index.html</h1>
+      {% endblock %}
 
       <!-- Footer -->
 
       <footer class="footer">
         <div
-          class="parallax_background parallax-window"
-          data-parallax="scroll"
-          data-image-src="{%static 'images/footer_1.jpg'%}"
-          data-speed="0.8"
+          class="background_image"
+          style="background-image: url('{%static'images/footer_1.jpg'5}')"
         ></div>
         <div class="container">
           <div class="row">
@@ -630,7 +260,7 @@
                       <div>
                         <input
                           type="text"
-                          class="newsletter_input newsletter_input_name"
+                          class="newsletter_input newsletter_input_name inpt"
                           id="newsletter_input_name"
                           placeholder="Name"
                           required="required"
@@ -640,7 +270,7 @@
                       <div>
                         <input
                           type="email"
-                          class="newsletter_input newsletter_input_email"
+                          class="newsletter_input newsletter_input_email inpt"
                           id="newsletter_input_email"
                           placeholder="Your e-mail"
                           required="required"
@@ -715,20 +345,22 @@
             </div>
           </div>
         </div>
-        <div class="col text-center">
-          
-        </div>
       </footer>
     </div>
 
     <script src="{%static 'js/jquery-3.2.1.min.js'%}"></script>
     <script src="{%static 'styles/bootstrap4/popper.js'%}"></script>
     <script src="{%static 'styles/bootstrap4/bootstrap.min.js'%}"></script>
+    <script src="{%static 'plugins/greensock/TweenMax.min.js'%}"></script>
+    <script src="{%static 'plugins/greensock/TimelineMax.min.js'%}"></script>
+    <script src="{%static 'plugins/scrollmagic/ScrollMagic.min.js'%}"></script>
+    <script src="{%static 'plugins/greensock/animation.gsap.min.js'%}"></script>
+    <script src="{%static 'plugins/greensock/ScrollToPlugin.min.js'%}"></script>
     <script src="{%static 'plugins/OwlCarousel2-2.2.1/owl.carousel.js'%}"></script>
-    <script src="{%static 'plugins/Isotope/isotope.pkgd.min.js'%}"></script>
-    <script src="{%static 'plugins/scrollTo/jquery.scrollTo.min.js'%}"></script>
     <script src="{%static 'plugins/easing/easing.js'%}"></script>
+    <script src="{%static 'plugins/progressbar/progressbar.min.js'%}"></script>
     <script src="{%static 'plugins/parallax-js-master/parallax.min.js'%}"></script>
-    <script src="{%static 'js/custom.js'%}"></script>
+    <script src=" https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
+    <script src="{%static 'js/elements.js'%}"></script>
   </body>
 </html>
