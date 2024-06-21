@@ -63,18 +63,19 @@
                 <div
                   class="header_content_inner d-flex flex-row align-items-end justify-content-start"
                 >
-                  <div class="logo"><a href="{%url 'index'%}">Luex</a></div>
+                  <div class="logo"><a href="{%url 'Home'%}">Luex</a></div>
                   <nav class="main_nav">
                     <ul
                       class="d-flex flex-row align-items-start justify-content-start"
                     >
-                      <li class="active"><a href="{%url 'index'%}">Home</a></li>
-                      <li><a href="{%url 'about'%}">About us</a></li>
+                      <li><a href="{%url 'Home'%}">Home</a></li>
+
                       <li>
                         <a href="{%url 'ProductDetails'%}">Product Details</a>
                       </li>
-                      <li><a href="news.html">News</a></li>
-                      <li><a href="contact.html">Contact</a></li>
+                      <li><a href="{%url 'cart'%}">Cart</a></li>
+                      <li><a href="{%url 'about'%}">About us</a></li>
+                      <li><a href="{%url 'about'%}">About us</a></li>
                     </ul>
                   </nav>
                   <div class="header_phone ml-auto">
@@ -133,11 +134,17 @@
         </div>
         <div class="menu_content">
           <ul>
-            <li><a href="inex.html">Home</a></li>
+            <!-- <li><a href="inex.html">Home</a></li>
             <li><a href="about.html">About us</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="news.html">News</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li> -->
+            <li><a href="{%url 'Home'%}">Home</a></li>
+
+            <li><a href="{%url 'ProductDetails'%}">Product Details</a></li>
+            <li><a href="{%url 'cart'%}">Cart</a></li>
+            <li><a href="{%url 'about'%}">About us</a></li>
+            <li><a href="{%url 'about'%}">About us</a></li>
           </ul>
         </div>
         <div class="menu_social">
