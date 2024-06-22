@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'Luex.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'LUEX',
+        'NAME': 'Luex',
         'USER': 'postgres',
         'PASSWORD': 'Edwardhans18.',
         'HOST': 'Localhost',
@@ -123,7 +123,9 @@ USE_TZ = True
 STATIC_URL = 'static/'
 # MEDIA_ROOT= 'media/'
 
-STATICFILE_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+STATICFILE_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles'),
 # Default primary key field type
