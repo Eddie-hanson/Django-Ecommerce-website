@@ -1,10 +1,12 @@
-from django.shortcuts import render
-
+from django.shortcuts import render, redirect
+from .models import Product, Category
 # Create your views here.
 
 
 def home(request):
-    return render(request, 'Home.html')
+    Items = Product.objects.all()
+    context = {Items: 'Items'}
+    return render(request, 'Home.html', context)
 
 
 def Cart(request):
@@ -16,4 +18,8 @@ def About(request):
 
 
 def ProductDetails(request):
+    # try:
+    #     Item = Product.objects.get()
+    # except Item.DoesNotExist:
+    #     return redirect('Home')
     return render(request, 'ProductDetails.html')
