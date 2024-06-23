@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'Luex.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'LUEX',
-        'USER': 'postgres',
-        'PASSWORD': 'Edwardhans18.',
-        'HOST': 'Localhost',
+        # 'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME': 'LUEX',
+        # 'USER': 'postgres',
+        # 'PASSWORD': 'Edwardhans18.',
+        # 'HOST': 'Localhost',
     }
 }
 
