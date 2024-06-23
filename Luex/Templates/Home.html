@@ -6,7 +6,18 @@
 {% block title %} Home page {% endblock %}
 <!-- dhfgsn -->
 {% block content %}
-<h1>Displays all product in the various category</h1>
-<img src="{%static 'images/Test1.png'%}" alt="" />
+<div>
+<h2 class="categories">Explore our categories</h2>
+<div class="control">
+<img class="clothes" src="{%static 'images/Shirts.jpg'%}" alt="Shirts" />
+<h3>Shirts and Tops</h3>
+<img class="clothes" src="{%static 'images/jeans.jpg'%}" alt="Jeans" />
+<h3>Shorts and Trousers</h3>
+<img class="clothes" src="{%static 'images/dress.jpg'%}" alt="Jeans" />
+<h3>Skirts and Dresses</h3>
+<img class="clothes" src="{%static 'images/babies.jpg'%}" alt="Jeans" />
+<h3>Babies and Toddlers</h3>
+</div>
+</div>
 <!-- All html are written here -->
 {% endblock %}
