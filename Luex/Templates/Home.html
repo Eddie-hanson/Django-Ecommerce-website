@@ -7,17 +7,38 @@
 <!-- dhfgsn -->
 {% block content %}
 <div>
-<h2 class="categories">Explore our categories</h2>
+    <h2 class="categories"><a href="{%url 'ProductDetails'%}">Explore our categories</a></h2>
+</div>
+<div class="bigContainer">
+
 <div class="control">
 <img class="clothes" src="{%static 'images/Shirts.jpg'%}" alt="Shirts" />
-<h3>Shirts and Tops</h3>
-<img class="clothes" src="{%static 'images/jeans.jpg'%}" alt="Jeans" />
-<h3>Shorts and Trousers</h3>
-<img class="clothes" src="{%static 'images/dress.jpg'%}" alt="Jeans" />
-<h3>Skirts and Dresses</h3>
-<img class="clothes" src="{%static 'images/babies.jpg'%}" alt="Jeans" />
-<h3>Babies and Toddlers</h3>
+<b class="clotheText"><a href="{%url 'ProductDetails'%}">Shirts and Tops</a></b>
 </div>
+<div class="control">
+<img class="clothes" src="{%static 'images/jeans.jpg'%}" alt="Jeans" />
+<b class="clotheText"><a href="{%url 'ProductDetails'%}">Shorts and Trousers </a></b>
+</div>
+<div class="control">
+<img class="clothes" src="{%static 'images/dress.jpg'%}" alt="Jeans" />
+<b class="clotheText"><a href="{%url 'ProductDetails'%}">Skirts and Dresses</a></b>
+</div>
+<div class="control">
+<img class="clothes" src="{%static 'images/babies.jpg'%}" alt="Jeans" />
+<b class="clotheText"><a href="{%url 'ProductDetails'%}">Babies and Toddlers</a></b>
+</div>
+</div>
+</div>
+<div class="slideshow">
+    <img id="image1" src="{%static 'images/dress.jpg'%}" alt="image1">
+    <p>Text for image1</p>
+    <img id="image2" src="{%static 'images/babies.jpg'%}" alt="image2">
+    
+    <img id="image3" src="{%static 'images/jeans.jpg'%}" alt="image3">
+    
+    <img id="image4" src="{%static 'images/dress.jpg'%}" alt="image4">
+    
+    <img id="image5" src="{%static 'images/dress.jpg'%}" alt="image5">
 </div>
 <!-- All html are written here -->
 {% endblock %}
