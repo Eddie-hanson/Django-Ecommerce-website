@@ -7,7 +7,7 @@ function displayImages() {
     images[index].style.opacity = 0;
     index = (index + 1) % images.length; 
     displayImages(); 
-  }, 5000); // Set the delay to 2 seconds
+  }, 5000); 
 }
 
 displayImages(); 

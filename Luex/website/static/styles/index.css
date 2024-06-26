@@ -94,7 +94,7 @@ a:link {
 }
 p a:active {
   position: relative;
-  color: #ff6347;
+  color: #beb9b8;
 }
 p a:hover {
   color: #ffffff;
@@ -612,7 +612,7 @@ section {
 }
 .search_input {
   height: 50px;
-  background: #f39b36;
+  background: #e9ddd3;
   border-radius: 25px;
   border: none;
   outline: none;
