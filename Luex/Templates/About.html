@@ -7,5 +7,138 @@
 {% block content %}
 <h1 class="ED">About page</h1>
 <img src="{%static 'images/Test3.png'%}" alt="" />
+<main>
+    <section class="stories">
+        <h2>Leux Stories</h2>
+        <p>Explore our stories of how we’re helping customers succeed and communities thrive.</p>
+        <a href="#">Learn More</a>
+    </section>
+    <section class="links">
+        <div class="link">
+            <img src="{%static 'images/babies.jpg'%}" alt="Investor Relations">
+            <h3> Relations</h3>
+        </div>
+        <div class="link">
+            <img src="{%static 'images/Banner.png'%}" alt="Leadership and Governance">
+            <h3>Leadership</h3>
+        </div>
+        <div class="link">
+            <img src="{%static 'images/latest_1.jpg'%}" alt="Newsroom">
+            <h3>Newsroom</h3>
+        </div>
+        <div class="link">
+            <img src="{%static 'images/Test1.png'%}"alt="Team">
+            <h3>Team</h3>
+        </div>
+        <div class="link">
+            <img src="{%static 'images/Test3.png'%}" alt="Corporate Responsibility">
+            <h3>Corporate Responsibility</h3>
+        </div>
+        <div class="link">
+            <img src="{%static 'images/Test2.png'%}" alt="Office">
+            <h3>Office</h3>
+        </div>
+        <div class="link">
+            <img src="{%static 'images/Test4.png'%}" alt="Social Media">
+            <h3>Social Media</h3>
+        </div>
+        <div class="link">
+            <img src="{%static 'images/Test5.png'%}"alt="Who We Are">
+            <h3>Who We Are</h3>
+        </div>
+    </section>
+</main>
+
+
+/* styles.css */
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+main {
+    padding: 20px;
+}
+
+.stories {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.stories h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.stories p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.stories a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.link {
+    flex: 1 1 calc(25% - 10px);
+    margin: 10px;
+    text-align: center;
+}
+
+.link img {
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.link h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+footer {
+    background-color: #f4f4f4;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .link {
+        flex: 1 1 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .link {
+        flex: 1 1 100%;
+    }
+}
+</style>
+
 <!-- All html are written here -->
 {% endblock %}
