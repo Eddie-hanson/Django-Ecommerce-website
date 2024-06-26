@@ -36,7 +36,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="{% static 'styles/elements.css' %}"
+      href="{% static 'styles/index.css' %}"
     />
     <link
       rel="stylesheet"
@@ -44,14 +44,29 @@
       href="{% static 'styles/ed.css' %}"
     />
     <link
-    rel="stylesheet"
-    type="text/css"
-    href="{% static 'styles/Home.css' %}"
-  />
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'styles/Home.css' %}"
+    />
     <link
       rel="stylesheet"
       type="text/css"
-      href="{% static 'styles/elements_responsive.css' %}"
+      href="{% static 'styles/about.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'styles/about_resposive.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'styles/product.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'styles/index_responsive.css' %}"
     />
   </head>
   <body>
@@ -74,12 +89,12 @@
                       class="d-flex flex-row align-items-start justify-content-start"
                     >
                       <li><a href="{%url 'Home'%}">Home</a></li>
-
                       <li>
-                        <a href="{%url 'ProductDetails'%}">Product Details</a>
+                        <li><a href="{%url 'Products'%}">Products</a></li>
+
+                      <li> <a href="{%url 'ProductDetails'%}">Product Details</a></li>
                       </li>
                       <li><a href="{%url 'cart'%}">Cart</a></li>
-                      <li><a href="{%url 'about'%}">About us</a></li>
                       <li><a href="{%url 'about'%}">About us</a></li>
                     </ul>
                   </nav>
@@ -138,7 +153,7 @@
         <div class="menu_content">
           <ul>
             <li><a href="{%url 'Home'%}">Home</a></li>
-            <li><a href="{%url 'ProductDetails'%}">Product Details</a></li>
+            <li><a href="{%url 'Products'%}">Product Details</a></li>
             <li><a href="{%url 'cart'%}">Cart</a></li>
             <li><a href="{%url 'about'%}">About us</a></li>
           </ul>
@@ -173,7 +188,7 @@
       <div class="home">
         <div
           class="background_image"
-          style="background-image: url('{%static 'images/elements.jpg'%}')"
+          style="background-color: rgb(192, 176, 165)"
         ></div>
       </div>
 
@@ -222,16 +237,14 @@
       <footer class="footer">
         <div
           class="background_image"
-          style="background-image: url('{%static 'images/footer_1.jpg'%}')"
+          style="background-color: rgb(216, 99, 16)"
         ></div>
         <div class="container">
           <div class="row">
             <div class="col">
               <div class="newsletter">
                 <div class="newsletter_title_container text-center">
-                  <div class="newsletter_title">
-                    Subscribe to our newsletter to get the latest trends & news
-                  </div>
+                  <div class="newsletter_title"></div>
                   <div class="newsletter_subtitle">Join our database NOW!</div>
                 </div>
                 <div class="newsletter_form_container">
@@ -281,13 +294,33 @@
                     class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center"
                   >
                     <div class="footer_contact_icon">
-                      <img src="{%static 'images/sign.svg'%}" alt="" />
+                      <img src="{%static 'images/Contact.svg'%}" alt="" />
                     </div>
-                    <div class="footer_contact_title">give us a call</div>
+                    <div class="footer_contact_title">Contact Us</div>
                     <div class="footer_contact_list">
                       <ul>
-                        <li>Office Landline: +44 5567 32 664 567</li>
-                        <li>Mobile: +44 5567 89 3322 332</li>
+                        <li>Office phone</li>
+                        <li>Mobile:</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Footer Media Item -->
+                <div class="col-xl-4 footer_contact_col">
+                  <div
+                    class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center"
+                  >
+                    <div class="footer_contact_icon">
+                      <img src="{%static 'images/media.svg'%}" alt="" />
+                    </div>
+                    <div class="footer_contact_title">
+                      visit our social media
+                    </div>
+                    <div class="footer_contact_list">
+                      <ul>
+                        <li><a href="#"></a></li>
+                        <li>Mobile:</li>
                       </ul>
                     </div>
                   </div>
@@ -299,12 +332,12 @@
                     class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center"
                   >
                     <div class="footer_contact_icon">
-                      <img src="{%static 'images/trekking.svg'%}" alt="" />
+                      <img src="{%static 'images/location.svg'%}" alt="" />
                     </div>
-                    <div class="footer_contact_title">come & drop by</div>
+                    <div class="footer_contact_title">Locate Us</div>
                     <div class="footer_contact_list">
                       <ul style="max-width: 190px">
-                        <li>4124 Barnes Street, Sanford, FL 32771</li>
+                        <li>community 7, Tema</li>
                       </ul>
                     </div>
                   </div>
@@ -316,13 +349,13 @@
                     class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center"
                   >
                     <div class="footer_contact_icon">
-                      <img src="{%static 'images/around.svg'%}" alt="" />
+                      <img src="{%static 'images/globe.svg'%}" alt="" />
                     </div>
                     <div class="footer_contact_title">send us a message</div>
                     <div class="footer_contact_list">
                       <ul>
-                        <li>youremail@gmail.com</li>
-                        <li>Office@yourbusinessname.com</li>
+                        <li>email@gmail.com</li>
+                        <li>Office_email</li>
                       </ul>
                     </div>
                   </div>
@@ -346,7 +379,7 @@
     <script src="{%static 'plugins/easing/easing.js'%}"></script>
     <script src="{%static 'plugins/progressbar/progressbar.min.js'%}"></script>
     <script src="{%static 'plugins/parallax-js-master/parallax.min.js'%}"></script>
-    <script src=" https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
     <script src="{%static 'js/elements.js'%}"></script>
+    <script src="{%static 'js/Slideshow.js'%}"></script>
   </body>
 </html>
