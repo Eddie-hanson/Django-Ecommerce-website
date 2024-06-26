@@ -51,17 +51,22 @@
     <link
       rel="stylesheet"
       type="text/css"
+      href="{% static 'styles/about.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'styles/about_resposive.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'styles/product.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
       href="{% static 'styles/index_responsive.css' %}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{% static 'styles/About.css' %}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{% static 'styles/About_responsive.css' %}"
     />
   </head>
   <body>
@@ -84,12 +89,12 @@
                       class="d-flex flex-row align-items-start justify-content-start"
                     >
                       <li><a href="{%url 'Home'%}">Home</a></li>
-
                       <li>
-                        <a href="{%url 'ProductDetails'%}">Product Details</a>
+                        <li><a href="{%url 'Products'%}">Products</a></li>
+
+                      <li> <a href="{%url 'ProductDetails'%}">Product Details</a></li>
                       </li>
                       <li><a href="{%url 'cart'%}">Cart</a></li>
-                      <li><a href="{%url 'about'%}">About us</a></li>
                       <li><a href="{%url 'about'%}">About us</a></li>
                     </ul>
                   </nav>
@@ -148,7 +153,7 @@
         <div class="menu_content">
           <ul>
             <li><a href="{%url 'Home'%}">Home</a></li>
-            <li><a href="{%url 'ProductDetails'%}">Product Details</a></li>
+            <li><a href="{%url 'Products'%}">Product Details</a></li>
             <li><a href="{%url 'cart'%}">Cart</a></li>
             <li><a href="{%url 'about'%}">About us</a></li>
           </ul>
@@ -183,7 +188,7 @@
       <div class="home">
         <div
           class="background_image"
-          style="background-color: rgb(226, 121, 45)"
+          style="background-color: rgb(192, 176, 165)"
         ></div>
       </div>
 
@@ -374,7 +379,6 @@
     <script src="{%static 'plugins/easing/easing.js'%}"></script>
     <script src="{%static 'plugins/progressbar/progressbar.min.js'%}"></script>
     <script src="{%static 'plugins/parallax-js-master/parallax.min.js'%}"></script>
-    <script src=" https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
     <script src="{%static 'js/elements.js'%}"></script>
     <script src="{%static 'js/Slideshow.js'%}"></script>
   </body>
