@@ -1,8 +1,8 @@
 .categories{
     color: #000080;
     flex-direction: column;
-    margin-left: 60px;
-    font-size: 60px;
+    margin: 80px 0 80px 60px ;
+    font-size: 70px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
@@ -22,7 +22,7 @@
     border-radius: 20px;
 }
 .control:hover{
-background-color: #ce55b0;
+background-color: #eea230;
 animation: ease-in;
 animation-duration: 1s;
 box-shadow: 2px 1px 1px 1px #0808085e;
@@ -33,10 +33,11 @@ transition-duration: 0.15s;
 }
 .bigContainer{
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    
+    /* flex-wrap: wrap; */
     justify-content: space-evenly;
-    background-color: #0808085e;
+    /* background-color: #0deb57; */
+    margin-bottom: 80px;
     
     
 }
