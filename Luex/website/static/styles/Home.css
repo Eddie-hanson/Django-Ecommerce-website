@@ -33,7 +33,10 @@ transition-duration: 0.15s;
 }
 .bigContainer{
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-evenly;
+    background-color: #0808085e;
     
     
 }
