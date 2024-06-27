@@ -1,0 +1,72 @@
+.categories{
+    color: #000080;
+    flex-direction: column;
+    margin-left: 60px;
+    font-size: 60px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.clothes{
+    height: 200px;
+    width:200px;
+    border-radius: 40px;
+}
+.control{
+    display:flex;
+    background-color: rgb(202, 204, 202);
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+ 
+    border-radius: 20px;
+}
+.control:hover{
+background-color: #ce55b0;
+animation: ease-in;
+animation-duration: 1s;
+box-shadow: 3px 1px 1px 1px #4d4d4d63;
+transform: scale(1);
+transition-duration: 0.15s;
+
+
+}
+.bigContainer{
+    display: flex;
+    justify-content: space-evenly;
+    
+    
+}
+.clotheText{
+    font-size: 20px;
+    text-align: center;
+    color: #000080;
+   padding-top: 5px;
+}
+.slideshow {
+    position: relative; 
+    width: 80%; 
+    height: 500px; 
+    overflow: hidden; 
+    margin: 80px 90px 0px 90px;
+    
+  }
+  .slideshow img {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    opacity: 0; 
+    transition: opacity 2s; 
+  }
+  .slideshow p{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+  }

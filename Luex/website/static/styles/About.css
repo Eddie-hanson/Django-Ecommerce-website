@@ -1,35 +1,24 @@
 /* styles.css */
 
 /* Basic reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 /* Body styling */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f4f4f4;
-}
 
 /* Container styling */
-.container {
+.about-container {
   width: 80%;
   margin: auto;
   overflow: hidden;
 }
 
 /* Section styling */
-section {
+.about-section {
   padding: 20px 0;
   border-bottom: 1px solid #ccc;
 }
 
 /* Heading styling */
-h2 {
+.about {
   margin-bottom: 20px;
   color: #333;
   text-align: center;
@@ -37,7 +26,7 @@ h2 {
 }
 
 /* Paragraph styling */
-p {
+.about {
   margin-bottom: 20px;
   font-size: 1.1em;
 }
@@ -48,14 +37,7 @@ p {
   justify-content: space-around;
   flex-wrap: wrap;
 }
-
-.team-member {
-  flex-basis: 45%;
-  margin: 20px 0;
-  text-align: center;
-}
-
-.team-member img {
+*/ .team-member img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -71,17 +53,4 @@ p {
 .team-member p {
   font-size: 1em;
   color: #666;
-}
-
-/* Footer styling */
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
-  margin-top: 20px;
-}
-
-footer p {
-  margin: 0;
 }

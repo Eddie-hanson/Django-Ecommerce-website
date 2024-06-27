@@ -4,13 +4,17 @@ from .models import Product, Category
 
 
 def home(request):
-    Items = Product.objects.all()
+    Items = Category.objects.all()
     context = {Items: 'Items'}
     return render(request, 'Home.html', context)
 
 
 def Cart(request):
     return render(request, 'cart.html')
+
+
+def Products(request):
+    return render(request, 'Products.html')
 
 
 def About(request):
