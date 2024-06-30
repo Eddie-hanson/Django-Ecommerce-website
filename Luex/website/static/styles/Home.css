@@ -22,7 +22,7 @@
     border-radius: 20px;
 }
 .control:hover{
-background-color: #eea230;
+background-color: #0ef722;
 animation: ease-in;
 animation-duration: 1s;
 box-shadow: 2px 1px 1px 1px #0808085e;
@@ -34,10 +34,11 @@ transition-duration: 0.15s;
 .bigContainer{
     display: flex;
     
-    /* flex-wrap: wrap; */
+    flex-wrap: nowrap;
     justify-content: space-evenly;
-    /* background-color: #0deb57; */
+    background-color: #0deb57;
     margin-bottom: 80px;
+    overflow-x: scroll;
     
     
 }
@@ -75,12 +76,10 @@ transition-duration: 0.15s;
     background-color: rgba(0, 0, 0, 0.8);
     text-wrap: wrap;
     width: 35%;
-    
-
-
+ 
   }
 .text p{
-  font-size: 50px;
+  font-size: 60px;
   color: #fff;
   padding: 20px;
   

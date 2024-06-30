@@ -8,9 +8,9 @@
 {% block content %}
 <div>
     <h2 class="categories"><a href="{%url 'ProductDetails'%}">Explore our categories</a></h2>
-</div>
-<div class="bigContainer">
-
+</div> 
+<div class="bigContainer" id="bigContainer">
+<button id="backBtn"></button>
 <div class="control">
     <a href="{%url 'ProductDetails'%}"><img class="clothes" src="{%static 'images/Shirts.jpg'%}" alt="Shirts" /> </a>
 <b class="clotheText"><a href="{%url 'ProductDetails'%}">Shirts and Tops</a></b>
@@ -66,7 +66,7 @@
     <img id="image5" src="{%static 'images/closet.jpg'%}" alt="image5">
    
     <div class="text">
-        <p >Explore our top outfits now!!For a special offer!</p>
+        <p >Explore our top oufits now!!For a special offer!</p>
     </div>
 </div>
 </div>
