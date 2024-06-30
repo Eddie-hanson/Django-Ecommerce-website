@@ -6,45 +6,31 @@
 <!-- dhfgsn -->
 {% block content %}
 
-<div class="product-container">
-  <main class="Pdcontainer">
-    <!-- Left Column / Product Image -->
-    <div class="left-column">
-      <img
-        class="Pd-img active"
-        src="{% static 'images/louisVuitton.png' %}"
-        alt="Louis Vuitton Shirt"
-      />
+<section id="Product-detail" class="Product-detail-container">
+  <div class="Product-detail-Image">
+    <img src="{%static 'images/louisVuitton.png' %}" width="100%" alt="" />
+  </div>
+  <div class="Product-detail-Description">
+    <!-- Product Description -->
+
+    <h2>Category</h2>
+
+    <h3>Name of product</h3>
+
+    <h4>Description</h4>
+    <span id="Description"
+      >Elevate your wardrobe with our Stylish Summer Dress, a perfect blend of
+      comfort and elegance. Crafted from high-quality, breathable fabric, this
+      dress ensures you stay cool and stylish all summer long. The vibrant
+      colors and flattering silhouette make it a must-have for any
+      fashion-forward individual.</span
+    >
+
+    <div class="Product-detail-Button">
+      <span>$148</span>
+      <button class="cart-btn">Add to cart</button>
     </div>
-
-    <!-- Right Column -->
-    <div class="Pd-right-column">
-      <!-- Product Description -->
-      <div class="product-description">
-        <span>Men's Wear</span>
-        <h1>Louis Vuitton</h1>
-        <p>Best Shirt brand on the market</p>
-      </div>
-
-      <!-- Product Configuration -->
-      <div class="product-configuration">
-        <!-- Product Description -->
-        <div class="Pd-Description">
-          <span>Product Description</span>
-          <div class="Pd-">
-            <p>Product description comes here.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Pricing -->
-      <div class="product-price">
-        <span>$148</span>
-        <a href="#" class="cart-btn">Add to cart</a>
-      </div>
-    </div>
-  </main>
-</div>
-
+  </div>
+</section>
 <!-- All html are written here -->
 {% endblock %}

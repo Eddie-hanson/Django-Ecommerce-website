@@ -1,15 +1,15 @@
 @media (max-width: 940px) {
-  .container {
+  .Pdcontainer {
     flex-direction: column;
     margin-top: 60px;
   }
 
-  .left-column,
-  .right-column {
+  .Pd-left-column,
+  .Pd-right-column {
     width: 100%;
   }
 
-  .left-column img {
+  .Pd-left-column .Pd-img {
     width: 300px;
     right: 0;
     top: -65px;
@@ -18,7 +18,7 @@
 }
 
 @media (max-width: 535px) {
-  .left-column img {
+  .Pd-left-column .Pd-img {
     width: 220px;
     top: -85px;
   }
