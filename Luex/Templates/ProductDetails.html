@@ -5,7 +5,46 @@
 {% block title %} Product Details page {% endblock %}
 <!-- dhfgsn -->
 {% block content %}
-<h1>Welcome to the Product Details page</h1>
-<img src="{%static 'images/Test2.png'%}" alt="" />
+
+<div class="product-container">
+  <main class="Pdcontainer">
+    <!-- Left Column / Product Image -->
+    <div class="left-column">
+      <img
+        class="Pd-img active"
+        src="{% static 'images/louisVuitton.png' %}"
+        alt="Louis Vuitton Shirt"
+      />
+    </div>
+
+    <!-- Right Column -->
+    <div class="Pd-right-column">
+      <!-- Product Description -->
+      <div class="product-description">
+        <span>Men's Wear</span>
+        <h1>Louis Vuitton</h1>
+        <p>Best Shirt brand on the market</p>
+      </div>
+
+      <!-- Product Configuration -->
+      <div class="product-configuration">
+        <!-- Product Description -->
+        <div class="Pd-Description">
+          <span>Product Description</span>
+          <div class="Pd-">
+            <p>Product description comes here.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Pricing -->
+      <div class="product-price">
+        <span>$148</span>
+        <a href="#" class="cart-btn">Add to cart</a>
+      </div>
+    </div>
+  </main>
+</div>
+
 <!-- All html are written here -->
 {% endblock %}
