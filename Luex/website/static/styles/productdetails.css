@@ -56,10 +56,22 @@
 }
 
 #Product-detail .Product-detail-Description .Product-detail-Button span {
-  font-size: 40px;
+  /* font-size: 40px;
   font-family: "Times New Roman", Times, serif;
   font-weight: bolder;
-  color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0); */
+  width: 161px;
+  height: 52px;
+  background: #181818;
+  font-family: "Oswald", sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-top: 35px;
 }
 #Product-detail .Product-detail-Description .Product-detail-Button .cart-btn {
   background-color: rgba(129, 106, 106, 0.897);

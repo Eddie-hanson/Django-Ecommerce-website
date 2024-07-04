@@ -6,7 +6,7 @@
 
 /* Container styling */
 .about-container {
-  width: 80%;
+  /* width: 80%; */
   margin: auto;
   overflow: hidden;
 }
@@ -63,7 +63,7 @@ Who we are section
   width: 100%;
   padding-top: 115px;
   padding-bottom: 115px;
-  background: #834d4d;
+  background: #ffffff;
 }
 .contact_title {
   font-family: "Oswald", sans-serif;
