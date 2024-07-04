@@ -5,217 +5,237 @@
 {% block title %} About page {% endblock %}
 <!-- dhfgsn -->
 {% block content %}
-<h1 class="ED">About page</h1>
-<img src="{%static 'images/Test3.png'%}" alt="" />
-<<<<<<< HEAD
-<main>
-    <section class="stories">
-        <h2>Leux Stories</h2>
-        <p>Explore our stories of how we’re helping customers succeed and communities thrive.</p>
-        <a href="#">Learn More</a>
-    </section>
-    <section class="links">
-        <div class="link">
-            <img src="{%static 'images/babies.jpg'%}" alt="Investor Relations">
-            <h3> Relations</h3>
-        </div>
-        <div class="link">
-            <img src="{%static 'images/Banner.png'%}" alt="Leadership and Governance">
-            <h3>Leadership</h3>
-        </div>
-        <div class="link">
-            <img src="{%static 'images/latest_1.jpg'%}" alt="Newsroom">
-            <h3>Newsroom</h3>
-        </div>
-        <div class="link">
-            <img src="{%static 'images/Test1.png'%}"alt="Team">
-            <h3>Team</h3>
-        </div>
-        <div class="link">
-            <img src="{%static 'images/Test3.png'%}" alt="Corporate Responsibility">
-            <h3>Corporate Responsibility</h3>
-        </div>
-        <div class="link">
-            <img src="{%static 'images/Test2.png'%}" alt="Office">
-            <h3>Office</h3>
-        </div>
-        <div class="link">
-            <img src="{%static 'images/Test4.png'%}" alt="Social Media">
-            <h3>Social Media</h3>
-        </div>
-        <div class="link">
-            <img src="{%static 'images/Test5.png'%}"alt="Who We Are">
-            <h3>Who We Are</h3>
-        </div>
-    </section>
-</main>
-
-
-/* styles.css */
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
-
-header {
-    background-color: #f4f4f4;
-    padding: 20px;
-    text-align: center;
-    border-bottom: 1px solid #ccc;
-}
-
-main {
-    padding: 20px;
-}
-
-.stories {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.stories h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.stories p {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.stories a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-
-
-.link {
-    flex: 1 1 calc(25% - 10px);
-    margin: 10px;
-    text-align: center;
-}
-
-.link img {
-    width: 100%;
-    height: auto;
-    max-height: 150px;
-    object-fit: cover;
-}
-
-.link h3 {
-    margin-top: 10px;
-    font-size: 18px;
-}
-
-footer {
-    background-color: #f4f4f4;
-    padding: 10px;
-    text-align: center;
-    border-top: 1px solid #ccc;
-    margin-top: 20px;
-}
-
-@media (max-width: 768px) {
-    .link {
-        flex: 1 1 calc(50% - 10px);
-    }
-}
-
-@media (max-width: 480px) {
-    .link {
-        flex: 1 1 100%;
-    }
-}
-</style>
-
-<!-- All html are written here -->
-{% endblock %}
-=======
 <body>
-     <!-- Meet Our Team Section -->
-  <section id="meet-our-team">
-    <div class="container">
-      <h2>Meet Our Team</h2>
-      <div class="team-members">
-        <div class="team-member">
-          <img src="images/team-member-1.jpg" alt="Team Member 1" />
-          <h3>Jane Doe</h3>
-          <p>Founder & CEO</p>
+  <!-- <div class="About-container">
+    <div class="About-item">
+      <img src="statictics.png" alt="Investor Relations">
+      <p>Investor Relations</p>
+    </div>
+    <div class="About-item">
+      <img src="{%static 'images/dress.jpg'%}" alt="Leadership and Governance">
+      <p>Leadership and Governance</p>
+    </div>
+    <div class="About-item">
+      <img src="{%static 'images/dress.jpg'%}" alt="Newsroom">
+      <p>Newsroom</p>
+    </div>
+    <div class="About-item">
+      <img src="{%static 'images/dress.jpg'%}" alt="Working at Wells Fargo">
+      <p>Working at Wells Fargo</p>
+    </div>
+    <div class="About-item">
+      <img src="{%static 'images/dress.jpg'%}" alt="Corporate Responsibility">
+      <p>Corporate Responsibility</p>
+    </div>
+    <div class="About-item">
+      <img src="{%static 'images/dress.jpg'%}" alt="Responsible Lending">
+      <p>Responsible Lending</p>
+    </div>
+    <div class="About-item">
+      <img src="{%static 'images/dress.jpg'%}" alt="Social Media">
+      <p>Social Media</p>
+    </div>
+    <div class="About-item">
+      <img src="{%static 'images/Test5.png'%}" alt="Who We Are">
+      <p>Who We Are</p>
+    </div>
+  </div> -->
+  <div class="About-container">
+    <div class="About-items">
+        <img src="{%static 'images/Banner.png'%}" alt="Corporate Responsibility">
+        <p>Corporate Responsibility</p>
+      </div>
+      <div class="About-items">
+        <p>Responsible Lending Responsible LendingResponsible LendingResponsible LendingResponsible Lending</p>
+        
+      </div>
+      
+  </div>
+<section class="About-section1">
+  <div class="slide-container swiper">
+    <div class="slide-content">
+        <div class="card-wrapper swiper-wrapper">
+            <div class="card swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+
+                    <div class="card-image">
+                        <img src="images/profile1.jpg" alt="" class="card-img">
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <h2 class="name">David Dell</h2>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                    <button class="button">View More</button>
+                </div>
+            </div>
+            <div class="card swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+
+                    <div class="card-image">
+                        <img src="{%static 'images/Test4.png'%}" alt="" class="card-img">
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <h2 class="name">David Dell</h2>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                    <button class="button">View More</button>
+                </div>
+            </div>
+            <div class="card swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+
+                    <div class="card-image">
+                        <img src="{%static 'images/Test4.png'%}" alt="" class="card-img">
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <h2 class="name">David Dell</h2>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                    <button class="button">View More</button>
+                </div>
+            </div>
+            <div class="card swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+
+                    <div class="card-image">
+                        <img src="{%static 'images/Test4.png'%}" alt="" class="card-img">
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <h2 class="name">David Dell</h2>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                    <button class="button">View More</button>
+                </div>
+            </div>
+            <div class="card swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+
+                    <div class="card-image">
+                        <img src="{%static 'images/Test4.png'%}" alt="" class="card-img">
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <h2 class="name">David Dell</h2>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                    <button class="button">View More</button>
+                </div>
+            </div>
+            <div class="card swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+
+                    <div class="card-image">
+                        <img src="{%static 'images/Banner.png'%}" alt="" class="card-img">
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <h2 class="name">David Dell</h2>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                    <button class="button">View More</button>
+                </div>
+            </div>
+            <div class="card swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+
+                    <div class="card-image">
+                        <img src="{%static 'images/Banner.png'%}" alt="" class="card-img">
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <h2 class="name">David Dell</h2>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                    <button class="button">View More</button>
+                </div>
+            </div>
+            <div class="card swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+
+                    <div class="card-image">
+                        <img src="{%static 'images/Test4.png'%}" alt="" class="card-img">
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <h2 class="name">David Dell</h2>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                    <button class="button">View More</button>
+                </div>
+            </div>
+            <div class="card swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+
+                    <div class="card-image">
+                        <img src="{%static 'images/Banner.png'%}" alt="" class="card-img">
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <h2 class="name">David Dell</h2>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                    <button class="button">View More</button>
+                </div>
+            </div>
         </div>
-        <div class="team-member">
-          <img src="images/team-member-2.jpg" alt="Team Member 2" />
-          <h3>John Smith</h3>
-          <p>Head of Marketing</p>
+    </div>
+
+    <div class="swiper-button-next swiper-navBtn"></div>
+    <div class="swiper-button-prev swiper-navBtn"></div>
+    <div class="swiper-pagination"></div>
+</div>
+</section>
+<section class="About-section2">
+    <div class="About-container">
+        
+        <div class="About-item">
+          <img src="{%static 'images/Banner.png'%}" alt="Corporate Responsibility">
+          <p>Corporate Responsibility</p>
         </div>
-        <div class="team-member">
-          <img src="images/team-member-3.jpg" alt="Team Member 3" />
-          <h3>Emily Johnson</h3>
-          <p>Lead Designer</p>
+        <div class="About-item">
+          <img src="{%static 'images/Banner.png'%}" alt="Responsible Lending">
+          <p>Responsible Lending</p>
+          
         </div>
-        <div class="team-member">
-          <img src="images/team-member-4.jpg" alt="Team Member 4" />
-          <h3>Michael Brown</h3>
-          <p>Customer Service Manager</p>
+        <div class="About-item">
+          <img src="{%static 'images/Banner.png'%}" alt="Social Media">
+          <p>Social Media</p>
+        </div>
+        <div class="About-item">
+          <img src="{%static 'images/Banner.png'%}" alt="Who We Are">
+          <p>Who We Are</p>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- Who We Are Section -->
-  <section id="who-we-are">
-    <div class="container">
-      <h2>Who We Are</h2>
-      <p>
-        Luex Trading Enterprise, located in Tema Community 7, was established in
-        2021. Since its inception, it has grown steadily, providing high-quality
-        clothes and accessories to our valued customers.
-      </p>
-    </div>
-  </section>
-
-  <!-- Vision Section -->
-  <section id="vision">
-    <div class="container">
-      <h2>Our Vision</h2>
-      <p>
-        Our vision is to become the leading online store for fashionable and
-        affordable clothing and accessories, ensuring customer satisfaction and
-        convenience.
-      </p>
-    </div>
-  </section>
-
-  <!-- About Our Online Store Section -->
-  <section id="about-our-online-store">
-    <div class="container">
-      <h2>About Our Online Store</h2>
-      <p>
-        Our online store offers a wide range of clothing and accessories, with a
-        user-friendly interface to enhance your shopping experience. We are
-        committed to providing the latest trends and styles at competitive
-        prices.
-      </p>
-    </div>
-  </section>
-
- </body>
+</section>
+<section class="About-section3">
+    <!-- get in touch -->
+</section>
+<section class="About-section4">
+    <!-- Customer Review section -->
+</section>
   <!-- All html are written here -->
+
   {% endblock %}
 </body>
->>>>>>> 15058c7495f1d1dff87882afa827f50b6d8e0c73
-
-
