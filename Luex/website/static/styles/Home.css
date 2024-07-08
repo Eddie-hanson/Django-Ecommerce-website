@@ -14,7 +14,7 @@
 
 .control {
   display: flex;
-  background-color: rgb(202, 204, 202);
+  background-color: rgb(204, 204, 202);
   flex-direction: column;
   margin: 10px;
   padding: 20px;
@@ -23,11 +23,10 @@
 }
 
 .control:hover {
-  background-color: #12ec1d;
+  background-color: rgb(247, 202, 57);
   animation: ease-in;
   animation-duration: 1s;
   box-shadow: 2px 1px 1px 1px #0808085e;
-  transform: scale(1);
   transition-duration: 0.15s;
 }
 
@@ -65,7 +64,7 @@
   
 }
 .arrow :active {
-  background-color: #5c7ff1;
+  background-color: #4242e0;
   transition: ease-in;
   transition-duration: 0.15s;
   opacity: 0.15;
@@ -73,10 +72,10 @@
 
 .clotheText {
   
-  height: 40px;
+  
   font-size: 20px;
   text-align: center;
-  color: #000080;
+  color: #000000;
   padding-top: 5px;
 }
 
@@ -111,9 +110,21 @@
 }
 
 .text p {
-  font-size: 60px;
+  font-size: 43px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #fff;
-  padding: 20px;
+  padding: 10px;
+}
+
+.new-arrivals {
+  display: flex;
+  flex-direction: row;
+}
+
+.new-arrivals .arrivals-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,min-max(270px,1fr));
+  gap:15px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -122,7 +133,7 @@
   }
 
   .text p {
-      font-size: 35px;
+      font-size: 25px;
       text-align: center;
   }
 
