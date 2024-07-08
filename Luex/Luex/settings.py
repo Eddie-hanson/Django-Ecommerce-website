@@ -75,14 +75,14 @@ WSGI_APPLICATION = 'Luex.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'LUEX',
-#         'USER': 'postgres',
-#         'PASSWORD': 'Edwardhans18.',
-#         'HOST': 'Localhost',
-#     }
+# #DATABASES = {
+#     ## 'default': {
+#       ##   'ENGINE': 'django.db.backends.postgresql',
+#       ##   'NAME': 'LUEX',
+#       ##   'USER': 'postgres',
+#       ##   'PASSWORD': 'Edwardhans18.',
+#       ##   'HOST': 'Localhost',
+#     #}
 # }
 
 
