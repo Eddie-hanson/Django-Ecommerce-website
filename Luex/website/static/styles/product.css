@@ -28,7 +28,7 @@
   display: flex;
   background: #fff;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  border-radius: 15px;
   overflow: hidden;
   flex-direction: column;
   box-shadow: 0 4px 12px 5px rgba(0, 0, 0, 0.1);
