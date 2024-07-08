@@ -1,0 +1,77 @@
+.Product-detail-container {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(229, 199, 160, 1);
+  margin: 5% 10% 40px 10%;
+  padding: 4% 4%;
+  border-radius: 20px;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12),
+    0 3px 5px -1px rgba(0, 0, 0, 0.4);
+}
+
+#Product-detail .Product-detail-Image {
+  width: 40%;
+  margin-right: 50px;
+  padding: 2%;
+  background-color: rgb(205, 220, 235);
+  border-radius: 10px;
+}
+
+#Product-detail .Product-detail-Description {
+  width: 50%;
+  padding-top: 30px;
+}
+
+#Product-detail .Product-detail-Description h2 {
+  padding: 30px 0 20px 0;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 2px;
+  color: rgb(29, 26, 26);
+}
+
+#Product-detail .Product-detail-Description h3 {
+  padding: 10px 0 20px 0;
+  font-size: 30px;
+}
+
+#Product-detail .Product-detail-Description h4 {
+  padding: 20px 0 -10px 0;
+  font-size: 30px;
+}
+
+#Product-detail .Product-detail-Description #Description {
+  line-height: 2%;
+  font-size: 18px;
+  color: black;
+  margin-top: 2px;
+}
+
+#Product-detail .Product-detail-Description .Product-detail-Button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20px 40px;
+}
+
+#Product-detail .Product-detail-Description .Product-detail-Button span {
+  font-size: 40px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bolder;
+  color: rgb(0, 0, 0);
+}
+#Product-detail .Product-detail-Description .Product-detail-Button .cart-btn {
+  width: 161px;
+  height: 52px;
+  background: #181818;
+  font-family: "Oswald", sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-left: 30px;
+}

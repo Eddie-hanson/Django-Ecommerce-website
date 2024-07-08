@@ -5,7 +5,32 @@
 {% block title %} Product Details page {% endblock %}
 <!-- dhfgsn -->
 {% block content %}
-<h1>Welcome to the Product Details page</h1>
-<img src="{%static 'images/Test2.png'%}" alt="" />
+
+<section id="Product-detail" class="Product-detail-container">
+  <div class="Product-detail-Image">
+    <img src="{%static 'images/louisVuitton.png' %}" width="100%" alt="" />
+  </div>
+  <div class="Product-detail-Description">
+    <!-- Product Description -->
+
+    <h2>Category</h2>
+
+    <h3>Name of product</h3>
+
+    <h4>Description</h4>
+    <span id="Description"
+      >Elevate your wardrobe with our Stylish Summer Dress, a perfect blend of
+      comfort and elegance. Crafted from high-quality, breathable fabric, this
+      dress ensures you stay cool and stylish all summer long. The vibrant
+      colors and flattering silhouette make it a must-have for any
+      fashion-forward individual.</span
+    >
+
+    <div class="Product-detail-Button">
+      <span>$148</span>
+      <button class="cart-btn">Add to cart</button>
+    </div>
+  </div>
+</section>
 <!-- All html are written here -->
 {% endblock %}
