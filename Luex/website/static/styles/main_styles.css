@@ -10,12 +10,7 @@
 3. Header
 4. Menu
 5. Home
-6. Home Search
-7. Intro
-8. Destinations
-9. Testimonials
-10. News
-11. Footer
+6. Footer
 
 
 ******************************/
@@ -41,8 +36,8 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  background: #ffffff;
-  color: #a5a5a5;
+  background: #dddbdb;
+  color: #000000;
 }
 div {
   display: block;
@@ -60,7 +55,7 @@ p {
   font-size: 14px;
   line-height: 1.9285;
   font-weight: 400;
-  color: #72728c;
+  color: #141414;
   -webkit-font-smoothing: antialiased;
   -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
   text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
@@ -100,10 +95,10 @@ p a:hover {
 p a:hover::after {
   opacity: 0.2;
 }
-::selection {
+/* ::selection {
 }
 p::selection {
-}
+} */
 h1 {
   font-size: 72px;
 }
@@ -131,13 +126,13 @@ h6 {
   -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
   text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
 }
-h1::selection,
+/* h1::selection,
 h2::selection,
 h3::selection,
 h4::selection,
 h5::selection,
 h6::selection {
-}
+} */
 .form-control {
   color: #db5246;
 }

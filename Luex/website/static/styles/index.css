@@ -321,8 +321,17 @@ section {
 .main_nav ul li {
   position: relative;
 }
+
+.main_nav ul li span {
+  display: inline-block;
+  width: 15px;
+  height: 20px;
+  padding: 0 3px;
+  color: antiquewhite;
+  font-size: 17px;
+}
 .main_nav ul li::after {
-  display: block;
+  display: inline;
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
