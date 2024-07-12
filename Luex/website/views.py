@@ -4,8 +4,8 @@ from .models import Product, Category
 
 
 def home(request):
-    Items = Category.objects.all()
-    context = {Items: 'Items'}
+    CategoryItems = Category.objects.all()
+    context = {'CategoryItems': CategoryItems}
     return render(request, 'Home.html', context)
 
 
