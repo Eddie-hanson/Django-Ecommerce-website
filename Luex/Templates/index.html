@@ -12,8 +12,12 @@
       rel="stylesheet"
       type="text/css"
       href="{% static 'styles/bootstrap4/bootstrap.min.css' %}"
-    /> 
-    <link rel="stylesheet"  type="text/css"  href="{% static 'styles/bootstrap4/swiper-bundle.min.css' %}">
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'styles/bootstrap4/swiper-bundle.min.css' %}"
+    />
     <link
       href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css '%}"
       rel="stylesheet"
@@ -41,15 +45,11 @@
     />
 
     <link
-    rel="stylesheet"
-    type="text/css"
-    href="{% static 'styles/productdetails.css' %}"
-  />
-    <link
       rel="stylesheet"
       type="text/css"
-      href="{% static 'styles/ed.css' %}"
+      href="{% static 'styles/productdetails.css' %}"
     />
+
     <link
       rel="stylesheet"
       type="text/css"
@@ -96,13 +96,15 @@
                       class="d-flex flex-row align-items-start justify-content-start"
                     >
                       <li><a href="{%url 'Home'%}">Home</a></li>
-                     
+
                       <li><a href="{%url 'Products'%}">Products</a></li>
 
-                      <li> <a href="{%url 'ProductDetails'%}">Product Details</a></li>
+                      <li>
+                        <a href="{%url 'ProductDetails'%}">Product Details</a>
                       </li>
-                      <li ><a href="{%url 'cart'%}">Cart </a><span>0</span></li>
-                      <li><a href="{%url 'about'%}">About us</a> </li>
+
+                      <li><a href="{%url 'cart'%}">Cart </a><span>0</span></li>
+                      <li><a href="{%url 'about'%}">About us</a></li>
                     </ul>
                   </nav>
                   <div class="header_phone ml-auto">Call us: 0576652815</div>
@@ -111,24 +113,36 @@
                   <div class="hamburger ml-auto">
                     <i class="fa fa-bars" aria-hidden="true"></i>
                   </div>
-    
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="header_social d-flex flex-row align-items-center justify-content-start">
+        <div
+          class="header_social d-flex flex-row align-items-center justify-content-start"
+        >
           <ul class="d-flex flex-row align-items-start justify-content-start">
-            <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            <li>
+              <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </li>
           </ul>
         </div>
       </header>
-    
 
       <!-- Menu -->
 
@@ -147,7 +161,8 @@
         <div class="menu_content">
           <ul>
             <li><a href="{%url 'Home'%}">Home</a></li>
-            <li><a href="{%url 'Products'%}">Product Details</a></li>
+            <li><a href="{%url 'Products'%}">Product </a></li>
+            <li><a href="{%url 'ProductDetails'%}">Product Details</a></li>
             <li><a href="{%url 'cart'%}">Cart</a></li>
             <li><a href="{%url 'about'%}">About us</a></li>
           </ul>
@@ -180,10 +195,7 @@
       <!-- Home -->
 
       <div class="home">
-        <div
-          class="background_image"
-          style="background-color: rgb(255, 172, 18)"
-        ></div>
+        <div class="background_image" style="background-color: #152635"></div>
       </div>
 
       <!-- Search -->
@@ -229,7 +241,7 @@
       <!-- Footer -->
 
       <footer class="footer">
-         <!--<div
+        <!--<div
           class="background_image"
           style="background-color: rgb(216, 99, 16)"
         ></div>
@@ -282,8 +294,8 @@
           <div class="row footer_contact_row">
             <div class="col-xl-10 offset-xl-1">
               <div class="row"> -->
-                <!-- Footer Contact Item -->
-                <!-- <div class="col-xl-4 footer_contact_col">
+        <!-- Footer Contact Item -->
+        <!-- <div class="col-xl-4 footer_contact_col">
                   <div
                     class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center"
                   >
@@ -300,8 +312,8 @@
                   </div>
                 </div> -->
 
-                <!-- Footer Media Item -->
-                <!-- <div class="col-xl-4 footer_contact_col">
+        <!-- Footer Media Item -->
+        <!-- <div class="col-xl-4 footer_contact_col">
                   <div
                     class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center"
                   >
@@ -320,8 +332,8 @@
                   </div>
                 </div>-->
 
-                <!-- Footer Contact Item -->
-                <!-- <div class="col-xl-4 footer_contact_col">
+        <!-- Footer Contact Item -->
+        <!-- <div class="col-xl-4 footer_contact_col">
                   <div
                     class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center"
                   >
@@ -337,8 +349,8 @@
                   </div>
                 </div> -->
 
-                <!-- Footer Contact Item -->
-                <!-- <div class="col-xl-4 footer_contact_col">
+        <!-- Footer Contact Item -->
+        <!-- <div class="col-xl-4 footer_contact_col">
                   <div
                     class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center"
                   >
@@ -354,53 +366,70 @@
                     </div>
                   </div>
                 </div> -->
-              <!-- </div>
+        <!-- </div>
             </div>
           </div>
         </div>  -->
-
 
         <div class="col">
           <h1>LUEX</h1>
         </div>
 
         <div class="col">
-          
           <h2>Contact Us:</h2>
           <p><strong>Phone:</strong>0576652815</p>
           <p><strong>Locate Us:</strong> Tema Community 7</p>
           <p><strong>Opening day:</strong> Mon - Fri</p>
           <p><strong>Opening Hours:</strong> 8:30am - 6pm</p>
-        
-        <div class="Socials">
-          <h4>follow us</h4>
-          <div class="Socials-Icons">
-            
 
-              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true" style="font-size: 2.5em;"></i></a></li>
-             
-              <li><a href="#"><i class="fa fa-instagram" aria-hidden="true" style="font-size: 2.5em;"></i></a></li>
+          <div class="Socials">
+            <h4>follow us</h4>
+            <div class="Socials-Icons">
+              <li>
+                <a href="#"
+                  ><i
+                    class="fa fa-facebook"
+                    aria-hidden="true"
+                    style="font-size: 2.5em"
+                  ></i
+                ></a>
+              </li>
 
-              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true" style="font-size: 2.5em;"></i></a></li>
-           
+              <li>
+                <a href="#"
+                  ><i
+                    class="fa fa-instagram"
+                    aria-hidden="true"
+                    style="font-size: 2.5em"
+                  ></i
+                ></a>
+              </li>
+
+              <li>
+                <a href="#"
+                  ><i
+                    class="fa fa-twitter"
+                    aria-hidden="true"
+                    style="font-size: 2.5em"
+                  ></i
+                ></a>
+              </li>
+            </div>
           </div>
         </div>
+        <div class="col">
+          <h2>My Account</h2>
+          <a href="#">Register</a>
+          <a href="#">Login</a>
+          <a href="#"> My Cart</a>
         </div>
-      <div class="col">
-        <h2>My Account</h2>
-        <a href="#">Register</a>
-        <a href="#">Login</a>
-        <a href="#"> My Cart</a>
-        
-      </div>
-      <div class="col">
-        <h2>Payment</h2>
-       
-        <img src="{%static 'images/mtn.png'%}" alt="">
-        <img src="{%static 'images/atm.png'%}" alt="">
-        <img src="{%static 'images/telecel.png'%}" alt="">
-        
-      </div>
+        <div class="col">
+          <h2>Payment</h2>
+
+          <img src="{%static 'images/mtn.png'%}" alt="" />
+          <img src="{%static 'images/atm.png'%}" alt="" />
+          <img src="{%static 'images/telecel.png'%}" alt="" />
+        </div>
       </footer>
     </div>
 
@@ -421,6 +450,5 @@
     <script src="{%static 'js/categorySlider.js'%}"></script>
     <script src="{%static 'js/swiper-bundle.min.js'%}"></script>
     <script src="{%static 'js/script.js'%}"></script>
-
   </body>
 </html>

@@ -43,7 +43,7 @@
                         <div>
                           <img
                             src="{%static 'images/image11.png'%}"
-                            class="img-fluid rounded-3"
+                            class="cart-img-fluid rounded-3"
                             alt="Shopping item"
                             width="65px"
                           />
@@ -58,7 +58,71 @@
                           <!-- <h5 class="cart-fw-normal mb-0">2</h5> -->
                         </div>
                         <div class="cart-item-price">
-                          <h5 class="mb-0">Gh₵900</h5>
+                          <h5 class="mb-0">Gh₵ 900</h5>
+                        </div>
+                        <a href="#!" class="cart-trash-icon">
+                          <i class="fas fa-trash-alt"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="cart-card mb-3">
+                  <div class="cart-card-body">
+                    <div class="d-flex justify-content-between">
+                      <div class="d-flex flex-row align-items-center">
+                        <div>
+                          <img
+                            src="{%static 'images/image1.png'%}"
+                            class="cart-img-fluid rounded-3"
+                            alt="Shopping item"
+                            width="65px"
+                          />
+                        </div>
+                        <div class="ms-3">
+                          <h5>Categoy</h5>
+                          <p class="small mb-0">Name Of Product</p>
+                        </div>
+                      </div>
+                      <div class="d-flex flex-row align-items-center">
+                        <div class="item-quantity">
+                          <!-- <h5 class="cart-fw-normal mb-0">2</h5> -->
+                        </div>
+                        <div class="cart-item-price">
+                          <h5 class="mb-0">Gh₵ 1000</h5>
+                        </div>
+                        <a href="#!" class="cart-trash-icon">
+                          <i class="fas fa-trash-alt"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="cart-card mb-3">
+                  <div class="cart-card-body">
+                    <div class="d-flex justify-content-between">
+                      <div class="d-flex flex-row align-items-center">
+                        <div>
+                          <img
+                            src="{%static 'images/image3.png'%}"
+                            class="cart-img-fluid rounded-3"
+                            alt="Shopping item"
+                            width="75px"
+                          />
+                        </div>
+                        <div class="ms-3">
+                          <h5>Categoy</h5>
+                          <p class="small mb-0">Name Of Product</p>
+                        </div>
+                      </div>
+                      <div class="d-flex flex-row align-items-center">
+                        <div class="item-quantity">
+                          <!-- <h5 class="cart-fw-normal mb-0">2</h5> -->
+                        </div>
+                        <div class="cart-item-price">
+                          <h5 class="mb-0">Gh₵ 460</h5>
                         </div>
                         <a href="#!" class="cart-trash-icon">
                           <i class="fas fa-trash-alt"></i>
@@ -104,9 +168,9 @@
                           type="text"
                           id="typeText"
                           class="form-control form-control-lg"
-                          placeholder="1234 5678 9012 3457"
-                          minlength="19"
-                          maxlength="19"
+                          placeholder="XXX-XXX-XXXX"
+                          minlength="10"
+                          maxlength="10"
                         />
                         <label class="form-label" for="typeText"
                           >Enter Payment Number</label
@@ -119,7 +183,7 @@
                             <input
                               type="text"
                               id="typeExp"
-                              class="form-control form-control-lg"
+                              class="cart-form-control form-control-lg"
                               placeholder="Enter Delivery Location"
                             />
                             <label class="form-label" for="typeExp"
@@ -130,9 +194,9 @@
                         <div class="col-md-6">
                           <div class="form-outline form-white">
                             <input
-                              type="password"
+                              type="text"
                               id="typeCvv"
-                              class="form-control form-control-lg"
+                              class="cart-form-control form-control-lg"
                               placeholder="Enter your Digital Address"
                             />
                             <label class="form-label">Digital Address </label>

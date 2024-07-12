@@ -1,9 +1,10 @@
 .cart-h-100 {
-  height: 100vh;
+  height: 90vh;
+  margin-top: 40px;
 }
 
 .cart-h-custom {
-  background-color: #000000;
+  background-color: #ece5e5;
 }
 
 .cart-container {
@@ -11,7 +12,7 @@
   margin: 0 auto;
   display: flex;
   flex-direction: row;
-  background-color: #4a4b4d;
+  background-color: #1529;
   border-radius: 25px;
 }
 
@@ -36,15 +37,15 @@
 }
 
 .cart-text-body {
-  color: #000;
+  color: #fae9e9;
 }
 
 .cart-text-body:hover {
-  color: #000;
+  color: #ffffff;
 }
 
 .cart-text-muted {
-  color: #6c757d;
+  color: #ffffff;
 }
 
 .cart-bg-primary {
@@ -83,6 +84,8 @@
 .cart-img-fluid {
   max-width: 100%;
   height: auto;
+  margin-right: 10px;
+  border-radius: 10px;
 }
 
 .cart-rounded-3 {
@@ -112,7 +115,28 @@
   position: relative;
   margin-bottom: 1.5rem;
 }
+.mb-1 {
+  color: #eaecee;
+  font-size: 30px;
+  text-align: center;
+}
+.ms-3 {
+  color: #dee8f0;
+  font-size: 20px;
+}
 
+.small {
+  color: #dee8f0;
+  font-size: 20px;
+}
+.mb-0 {
+  color: #dee8f0;
+  font-size: 20px;
+}
+
+.d-flex p {
+  color: #eef5fa;
+}
 .cart-form-control {
   display: block;
   width: 100%;
@@ -121,7 +145,9 @@
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #495057;
+  color: #eaecee;
+  /* height: 2rem;
+  width: 10rem; */
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ced4da;
@@ -136,13 +162,13 @@
   background: #fff;
   padding: 0 0.25rem;
   font-size: 0.75rem;
-  color: #6c757d;
+  color: #eef5fa;
 }
 
 .cart-btn {
   display: inline-block;
   font-weight: 400;
-  color: #212529;
+  color: #bec5cc;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;

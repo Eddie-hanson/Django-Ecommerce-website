@@ -15,8 +15,8 @@
 
     <h2>Category</h2>
 
-    <h3>Name of product</h3>
-    <h4>Size: XL</h4>
+    <h3 id="Product-Name">Name of product</h3>
+    <h4 id="Product-Size">Size: XL</h4>
 
     <h4>Description</h4>
     <span id="Description"
@@ -28,10 +28,25 @@
     >
 
     <div class="Product-detail-Button">
-      <span>Gh₵ 148</span>
+      <span id="Product-Price">Gh₵ 148</span>
       <button class="cart-btn">Add to cart</button>
     </div>
   </div>
 </section>
+<!-- Adding to cart -->
+<!-- <script>
+  $(".cart-btn").on("click", function () {
+    let Product_Name = $("#Product-Name");
+    let Product_Size = $("#Product-Size");
+    let Product_Price = $("#Product-Price");
+    let this_val = $(this);
+
+    console.log("Name: ", Product_Name).text();
+    console.log("Price: ", Product_Price).text();
+    console.log("Size: ", Product_Size).text();
+    console.log("Current Item: ", this_val);
+  });
+</script> -->
+
 <!-- All html are written here -->
 {% endblock %}

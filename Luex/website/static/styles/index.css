@@ -44,7 +44,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  background: #ffffff;
+  background: #ccd5d2;
   color: #a5a5a5;
 }
 div {
@@ -842,7 +842,8 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: #80746d;
+  background-color: #152635;
+  margin-top: 60px;
 }
 .footer .col {
   display: flex;
@@ -853,12 +854,18 @@ section {
 .footer p {
   font-size: 15px;
   margin: 1px 1px 8px 1px;
-  color: #181818;
+  color: #dacdcd;
+}
+
+.footer h1,
+h2,
+h4 {
+  color: #dacdcd;
 }
 .footer a {
   font-size: 15px;
   text-decoration: none;
-  color: #222;
+  color: #dacdcd;
   margin: 1px 1px 8px 1px;
 }
 .footer .col img {

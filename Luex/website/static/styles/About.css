@@ -33,6 +33,10 @@ Meet Our Team section
   justify-content: space-between;
 }
 
+.About-section1 h1 {
+  text-align: center;
+}
+
 .About-item {
   background-color: white;
   border: 1px solid #ddd;
@@ -88,7 +92,7 @@ Meet Our Team section
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: #4070f4;
+  background-color: #707277;
   border-radius: 25px 25px 0 25px;
 }
 .overlay::before,
@@ -99,7 +103,7 @@ Meet Our Team section
   bottom: -40px;
   height: 40px;
   width: 40px;
-  background-color: #4070f4;
+  background-color: #707277;
 }
 .overlay::after {
   border-radius: 0 25px 0 0;
@@ -118,7 +122,7 @@ Meet Our Team section
   width: 100%;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid #4070f4;
+  border: 4px solid #3b3b3f;
 }
 .name {
   font-size: 18px;
