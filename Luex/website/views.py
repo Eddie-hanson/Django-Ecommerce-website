@@ -14,16 +14,18 @@ def Cart(request):
 
 
 def Products(request):
-    return render(request, 'Products.html')
+    Apparel = Product.objects.all()
+    context = {'Apparels': Apparel}
+    return render(request, 'Products.html', context)
 
 
 def About(request):
     return render(request, 'About.html')
 
 
-def ProductDetails(request):
-    # try:
-    #     Item = Product.objects.get()
-    # except Item.DoesNotExist:
-    #     return redirect('Home')
-    return render(request, 'ProductDetails.html')
+def ProductDetails(request, pk):
+
+    Apparels = Product.objects.get(id=pk)
+
+    context = {'Apparel': Apparels}
+    return render(request, 'ProductDetails.html', context)
