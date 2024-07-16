@@ -14,7 +14,6 @@
         <div class="products">
           {%for Apparel in Apparels%}
           <div class="product">
-            
             <div class="product-image">
               <img
                 src="{{Apparel.image.url}}"
@@ -24,15 +23,15 @@
             </div>
             <div class="product-content">
               <h2 class="product-title">{{Apparel.name}}</h2>
-              <p class="product-description">
-                {{Apparel.description}}
-              </p>
+              <p class="product-description">{{Apparel.description}}</p>
               <!-- <p class="Unavailable" >Out of stock</p> -->
 
               <div class="instock_offer">
                 <div class="offer">Size: {{Apparel.size}}</div>
                 <div class="offer">
-                  <a href="{%url 'ProductDetails' Apparel.pk %}">view detatil</a>
+                  <a href="{%url 'ProductDetails' Apparel.pk %}"
+                    >view detatil</a
+                  >
                 </div>
               </div>
               <div class="price_wrapper">
@@ -42,19 +41,11 @@
                 </div>
               </div>
             </div>
-           
           </div>
           {% endfor %}
-
-         
-
-          
-
-          
-          </div>
         </div>
-        <!-- Products-section-end -->
       </div>
+      <!-- Products-section-end -->
     </div>
   </section>
   <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>

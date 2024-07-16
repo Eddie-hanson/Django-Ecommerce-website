@@ -58,6 +58,11 @@
     <link
       rel="stylesheet"
       type="text/css"
+      href="{% static 'styles/Seacrhpage.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
       href="{% static 'styles/about.css' %}"
     />
     <link
@@ -204,9 +209,10 @@
                 <div class="home_search_title">Search apparel</div>
                 <div class="home_search_content">
                   <form
-                    action="#"
+                    action="{%url 'Search' %}"
                     class="home_search_form"
                     id="home_search_form"
+                    method="post"
                   >
                     <div
                       class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start"
@@ -216,10 +222,12 @@
                         class="search_input search_input_1"
                         placeholder=""
                         required="required"
+                        name="Searched"
                       />
 
                       <button class="home_search_button">search</button>
                     </div>
+                    {% csrf_token %}
                   </form>
                 </div>
               </div>

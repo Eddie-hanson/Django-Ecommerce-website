@@ -1,0 +1,47 @@
+{% extends "index.html" %}
+<!-- arestdfgh -->
+{% load static %}
+
+<!-- asdafghj -->
+{% block title %} Search page {%endblock %}
+<!-- asdfghjk -->
+{% block content %}
+<main class="Search">
+  <h1>Search Results for {{Searched}}</h1>
+
+  <div class="products-container">
+    <div class="main-content">
+      <!-- Products-section-start -->
+      <div class="products">
+        {%for Item in Item%}
+        <div class="product">
+          <div class="product-image">
+            <img src="{{Item.image.url}}" alt="Nike React Miler" width="100%" />
+          </div>
+          <div class="product-content">
+            <h2 class="product-title">{{Item.name}}</h2>
+
+            <!-- <p class="Unavailable" >Out of stock</p> -->
+
+            <div class="instock_offer">
+              <div class="offer">Size: {{Item.size}}</div>
+              <div class="offer">
+                <a href="{%url 'ProductDetails' Item.pk %}">view detatil</a>
+              </div>
+            </div>
+            <div class="price_wrapper">
+              <div class="price">Gh₵ {{Item.price}}</div>
+              <div class="icons">
+                <div><ion-icon name="cart-outline"></ion-icon></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- Products-section-end -->
+  </div>
+</main>
+
+{% endblock %}
