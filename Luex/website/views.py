@@ -13,6 +13,17 @@ def Cart(request):
     return render(request, 'cart.html')
 
 
+def Search_Apparel(request):
+    if request.method == 'POST':
+        Search = request.POST['Searched']
+
+        Items = Product.objects.filter(name__icontains=Search,)
+        context = {'Searched': Search, 'Item': Items}
+        return render(request, 'Search_Apparel.html', context)
+    else:
+        return render(request, 'Search_Apparel.html')
+
+
 def Products(request):
     Apparel = Product.objects.all()
     context = {'Apparels': Apparel}
