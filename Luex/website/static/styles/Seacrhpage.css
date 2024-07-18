@@ -1,12 +1,13 @@
-.Search-product-list {
+/* .Search-product-list {
   display: flex;
   flex-wrap: wrap;
-}
+} */
+
 .Search h1 {
   color: black;
   text-align: center;
 }
-.Search-product {
+/* .Search-product {
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 10px;
@@ -16,9 +17,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 
-.Search-product-image img {
+/* .Search-product-image img {
   max-width: 100%;
   height: auto;
 }
@@ -58,4 +59,55 @@
 .Search-product-details .btn:hover,
 .Search-product-details .cart-btn:hover {
   background-color: #0056b3;
+} */
+
+.destinations_row {
+  margin-top: 99px;
+  margin-left: 20px;
+}
+
+.grid-item {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 30px;
+  margin: 10px 5px;
+  padding: 30px;
+  gap: 20px;
+}
+
+.search_image {
+  width: 100%;
+}
+.search_image img {
+  max-width: 100%;
+}
+
+.search_item {
+  width: 330px;
+  height: fit-content;
+  padding: 15px;
+  margin-bottom: 33px;
+  margin: 10px 20px 33px 20;
+  background: #add1d8;
+  border-radius: 5px;
+}
+.destination_content {
+  width: 300px;
+}
+
+.Search_title {
+  margin-top: 15px;
+}
+.Search_title .product-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #181818;
+}
+
+.destination_price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #c20101;
+  margin-top: 16px;
 }

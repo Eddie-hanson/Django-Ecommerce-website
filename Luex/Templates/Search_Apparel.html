@@ -9,21 +9,21 @@
 <main class="Search">
   <h1>Search Results for {{Searched}}</h1>
 
-  <div class="products-container">
-    <div class="main-content">
-      <!-- Products-section-start -->
-      <div class="products">
+  <!-- <div class="products-container">
+    <div class="main-content"> -->
+  <!-- Products-section-start -->
+  <!-- <div class="products">
         {%for Item in Item%}
         <div class="product">
           <div class="product-image">
             <img src="{{Item.image.url}}" alt="Nike React Miler" width="100%" />
           </div>
           <div class="product-content">
-            <h2 class="product-title">{{Item.name}}</h2>
+            <h2 class="product-title">{{Item.name}}</h2> -->
 
-            <!-- <p class="Unavailable" >Out of stock</p> -->
+  <!-- <p class="Unavailable" >Out of stock</p> -->
 
-            <div class="instock_offer">
+  <!-- <div class="instock_offer">
               <div class="offer">Size: {{Item.size}}</div>
               <div class="offer">
                 <a href="{%url 'ProductDetails' Item.pk %}">view detatil</a>
@@ -39,8 +39,48 @@
         </div>
         {% endfor %}
       </div>
+    </div> -->
+  <!-- Products-section-end -->
+  <!-- </div> -->
+
+  <!-- dfg -->
+  <div class="row destinations_row">
+    <div class="col">
+      <div class="grid-item">
+        <!-- dfgh -->
+        {%for Item in Item%}
+        <!-- START of product card -->
+        <div class="search_item">
+          <!-- image -->
+          <div class="destination_image">
+            <img src=" {{Item.image.url}}" width="300px" alt="" />
+          </div>
+          <!-- image -->
+
+          <!--card body -->
+          <div class="destination_content">
+            <div class="Search_title">
+              <h2 class="product-title">{{Item.name}}</h2>
+            </div>
+
+            <div class="instock_offer">
+              <div class="offer">Size: {{Item.size}}</div>
+              <div class="offer">
+                <a href="{%url 'ProductDetails' Item.pk%}">view detatil</a>
+              </div>
+            </div>
+            <!-- dfgh -->
+            <div class="price_wrapper">
+              <div class="price">Gh₵ {{Item.price}}</div>
+            </div>
+            <!-- dfgh -->
+          </div>
+          <!-- Card body -->
+        </div>
+        <!-- End of product card -->
+        {% endfor%}
+      </div>
     </div>
-    <!-- Products-section-end -->
   </div>
 </main>
 

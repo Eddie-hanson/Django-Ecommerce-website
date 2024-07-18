@@ -5,12 +5,17 @@ from .models import Product, Category
 
 def home(request):
     CategoryItems = Category.objects.all()
-    context = {'CategoryItems': CategoryItems}
+    Apparel = Product.objects.all().order_by('?')
+    context = {'CategoryItems': CategoryItems, 'Apparels': Apparel}
     return render(request, 'Home.html', context)
 
 
-def Cart(request):
-    return render(request, 'cart.html')
+def Category_Product_listing(request, foo):
+    foo = foo.replace('-', '')
+    category = Category.objects.get(CID=foo)
+    products = Product.objects.filter(category=category)
+    context = {'Category': category, 'Products': products}
+    return render(request, 'Category.html', context)
 
 
 def Search_Apparel(request):
@@ -25,9 +30,13 @@ def Search_Apparel(request):
 
 
 def Products(request):
-    Apparel = Product.objects.all()
+    Apparel = Product.objects.all().order_by('?')
     context = {'Apparels': Apparel}
     return render(request, 'Products.html', context)
+
+
+def Cart(request):
+    return render(request, 'cart.html')
 
 
 def About(request):
