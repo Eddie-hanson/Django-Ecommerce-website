@@ -5,240 +5,437 @@
 {% block title%} Cart {%endblock%}
 <!-- cart -->
 {%block content%}
-<!-- HTML GOES HERE -->
-<!-- <img src="{%static 'images/Test4.png'%}" alt="" />
-<h1>Your Cart</h1> -->
-<section class="cart-h-100 h-custom">
-  <div class="cart-container py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col">
-        <div class="cart-card">
-          <div class="cart-card-body p-4">
-            <div class="row">
-              <div class="col-lg-7">
-                <h5 class="mb-3">
-                  <a href="#!" class="cart-text-body">
-                    <i class="fas fa-long-arrow-alt-left me-2"></i>Continue
-                    shopping
+
+<section class="cart">
+  <div class="cart-container">
+    <div class="cart-card">
+      <div class="col-lg-7">
+        <h5 class="mb-3">
+          <a href="#!" class="cart-text-body">
+            <i class="bi bi-arrow-left"></i> Continue shopping
+          </a>
+        </h5>
+        <hr />
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <div>
+            <p class="mb-1">Shopping cart</p>
+          </div>
+          <div>
+            <!-- Sorting comes here -->
+          </div>
+        </div>
+
+        <!-- Repeat this block for each item in the cart -->
+        <div class="cart-form-container">
+          <div class="cart-card mb-3">
+            <div class="cart-card-body">
+              <div class="d-flex justify-content-between">
+                <div class="d-flex flex-row align-items-center">
+                  <div>
+                    <img
+                      src="{%static 'images/image8.png'%}"
+                      class="cart-img-fluid rounded-3"
+                      alt="Shopping item"
+                      width="65px"
+                    />
+                  </div>
+                  <div class="ms-3">
+                    <h5>Categoy</h5>
+                    <p class="small mb-0">Name Of Product</p>
+                    <h6>Size:</h6>
+                  </div>
+                </div>
+                <div class="d-flex flex-row align-items-center">
+                  <div class="item-quantity">
+                    <!-- <h5 class="cart-fw-normal mb-0">2</h5> -->
+                  </div>
+                  <div class="cart-item-price">
+                    <h5 class="mb-0">Gh₵ 900</h5>
+                  </div>
+                  <a href="#!" class="cart-trash-icon">
+                    <i class="bi bi-trash"></i>
                   </a>
-                </h5>
-                <hr />
-
-                <div
-                  class="d-flex justify-content-between align-items-center mb-4"
-                >
-                  <div>
-                    <p class="mb-1">Shopping cart</p>
-                  </div>
-                  <div>
-                    <!-- Sorting comes here -->
-                  </div>
-                </div>
-
-                <!-- Repeat this block for each item in the cart -->
-                <div class="cart-card mb-3">
-                  <div class="cart-card-body">
-                    <div class="d-flex justify-content-between">
-                      <div class="d-flex flex-row align-items-center">
-                        <div>
-                          <img
-                            src="{%static 'images/image11.png'%}"
-                            class="cart-img-fluid rounded-3"
-                            alt="Shopping item"
-                            width="65px"
-                          />
-                        </div>
-                        <div class="ms-3">
-                          <h5>Categoy</h5>
-                          <p class="small mb-0">Name Of Product</p>
-                        </div>
-                      </div>
-                      <div class="d-flex flex-row align-items-center">
-                        <div class="item-quantity">
-                          <!-- <h5 class="cart-fw-normal mb-0">2</h5> -->
-                        </div>
-                        <div class="cart-item-price">
-                          <h5 class="mb-0">Gh₵ 900</h5>
-                        </div>
-                        <a href="#!" class="cart-trash-icon">
-                          <i class="fas fa-trash-alt"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="cart-card mb-3">
-                  <div class="cart-card-body">
-                    <div class="d-flex justify-content-between">
-                      <div class="d-flex flex-row align-items-center">
-                        <div>
-                          <img
-                            src="{%static 'images/image1.png'%}"
-                            class="cart-img-fluid rounded-3"
-                            alt="Shopping item"
-                            width="65px"
-                          />
-                        </div>
-                        <div class="ms-3">
-                          <h5>Categoy</h5>
-                          <p class="small mb-0">Name Of Product</p>
-                        </div>
-                      </div>
-                      <div class="d-flex flex-row align-items-center">
-                        <div class="item-quantity">
-                          <!-- <h5 class="cart-fw-normal mb-0">2</h5> -->
-                        </div>
-                        <div class="cart-item-price">
-                          <h5 class="mb-0">Gh₵ 1000</h5>
-                        </div>
-                        <a href="#!" class="cart-trash-icon">
-                          <i class="fas fa-trash-alt"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="cart-card mb-3">
-                  <div class="cart-card-body">
-                    <div class="d-flex justify-content-between">
-                      <div class="d-flex flex-row align-items-center">
-                        <div>
-                          <img
-                            src="{%static 'images/image3.png'%}"
-                            class="cart-img-fluid rounded-3"
-                            alt="Shopping item"
-                            width="75px"
-                          />
-                        </div>
-                        <div class="ms-3">
-                          <h5>Categoy</h5>
-                          <p class="small mb-0">Name Of Product</p>
-                        </div>
-                      </div>
-                      <div class="d-flex flex-row align-items-center">
-                        <div class="item-quantity">
-                          <!-- <h5 class="cart-fw-normal mb-0">2</h5> -->
-                        </div>
-                        <div class="cart-item-price">
-                          <h5 class="mb-0">Gh₵ 460</h5>
-                        </div>
-                        <a href="#!" class="cart-trash-icon">
-                          <i class="fas fa-trash-alt"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Repeat block ends -->
-              </div>
-              <div class="col-lg-5">
-                <div class="cart-card bg-primary text-white rounded-3">
-                  <div class="cart-card-body">
-                    <div
-                      class="d-flex justify-content-between align-items-center mb-4"
-                    >
-                      <h5 class="mb-0">Payment details</h5>
-                    </div>
-                    <div class="dropdown">
-                      <button
-                        class="btn btn-secondary dropdown-toggle"
-                        type="button"
-                        id="dropdownMenuButton"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      >
-                        Select Payment Method
-                      </button>
-                      <div
-                        class="dropdown-menu"
-                        aria-labelledby="dropdownMenuButton"
-                      >
-                        <a class="dropdown-item" href="#">MTN MOMO</a>
-                        <a class="dropdown-item" href="#">Airtel Tigo Cash</a>
-                        <a class="dropdown-item" href="#">Telecel Cash</a>
-                      </div>
-                    </div>
-
-                    <form class="mt-4">
-                      <div class="form-outline form-white mb-4">
-                        <input
-                          type="text"
-                          id="typeText"
-                          class="form-control form-control-lg"
-                          placeholder="XXX-XXX-XXXX"
-                          minlength="10"
-                          maxlength="10"
-                        />
-                        <label class="form-label" for="typeText"
-                          >Enter Payment Number</label
-                        >
-                      </div>
-
-                      <div class="row mb-4">
-                        <div class="col-md-6">
-                          <div class="form-outline form-white">
-                            <input
-                              type="text"
-                              id="typeExp"
-                              class="cart-form-control form-control-lg"
-                              placeholder="Enter Delivery Location"
-                            />
-                            <label class="form-label" for="typeExp"
-                              >location</label
-                            >
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="form-outline form-white">
-                            <input
-                              type="text"
-                              id="typeCvv"
-                              class="cart-form-control form-control-lg"
-                              placeholder="Enter your Digital Address"
-                            />
-                            <label class="form-label">Digital Address </label>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-
-                    <hr class="my-4" />
-
-                    <div class="d-flex justify-content-between">
-                      <p class="mb-2">Subtotal</p>
-                      <p class="mb-2">Gh₵ 4798.00</p>
-                    </div>
-
-                    <div class="d-flex justify-content-between">
-                      <p class="mb-2">Delivery Fee</p>
-                      <p class="mb-2">Gh₵ 20.00</p>
-                    </div>
-
-                    <div class="d-flex justify-content-between mb-4">
-                      <p class="mb-2">Total</p>
-                      <p class="mb-2">Gh₵ 4818.00</p>
-                    </div>
-
-                    <button type="button" class="btn btn-info btn-block btn-lg">
-                      <div class="d-flex justify-content-between">
-                        <span>Gh₵ 4818.00</span>
-                        <span
-                          >Checkout
-                          <i class="fas fa-long-arrow-alt-right ms-2"></i
-                        ></span>
-                      </div>
-                    </button>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <hr />
+
+          <div class="cart-card mb-3">
+            <div class="cart-card-body">
+              <div class="d-flex justify-content-between">
+                <div class="d-flex flex-row align-items-center">
+                  <div>
+                    <img
+                      src="{%static 'images/image6.png'%}"
+                      class="cart-img-fluid rounded-3"
+                      alt="Shopping item"
+                      width="65px"
+                    />
+                  </div>
+                  <div class="ms-3">
+                    <h5>Categoy</h5>
+                    <p class="small mb-0">Name Of Product</p>
+                    <h6>Size:</h6>
+                  </div>
+                </div>
+                <div class="d-flex flex-row align-items-center">
+                  <div class="item-quantity">
+                    <!-- <h5 class="cart-fw-normal mb-0">2</h5> -->
+                  </div>
+                  <div class="cart-item-price">
+                    <h5 class="mb-0">Gh₵ 900</h5>
+                  </div>
+                  <a href="#!" class="cart-trash-icon">
+                    <i class="bi bi-trash"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+
+          <div class="cart-card mb-3">
+            <div class="cart-card-body">
+              <div class="d-flex justify-content-between">
+                <div class="d-flex flex-row align-items-center">
+                  <div>
+                    <img
+                      src="{%static 'images/image4.png'%}"
+                      class="cart-img-fluid rounded-3"
+                      alt="Shopping item"
+                      width="65px"
+                    />
+                  </div>
+                  <div class="ms-3">
+                    <h5>Categoy</h5>
+                    <p class="small mb-0">Name Of Product</p>
+                    <h6>Size:</h6>
+                  </div>
+                </div>
+                <div class="d-flex flex-row align-items-center">
+                  <div class="item-quantity">
+                    <!-- <h5 class="cart-fw-normal mb-0">2</h5> -->
+                  </div>
+                  <div class="cart-item-price">
+                    <h5 class="mb-0">Gh₵ 900</h5>
+                  </div>
+                  <a href="#!" class="cart-trash-icon">
+                    <i class="bi bi-trash"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+
+          <div class="cart-card mb-3">
+            <div class="cart-card-body">
+              <div class="d-flex justify-content-between">
+                <div class="d-flex flex-row align-items-center">
+                  <div>
+                    <img
+                      src="{%static 'images/image1.png'%}"
+                      class="cart-img-fluid rounded-3"
+                      alt="Shopping item"
+                      width="65px"
+                    />
+                  </div>
+                  <div class="ms-3">
+                    <h5>Categoy</h5>
+                    <p class="small mb-0">Name Of Product</p>
+                    <h6>Size:</h6>
+                  </div>
+                </div>
+                <div class="d-flex flex-row align-items-center">
+                  <div class="item-quantity">
+                    <!-- <h5 class="cart-fw-normal mb-0">2</h5> -->
+                  </div>
+                  <div class="cart-item-price">
+                    <h5 class="mb-0">Gh₵ 900</h5>
+                  </div>
+                  <a href="#!" class="cart-trash-icon">
+                    <i class="bi bi-trash"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+
+          <div class="cart-card mb-3">
+            <div class="cart-card-body">
+              <div class="d-flex justify-content-between">
+                <div class="d-flex flex-row align-items-center">
+                  <div>
+                    <img
+                      src="{%static 'images/image3.png'%}"
+                      class="cart-img-fluid rounded-3"
+                      alt="Shopping item"
+                      width="65px"
+                    />
+                  </div>
+                  <div class="ms-3">
+                    <h5>Categoy</h5>
+                    <p class="small mb-0">Name Of Product</p>
+                    <h6>Size:</h6>
+                  </div>
+                </div>
+                <div class="d-flex flex-row align-items-center">
+                  <div class="item-quantity">
+                    <!-- <h5 class="cart-fw-normal mb-0">2</h5> -->
+                  </div>
+                  <div class="cart-item-price">
+                    <h5 class="mb-0">Gh₵ 900</h5>
+                  </div>
+                  <a href="#!" class="cart-trash-icon">
+                    <i class="bi bi-trash"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+
+          <div class="cart-card mb-3">
+            <div class="cart-card-body">
+              <div class="d-flex justify-content-between">
+                <div class="d-flex flex-row align-items-center">
+                  <div>
+                    <img
+                      src="{%static 'images/image11.png'%}"
+                      class="cart-img-fluid rounded-3"
+                      alt="Shopping item"
+                      width="65px"
+                    />
+                  </div>
+                  <div class="ms-3">
+                    <h5>Categoy</h5>
+                    <p class="small mb-0">Name Of Product</p>
+                    <h6>Size:</h6>
+                  </div>
+                </div>
+                <div class="d-flex flex-row align-items-center">
+                  <div class="item-quantity">
+                    <!-- <h5 class="cart-fw-normal mb-0">2</h5> -->
+                  </div>
+                  <div class="cart-item-price">
+                    <h5 class="mb-0">Gh₵ 900</h5>
+                  </div>
+                  <a href="#!" class="cart-trash-icon">
+                    <i class="bi bi-trash"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+
+          <div class="cart-card mb-3">
+            <div class="cart-card-body">
+              <div class="d-flex justify-content-between">
+                <div class="d-flex flex-row align-items-center">
+                  <div>
+                    <img
+                      src="{%static 'images/image11.png'%}"
+                      class="cart-img-fluid rounded-3"
+                      alt="Shopping item"
+                      width="65px"
+                    />
+                  </div>
+                  <div class="ms-3">
+                    <h5>Categoy</h5>
+                    <p class="small mb-0">Name Of Product</p>
+                  </div>
+                </div>
+                <div class="d-flex flex-row align-items-center">
+                  <div class="item-quantity">
+                    <!-- <h5 class="cart-fw-normal mb-0">2</h5> -->
+                  </div>
+                  <div class="cart-item-price">
+                    <h5 class="mb-0">Gh₵ 900</h5>
+                  </div>
+                  <a href="#!" class="cart-trash-icon">
+                    <i class="bi bi-trash"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+
+          <div class="cart-card mb-3">
+            <div class="cart-card-body">
+              <div class="d-flex justify-content-between">
+                <div class="d-flex flex-row align-items-center">
+                  <div>
+                    <img
+                      src="{%static 'images/image11.png'%}"
+                      class="cart-img-fluid rounded-3"
+                      alt="Shopping item"
+                      width="65px"
+                    />
+                  </div>
+                  <div class="ms-3">
+                    <h5>Categoy</h5>
+                    <p class="small mb-0">Name Of Product</p>
+                  </div>
+                </div>
+                <div class="d-flex flex-row align-items-center">
+                  <div class="item-quantity">
+                    <!-- <h5 class="cart-fw-normal mb-0">2</h5> -->
+                  </div>
+                  <div class="cart-item-price">
+                    <h5 class="mb-0">Gh₵ 900</h5>
+                  </div>
+                  <a href="#!" class="cart-trash-icon">
+                    <i class="bi bi-trash"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cart-card mb-3">
+            <div class="cart-card-body">
+              <div class="d-flex justify-content-between">
+                <div class="d-flex flex-row align-items-center">
+                  <div>
+                    <img
+                      src="{%static 'images/image3.png'%}"
+                      class="cart-img-fluid rounded-3"
+                      alt="Shopping item"
+                      width="75px"
+                    />
+                  </div>
+                  <div class="ms-3">
+                    <h5>Categoy</h5>
+                    <p class="small mb-0">Name Of Product</p>
+                  </div>
+                </div>
+                <div class="d-flex flex-row align-items-center">
+                  <div class="item-quantity">
+                    <!-- <h5 class="cart-fw-normal mb-0">2</h5> -->
+                  </div>
+                  <div class="cart-item-price">
+                    <h5 class="mb-0">Gh₵ 460</h5>
+                  </div>
+                  <a href="#!" class="cart-trash-icon">
+                    <i class="fas fa-trash-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repeat block ends -->
         </div>
       </div>
+
+      <!-- PAYMENT INFO FORM -->
+      <!-- <div class="col-lg-0"> -->
+      <div class="card_form">
+        <!-- <div class="cart-card bg-primary text-white rounded-3"> -->
+        <div class="cart-form-body">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h5 class="mb-0">Payment details</h5>
+          </div>
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Select Payment Method
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">MTN MOMO</a>
+              <a class="dropdown-item" href="#">Airtel Tigo Cash</a>
+              <a class="dropdown-item" href="#">Telecel Cash</a>
+            </div>
+          </div>
+
+          <form class="mt-4">
+            <div class="form-outline form-white mb-4">
+              <input
+                type="text"
+                id="typeText"
+                class="form-control form-control-lg"
+                placeholder="XXX-XXX-XXXX"
+                minlength="10"
+                maxlength="10"
+              />
+              <label class="form-label" for="typeText"
+                >Enter Payment Number</label
+              >
+            </div>
+
+            <div class="row mb-4">
+              <div class="cart_form_row">
+                <div class="col-md-6">
+                  <div class="form-outline_2 form-white">
+                    <input
+                      type="text"
+                      id="typeExp"
+                      class="cart-form-control form-control-lg"
+                      placeholder="Enter Delivery Location"
+                    />
+                    <label class="form-label" for="typeExp">location</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-outline_2 form-white">
+                    <input
+                      type="text"
+                      id="typeCvv"
+                      class="cart-form-control form-control-lg"
+                      placeholder="Enter your Digital Address"
+                    />
+                    <label class="form-label">Digital Address </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <hr class="my-4" />
+
+          <div class="d-flex justify-content-between">
+            <p class="mb-2">Subtotal</p>
+            <p class="mb-2">Gh₵ 4798.00</p>
+          </div>
+
+          <div class="d-flex justify-content-between">
+            <p class="mb-2">Delivery Fee</p>
+            <p class="mb-2">Gh₵ 20.00</p>
+          </div>
+
+          <div class="d-flex justify-content-between mb-4">
+            <p class="mb-2">Total</p>
+            <p class="mb-2">Gh₵ 4818.00</p>
+          </div>
+          <div class="cart-btn-block">
+            <button type="button" class="btn btn-info btn-block btn-lg">
+              <div class="d-flex justify-content-between">
+                <span>Gh₵ 4818.00</span>
+                <span
+                  >Checkout <i class="fas fa-long-arrow-alt-right ms-2"></i
+                ></span>
+              </div>
+            </button>
+          </div>
+        </div>
+        <!-- </div> -->
+      </div>
+      <!-- </div> -->
+      <!-- DFGH -->
+      <!-- </div> -->
     </div>
+    <!-- </div> -->
   </div>
 </section>
 {%endblock%}
