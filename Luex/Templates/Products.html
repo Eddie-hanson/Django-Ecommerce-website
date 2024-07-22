@@ -20,8 +20,9 @@
             <div class="product-content">
               <h2 class="product-title">{{Apparel.name}}</h2>
               <p class="product-description">{{Apparel.description}}</p>
-              <!-- <p class="Unavailable" >Out of stock</p> -->
-
+              {%if Apparel.not_available == True %}
+              <p class="Unavailable">Out of stock</p>
+              {%else%}
               <div class="instock_offer">
                 <div class="offer">Size: {{Apparel.size}}</div>
                 <div class="offer">
@@ -33,9 +34,14 @@
               <div class="price_wrapper">
                 <div class="price">Gh₵ {{Apparel.price}}</div>
                 <div class="icons">
-                  <div><ion-icon name="cart-outline"></ion-icon></div>
+                  <div>
+                    <a href="{%url 'add_to_cart' Apparel.pk %}"
+                      ><ion-icon name="cart-outline"></ion-icon
+                    ></a>
+                  </div>
                 </div>
               </div>
+              {% endif %}
             </div>
           </div>
           {% endfor %}

@@ -23,7 +23,11 @@
 
     <div class="Product-detail-Button">
       <span id="Product-Price">Gh₵ {{Apparel.price}}</span>
-      <button class="cart-btn">Add to cart</button>
+      <button class="cart-btn">
+        <a id="cart-btn-link" href="{% url 'add_to_cart' Apparel.pk %}">
+          Add to cart <i class="bi bi-cart"></i>
+        </a>
+      </button>
     </div>
   </div>
 </section>

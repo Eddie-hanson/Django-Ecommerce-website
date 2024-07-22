@@ -108,7 +108,10 @@
 
                       <li><a href="{%url 'Products'%}">Products</a></li>
 
-                      <li><a href="{%url 'cart'%}">Cart </a><span>0</span></li>
+                      <li>
+                        <a href="{%url 'cart'%}">Cart </a
+                        ><span>{{cart_count}}</span>
+                      </li>
                       <li><a href="{%url 'about'%}">About us</a></li>
                     </ul>
                   </nav>

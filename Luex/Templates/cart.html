@@ -11,7 +11,7 @@
     <div class="cart-card">
       <div class="col-lg-7">
         <h5 class="mb-3">
-          <a href="#!" class="cart-text-body">
+          <a href="{%url 'Products'%}" class="cart-text-body">
             <i class="bi bi-arrow-left"></i> Continue shopping
           </a>
         </h5>
@@ -21,6 +21,8 @@
           <div>
             <p class="mb-1">Shopping cart</p>
           </div>
+          <hr />
+
           <div>
             <!-- Sorting comes here -->
           </div>
@@ -28,6 +30,131 @@
 
         <!-- Repeat this block for each item in the cart -->
         <div class="cart-form-container">
+          {% comment %}
+          <div class="cart-card mb-3">
+            <div class="cart-card-body">
+              <div class="d-flex justify-content-between">
+                <div class="d-flex flex-row align-items-center">
+                  <div>
+                    <img
+                      src="{{cart_item.product.image.url}}"
+                      class="cart-img-fluid rounded-3"
+                      alt="Shopping item"
+                      width="65px"
+                    />
+                  </div>
+                  <div class="ms-3">
+                    <h5>Categoy</h5>
+                    <p class="small mb-0">{{cart_item.product.name}}</p>
+                    <h6>Size:</h6>
+                  </div>
+                </div>
+                <div class="d-flex flex-row align-items-center">
+                  <div class="item-quantity">
+                    <!-- <h5 class="cart-fw-normal mb-0">2</h5> -->
+
+                    <div class="def-number-input">
+                      <button
+                        data-mdb-button-init
+                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                        class="minus"
+                      ></button>
+                      <input
+                        class="quantity fw-bold bg-body-tertiary text-body"
+                        min="0"
+                        name="quantity"
+                        value="{{cart_item.quatity}}"
+                        type="number"
+                      />
+                      <button
+                        data-mdb-button-init
+                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                        class="plus"
+                      ></button>
+                    </div>
+                  </div>
+                  <div class="cart-item-price">
+                    <h5 class="mb-0">Gh₵ {{cart_item.product.price}}</h5>
+                  </div>
+                  <a href="#!" class="cart-trash-icon">
+                    <i class="bi bi-trash"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          {% endcomment %} {%if not cart_items %}
+          <h2 class="text-center">Your cart is empty</h2>
+          {%endif%} {% for cart_item in cart_items %}
+          <div class="cart-card mb-3">
+            <div class="cart-card-body">
+              <div class="d-flex justify-content-between">
+                <div class="d-flex flex-row align-items-center">
+                  <div>
+                    <img
+                      src="{{cart_item.product.image.url}}"
+                      class="cart-img-fluid rounded-3"
+                      alt="Shopping item"
+                      width="65px"
+                    />
+                  </div>
+                  <div class="ms-3">
+                    <h5>{{cart_item.product.category}}</h5>
+                    <p class="small mb-0">{{cart_item.product.name}}</p>
+                    <h6>Size: {{cart_item.product.size}}</h6>
+                  </div>
+                </div>
+                <div class="d-flex flex-row align-items-center">
+                  <div class="item-quantity">
+                    <!-- <h5 class="cart-fw-normal mb-0">2</h5> -->
+
+                    <div class="def-number-input">
+                      <a
+                        data-mdb-button-init
+                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                        class="minus"
+                        href='{%url "remove_from_cart" cart_item.product.pk%}'
+                      ></a>
+                      <input
+                        class="quantity fw-bold bg-body-tertiary text-body"
+                        min="0"
+                        name="quantity"
+                        value="{{cart_item.quantity}}"
+                        type="number"
+                        readonly="true"
+                      />
+                      <a
+                        data-mdb-button-init
+                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                        class="plus"
+                        href="{%url 'add_to_cart' cart_item.product.pk%}"
+                      ></a>
+                    </div>
+                  </div>
+                  <div class="cart-item-price">
+                    <h5 class="mb-0">
+                      Gh₵ {{cart_item.product.price}} <br />
+                      for each
+                    </h5>
+                    <br />
+                    <h5 class="mb-0">
+                      Total
+                      <br />Gh₵ {{cart_item.subtotal}}
+                    </h5>
+                  </div>
+                  <a
+                    href="{% url 'Delete_from_cart' cart_item.product.pk %}"
+                    class="cart-trash-icon"
+                  >
+                    <i class="bi bi-trash"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          {%endfor%} {% comment %}
           <div class="cart-card mb-3">
             <div class="cart-card-body">
               <div class="d-flex justify-content-between">
@@ -49,6 +176,26 @@
                 <div class="d-flex flex-row align-items-center">
                   <div class="item-quantity">
                     <!-- <h5 class="cart-fw-normal mb-0">2</h5> -->
+
+                    <div class="def-number-input">
+                      <button
+                        data-mdb-button-init
+                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                        class="minus"
+                      ></button>
+                      <input
+                        class="quantity fw-bold bg-body-tertiary text-body"
+                        min="0"
+                        name="quantity"
+                        value="1"
+                        type="number"
+                      />
+                      <button
+                        data-mdb-button-init
+                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                        class="plus"
+                      ></button>
+                    </div>
                   </div>
                   <div class="cart-item-price">
                     <h5 class="mb-0">Gh₵ 900</h5>
@@ -61,7 +208,61 @@
             </div>
           </div>
           <hr />
+          {% endcomment %} {% comment %}
+          <div class="cart-card mb-3">
+            <div class="cart-card-body">
+              <div class="d-flex justify-content-between">
+                <div class="d-flex flex-row align-items-center">
+                  <div>
+                    <img
+                      src="{%static 'images/image8.png'%}"
+                      class="cart-img-fluid rounded-3"
+                      alt="Shopping item"
+                      width="65px"
+                    />
+                  </div>
+                  <div class="ms-3">
+                    <h5>Categoy</h5>
+                    <p class="small mb-0">Name Of Product</p>
+                    <h6>Size:</h6>
+                  </div>
+                </div>
+                <div class="d-flex flex-row align-items-center">
+                  <div class="item-quantity">
+                    <!-- <h5 class="cart-fw-normal mb-0">2</h5> -->
 
+                    <div class="def-number-input">
+                      <button
+                        data-mdb-button-init
+                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                        class="minus"
+                      ></button>
+                      <input
+                        class="quantity fw-bold bg-body-tertiary text-body"
+                        min="0"
+                        name="quantity"
+                        value="1"
+                        type="number"
+                      />
+                      <button
+                        data-mdb-button-init
+                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                        class="plus"
+                      ></button>
+                    </div>
+                  </div>
+                  <div class="cart-item-price">
+                    <h5 class="mb-0">Gh₵ 900</h5>
+                  </div>
+                  <a href="#!" class="cart-trash-icon">
+                    <i class="bi bi-trash"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          {% endcomment %} {% comment %}
           <div class="cart-card mb-3">
             <div class="cart-card-body">
               <div class="d-flex justify-content-between">
@@ -328,6 +529,7 @@
               </div>
             </div>
           </div>
+          {% endcomment %}
 
           <!-- Repeat block ends -->
         </div>
@@ -404,6 +606,7 @@
 
           <hr class="my-4" />
 
+          {% comment %}
           <div class="d-flex justify-content-between">
             <p class="mb-2">Subtotal</p>
             <p class="mb-2">Gh₵ 4798.00</p>
@@ -413,15 +616,16 @@
             <p class="mb-2">Delivery Fee</p>
             <p class="mb-2">Gh₵ 20.00</p>
           </div>
+          {% endcomment %}
 
           <div class="d-flex justify-content-between mb-4">
             <p class="mb-2">Total</p>
-            <p class="mb-2">Gh₵ 4818.00</p>
+            <p class="mb-2">Gh₵ {{total}}</p>
           </div>
           <div class="cart-btn-block">
             <button type="button" class="btn btn-info btn-block btn-lg">
               <div class="d-flex justify-content-between">
-                <span>Gh₵ 4818.00</span>
+                <span>Gh₵ {{total}}</span>
                 <span
                   >Checkout <i class="fas fa-long-arrow-alt-right ms-2"></i
                 ></span>

@@ -56,7 +56,7 @@
    <div class="specifics">Size: {{Apparel.size}} </div>
    {% comment %} <div class="specifics">Color: {{Apparel.Rating}}</div> {% endcomment %}
    <div class="specifics">Price: Gh₵ {{Apparel.price}}</div>
-  <div class="button-controller"> <button>Add to cart</button> </div>
+  <div class="button-controller"> <button > <a  href="{%url 'add_to_cart' Apparel.pk %}"> Add to cart </a></button>  </div>
 </div>
 {% endif %}
 {% endfor %}

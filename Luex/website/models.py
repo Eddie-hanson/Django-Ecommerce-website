@@ -54,5 +54,24 @@ class Product(models.Model):
         return self.name
 
 
+class Cart(models.Model):
+    Cart_Id = models.CharField(blank=True, max_length=250)
+    date = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return self.Cart_Id
+
+
+class Cart_Item(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE,)
+    cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField()
+
+    def subtotal(self):
+        return self.product.price * self.quantity
+
+    def __str__(self):
+        return self.product.name
+
 # class Order(models.Model):
 #     pass
