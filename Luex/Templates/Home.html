@@ -8,42 +8,27 @@
 </div>
 <div class="bigContainerWrapper">
     <div class="bigContainer">
-        
-         <div class="control">
-            <a href="{% url 'Products' %}"><img class="clothes" src="{% static 'images/image15.jpg' %}" alt="Jeans" /></a>
-            <b class="clotheText"><a href="{% url 'Products' %}">Shoes</a></b>
-        </div>
+        {% for Category in  CategoryItems %}
         <div class="control">
-            <a href="{% url 'Products' %}"><img class="clothes" src="{% static 'images/image14.jpg' %}" alt="Jeans" /></a>
-            <b class="clotheText"><a href="{% url 'Products' %}">Women's Wear</a></b>
+           
+            <a href="{% url 'Categorylisting' Category.CID %}"><img class="clothes" src="{{Category.image.url}}" alt="Shirts" /></a>
+            <b class="clotheText"><a href="{% url 'Categorylisting' Category.CID %}">{{ Category.Name }} </a></b>
         </div>
-        <div class="control">
-            <a href="{% url 'Products' %}"><img class="clothes" src="{% static 'images/image16.jpg' %}" alt="Jeans" /></a>
-            <b class="clotheText"><a href="{% url 'Products' %}">Ladies Shoes</a></b>
-        </div>
-        <div class="control">
-            <a href="{% url 'Products' %}"><img class="clothes" src="{% static 'images/image12.png' %}" alt="Jeans" /></a>
-            <b class="clotheText"><a href="{% url 'Products' %}">Suits</a></b>
-        </div>
-        <div class="control">
-            <a href="{% url 'Products' %}"><img class="clothes" src="{% static 'images/image7.png' %}" alt="Jeans" /></a>
-            <b class="clotheText"><a href="{% url 'Products' %}">Perfumes</a></b>
-        </div>
-        <div class="control">
-            <a href="{% url 'Products' %}"><img class="clothes" src="{% static 'images/image13.png' %}" alt="Jeans" /></a>
-            <b class="clotheText"><a href="{% url 'Products' %}">Women's Bags</a></b>
-        </div>
-
+        {% endfor %}
         
     </div>
     <div class="arrow">
-        <button onclick="left()" class="left" id="leftBtn"> < </button>
-        <button onclick="right()" class="right" id="rightBtn"> > </button>
+        <button  class="left"> < </button>
+        <button  class="right"> > </button>
+        
     </div>
+    
+
+    <div class="swiperpagination"></div>
 </div>
 
-        <!-- Slideshow -->
-<div class="slideshow"> <a href="{% url 'ProductDetails' %}"> 
+<div class="slideshow">
+    
     <img id="image1" src="{% static 'images/image14.jpg' %}" alt="image1">
     <img id="image2" src="{% static 'images/image11.png' %}" alt="image2">
     <img id="image3" src="{% static 'images/image13.png' %}" alt="image3">
@@ -58,20 +43,25 @@
     </div>
 </div>
 </div> 
-<!-- New Arrivals -->
-<div class="new-arrivals-header"> <h2>New Arrivals</h2></div>
-<div class="new-arrivals-container">
-    <img  id="image1" src="{% static 'images/image15.jpg' %}" alt="image1">
-    <div class="description"> XXXXX </div>
-    &#11088&#11088&#11088
-   <div class="specifics">XXXXX</div>
-   <div class="specifics">Size: XXXX</div>
-   <div class="specifics">Color: XXXX</div>
-   <div class="specifics">Price: Gh₵70</div>
-  <div class="button-controller"> <button>Add to cart</button> </div>
-</div>
 
+<section class="new-arrivals">
+<div> <h3>New Arrivals</h3></div>
+{% for Apparel in  Apparels %}
+{% if Apparel.New_Arrival == True %}
 <div class="new-arrivals-container">
+    <img  id="image1" src="{{Apparel.image.url}}" alt="{{Apparel.name}}">
+    <div class="description">{{Apparel.name}}</div>
+    <div class="rating">{{Apparel.Rating}}</div>
+   <div class="specifics">XXXXX</div>
+   <div class="specifics">Size: {{Apparel.size}} </div>
+   {% comment %} <div class="specifics">Color: {{Apparel.Rating}}</div> {% endcomment %}
+   <div class="specifics">Price: Gh₵ {{Apparel.price}}</div>
+  <div class="button-controller"> <button > <a  href="{%url 'add_to_cart' Apparel.pk %}"> Add to cart </a></button>  </div>
+</div>
+{% endif %}
+{% endfor %}
+</section>
+<!-- <div class="new-arrivals-container">
     <img  id="image1" src="{% static 'images/image5.png' %}" alt="image1">
     <div class="description"> XXXXX </div>
     &#11088&#11088&#11088&#11088&#11088
@@ -146,6 +136,6 @@
     <div class="specifics">Color: XXXX</div>
     <div class="specifics">Price: Gh₵70</div>
    <div class="button-controller"> <button>Add to cart</button> </div>
-</div>
+</div> -->
 
 {% endblock %}

@@ -1,0 +1,47 @@
+{% extends "index.html" %} {% block title %} {{Category.Name}} {%endblock %}
+{%load static %} {% comment %} asdfg {% endcomment %} {% block content %}
+
+<section id="main">
+  <h1>{{Category.Name}}</h1>
+  <div class="products-container">
+    <div class="main-content">
+      <!-- Products-section-start -->
+
+      <div class="products">
+        {% for product in Products%}
+        <div class="product">
+          <div class="product-image">
+            <img
+              src="{{product.image.url}}"
+              alt="Nike React Miler"
+              width="100%"
+            />
+          </div>
+          <div class="product-content">
+            <h2 class="product-title">{{product.name}}</h2>
+            <p class="product-description">{{product.descripton}}</p>
+            <!-- <p class="Unavailable" >Out of stock</p> -->
+
+            <div class="instock_offer">
+              <div class="offer">Size:{{product.size}}</div>
+              <div class="offer">
+                <a href="{%url 'ProductDetails' product.pk%}">view detatil</a>
+              </div>
+            </div>
+            <div class="price_wrapper">
+              <div class="price">Gh₵ {{product.price}}</div>
+              <div class="icons">
+                <div><ion-icon name="cart-outline"></ion-icon></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- Products-section-end -->
+  </div>
+</section>
+<script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+
+{%endblock %}

@@ -1,0 +1,113 @@
+/* .Search-product-list {
+  display: flex;
+  flex-wrap: wrap;
+} */
+
+.Search h1 {
+  color: black;
+  text-align: center;
+}
+/* .Search-product {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: calc(33.333% - 20px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+/* .Search-product-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.Search-product-details {
+  text-align: center;
+}
+
+.Search-product-list .Search-product-details h2 {
+  font-size: 1.25em;
+  margin: 10px 0;
+  color: #152935;
+}
+
+.Search-product-details p {
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+.Search-product-details span {
+  font-size: 1.1em;
+  color: #007bff;
+}
+
+.Search-product-details .btn,
+.Search-product-details .cart-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px 0;
+  background-color: #007bff;
+  color: #1b1818;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Search-product-details .btn:hover,
+.Search-product-details .cart-btn:hover {
+  background-color: #0056b3;
+} */
+
+.destinations_row {
+  margin-top: 99px;
+  margin-left: 20px;
+}
+
+.grid-item {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 30px;
+  margin: 10px 5px;
+  padding: 30px;
+  gap: 20px;
+}
+
+.search_image {
+  width: 100%;
+}
+.search_image img {
+  max-width: 100%;
+}
+
+.search_item {
+  width: 330px;
+  height: fit-content;
+  padding: 15px;
+  margin-bottom: 33px;
+  margin: 10px 20px 33px 20;
+  background: #add1d8;
+  border-radius: 5px;
+}
+.destination_content {
+  width: 300px;
+}
+
+.Search_title {
+  margin-top: 15px;
+}
+.Search_title .product-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #181818;
+}
+
+.destination_price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #c20101;
+  margin-top: 16px;
+}
