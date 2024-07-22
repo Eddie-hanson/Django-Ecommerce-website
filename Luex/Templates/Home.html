@@ -4,18 +4,12 @@
 
 {% block content %}
 <div>
-    <h2 class="categories"><a href="{% url 'Products' %}">Explore our categories</a></h2>
+    <h2 class="categories" ><a  href="{% url 'Products' %}">Explore our categories</a></h2>
 </div>
 <div class="bigContainerWrapper">
     <div class="bigContainer">
-        {% for Category in  CategoryItems %}
-        <div class="control">
-           
-            <a href="{% url 'Products' %}"><img class="clothes" src="{{Category.image.url}}" alt="Shirts" /></a>
-            <b class="clotheText"><a href="{% url 'Products' %}">{{ Category.Name }} </a></b>
-        </div>
-        {% endfor %}
-        <!-- <div class="control">
+        
+         <div class="control">
             <a href="{% url 'Products' %}"><img class="clothes" src="{% static 'images/image15.jpg' %}" alt="Jeans" /></a>
             <b class="clotheText"><a href="{% url 'Products' %}">Shoes</a></b>
         </div>
@@ -38,15 +32,17 @@
         <div class="control">
             <a href="{% url 'Products' %}"><img class="clothes" src="{% static 'images/image13.png' %}" alt="Jeans" /></a>
             <b class="clotheText"><a href="{% url 'Products' %}">Women's Bags</a></b>
-        </div> -->
+        </div>
+
         
     </div>
     <div class="arrow">
-        <button onclick="left()" class="left"> < </button>
-        <button onclick="right()" class="right"> > </button>
+        <button onclick="left()" class="left" id="leftBtn"> < </button>
+        <button onclick="right()" class="right" id="rightBtn"> > </button>
     </div>
 </div>
 
+        <!-- Slideshow -->
 <div class="slideshow"> <a href="{% url 'ProductDetails' %}"> 
     <img id="image1" src="{% static 'images/image14.jpg' %}" alt="image1">
     <img id="image2" src="{% static 'images/image11.png' %}" alt="image2">
@@ -62,8 +58,8 @@
     </div>
 </div>
 </div> 
-
-<div> <h3>New Arrivals</h3></div>
+<!-- New Arrivals -->
+<div class="new-arrivals-header"> <h2>New Arrivals</h2></div>
 <div class="new-arrivals-container">
     <img  id="image1" src="{% static 'images/image15.jpg' %}" alt="image1">
     <div class="description"> XXXXX </div>

@@ -1,25 +1,25 @@
-const bigContainer = document.querySelector('.bigContainer');
-let counter = 0;
+document.addEventListener("DOMContentLoaded", () => {
+    const bigContainer = document.querySelector('.bigContainer');
+    const controls = document.querySelectorAll('.control');
+    const controlWidth = controls[0].offsetWidth + 40; // width + margin
+    let currentPosition = 0;
 
-function left() {
-    if (counter === 0) {
-        counter = bigContainer.children.length - 1;
-    } else {
-        counter--;
-    }
-    scroll();
-}
+    // Calculate the max position to stop at the last item before wrapping
+    const maxPosition = -(controls.length - 1) * controlWidth;
 
-function right() {
-    if (counter === bigContainer.children.length - 1) {
-        counter = 0;
-    } else {
-        counter++;
-    }
-    scroll();
-}
+    document.getElementById('leftBtn').addEventListener('click', () => {
+        currentPosition += controlWidth;
+        if (currentPosition > 0) {
+            currentPosition = 0; // Stop at the first item
+        }
+        bigContainer.style.transform = `translateX(${currentPosition}px)`;
+    });
 
-function scroll() {
-    const itemWidth = bigContainer.children[0].clientWidth;
-    bigContainer.style.transform = `translateX(-${counter * itemWidth}px)`;
-}
+    document.getElementById('rightBtn').addEventListener('click', () => {
+        currentPosition -= controlWidth;
+        if (currentPosition < maxPosition) {
+            currentPosition = maxPosition; // Stop at the last item
+        }
+        bigContainer.style.transform = `translateX(${currentPosition}px)`;
+    });
+});
