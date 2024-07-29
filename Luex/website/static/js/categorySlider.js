@@ -8,18 +8,35 @@ document.addEventListener("DOMContentLoaded", () => {
     const maxPosition = -(controls.length - 1) * controlWidth;
 
     document.getElementById('leftBtn').addEventListener('click', () => {
+        scrollLeft();
+    });
+
+    document.getElementById('rightBtn').addEventListener('click', () => {
+        scrollRight();
+    });
+
+    function scrollLeft() {
         currentPosition += controlWidth;
         if (currentPosition > 0) {
             currentPosition = 0; // Stop at the first item
         }
         bigContainer.style.transform = `translateX(${currentPosition}px)`;
-    });
+        updateButtonState();
+    }
 
-    document.getElementById('rightBtn').addEventListener('click', () => {
+    function scrollRight() {
         currentPosition -= controlWidth;
         if (currentPosition < maxPosition) {
             currentPosition = maxPosition; // Stop at the last item
         }
         bigContainer.style.transform = `translateX(${currentPosition}px)`;
-    });
+        updateButtonState();
+    }
+
+    function updateButtonState() {
+        document.getElementById('leftBtn').disabled = (currentPosition === 0);
+        document.getElementById('rightBtn').disabled = (currentPosition === maxPosition);
+    }
+
+    updateButtonState();
 });
