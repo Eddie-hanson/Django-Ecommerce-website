@@ -52,90 +52,12 @@
     <img  id="image1" src="{{Apparel.image.url}}" alt="{{Apparel.name}}">
     <div class="description">{{Apparel.name}}</div>
     <div class="rating">{{Apparel.Rating}}</div>
-   <div class="specifics">XXXXX</div>
    <div class="specifics">Size: {{Apparel.size}} </div>
-   {% comment %} <div class="specifics">Color: {{Apparel.Rating}}</div> {% endcomment %}
    <div class="specifics">Price: Gh₵ {{Apparel.price}}</div>
   <div class="button-controller"> <button > <a  href="{%url 'add_to_cart' Apparel.pk %}"> Add to cart </a></button>  </div>
 </div>
 {% endif %}
 {% endfor %}
 </section>
-<!-- <div class="new-arrivals-container">
-    <img  id="image1" src="{% static 'images/image5.png' %}" alt="image1">
-    <div class="description"> XXXXX </div>
-    &#11088&#11088&#11088&#11088&#11088
-   <div class="specifics">XXXXX</div>
-   <div class="specifics">Size: XXXX</div>
-   <div class="specifics">Color: XXXX</div>
-   <div class="specifics">Price: Gh₵70</div>
-  <div class="button-controller"> <button>Add to cart</button> </div>
-</div>
-
-<div class="new-arrivals-container">
-    <img  id="image1" src="{% static 'images/image12.png' %}" alt="image1">
-    <div class="description"> XXXXX </div>
-    &#11088&#11088&#11088&#11088&#11088
-   <div class="specifics">XXXXX</div>
-   <div class="specifics">Size: XXXX</div>
-   <div class="specifics">Color: XXXX</div>
-   <div class="specifics">Price: Gh₵70</div>
-  <div class="button-controller"> <button>Add to cart</button> </div>
-</div>
-
-<div class="new-arrivals-container">
-    <img  id="image1" src="{% static 'images/image18.jpg' %}" alt="image1">
-    <div class="description"> XXXXX </div>
-    &#11088&#11088&#11088&#11088&#11088
-   <div class="specifics">XXXXX</div>
-   <div class="specifics">Size: XXXX</div>
-   <div class="specifics">Color: XXXX</div>
-   <div class="specifics">Price: Gh₵70</div>
-  <div class="button-controller"> <button>Add to cart</button> </div>
-</div>
-
-<div class="new-arrivals-container">
-    <img  id="image1" src="{% static 'images/image16.jpg' %}" alt="image1">
-    <div class="description"> XXXXX </div>
-    &#11088&#11088&#11088&#11088&#11088
-   <div class="specifics">XXXXX</div>
-   <div class="specifics">Size: XXXX</div>
-   <div class="specifics">Color: XXXX</div>
-   <div class="specifics">Price: Gh₵70</div>
-  <div class="button-controller"> <button>Add to cart</button> </div>
-</div>
-
-<div class="new-arrivals-container">
-    <img  id="image1" src="{% static 'images/image8.png' %}" alt="image1">
-    <div class="description"> XXXXX </div>
-    &#11088&#11088&#11088&#11088&#11088
-   <div class="specifics">XXXXX</div>
-   <div class="specifics">Size: XXXX</div>
-   <div class="specifics">Color: XXXX</div>
-   <div class="specifics">Price: Gh₵70</div>
-  <div class="button-controller"> <button>Add to cart</button> </div>
-</div>
-
-<div class="new-arrivals-container">
-    <img  id="image1" src="{% static 'images/image11.png' %}" alt="image1">
-    <div class="description"> XXXXX </div>
-    &#11088&#11088&#11088&#11088&#11088
-   <div class="specifics">XXXXX</div>
-   <div class="specifics">Size: XXXX</div>
-   <div class="specifics">Color: XXXX</div>
-   <div class="specifics">Price: Gh₵70</div>
-  <div class="button-controller"> <button>Add to cart</button> </div>
-</div>
-
-<div class="new-arrivals-container">
-    <img  id="image1" src="{% static 'images/image4.png' %}" alt="image1">
-     <div class="description"> XXXXX </div>
-     &#11088&#11088&#11088&#11088&#11088
-    <div class="specifics">XXXXX</div>
-    <div class="specifics">Size: XXXX</div>
-    <div class="specifics">Color: XXXX</div>
-    <div class="specifics">Price: Gh₵70</div>
-   <div class="button-controller"> <button>Add to cart</button> </div>
-</div> -->
 
 {% endblock %}

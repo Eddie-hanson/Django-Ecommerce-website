@@ -83,7 +83,7 @@
 6. 991px
 ************/
 
-/* @media only screen and (max-width: 991px) {
+@media only screen and (max-width: 991px) {
   .main_nav,
   .header_phone {
     display: none;
@@ -112,19 +112,7 @@
     width: 100%;
     margin-top: 10px;
   }
-  .loader_col:not(:last-child) {
-    margin-bottom: 135px;
-  }
-  .milestone_col:not(:last-child) {
-    margin-bottom: 60px;
-  }
-  .intro_col:not(:last-child) {
-    margin-bottom: 50px;
-  }
-  .footer_contact_col:not(:last-child) {
-    margin-bottom: 60px;
-  }
-} */
+}
 
 /************
 7. 959px
@@ -480,7 +468,7 @@
 11. 575px
 ************/
 
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 600px) {
   p {
     font-size: 13px;
   }
@@ -544,6 +532,15 @@
   }
   .milestone_counter {
     font-size: 48px;
+  }
+  .footer {
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #152635;
+    margin-top: 60px; */
   }
 }
 

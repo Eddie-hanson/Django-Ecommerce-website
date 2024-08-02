@@ -1,0 +1,34 @@
+{% extends "index.html" %} {% comment %} fdasghvkj {% endcomment %} {% load
+static %} {% block title %} Signup page {% endblock %} {% block content %}
+<body class="login-page">
+  <p class="title">Sign Up</p>
+  <div class="error-container">
+    <strong class="error">{{form.errors}}</strong>
+  <div class="form-container">
+    <form action="" class="form" method="POST">
+      {%csrf_token%}
+      <!-- <input type="firstname" class="input" placeholder="First Name" /> -->
+      {{form.first_name}}
+      <!-- <input type="lastname" class="input" placeholder="Last Name" /> -->
+      {{form.last_name}}
+      <!-- <input type="email" class="input" placeholder="Email" /> -->
+      {{form.email}}
+      <!-- <input type="password" class="input" placeholder="Password" /> -->
+      {{form.username}}
+      <!-- fghjbk -->
+      {{form.password1}}
+      <!-- gfhjbkl -->
+      {{form.password2}}
+
+      
+
+      <button type="submit" class="form-btn">Sign Up</button>
+      <p class="sign-up-label">
+        Already have an account? <a  class="sign-up-link" href="{% url 'Login'%}" >Login</a>
+      </p>
+    </form>
+
+    <div class="buttons-container"></div>
+  </div>
+</body>
+{% endblock content %}

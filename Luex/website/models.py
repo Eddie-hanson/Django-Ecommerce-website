@@ -73,5 +73,12 @@ class Cart_Item(models.Model):
     def __str__(self):
         return self.product.name
 
-# class Order(models.Model):
-#     pass
+
+class User_FeedBack(models.Model):
+    Name = models.CharField(max_length=100)
+    Email = models.EmailField()
+    Subject = models.CharField(max_length=250)
+    Message = models.TextField()
+
+    def __str__(self):
+        return f"{self.Name}: {self.Subject}"

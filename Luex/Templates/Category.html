@@ -31,7 +31,11 @@
             <div class="price_wrapper">
               <div class="price">Gh₵ {{product.price}}</div>
               <div class="icons">
-                <div><ion-icon name="cart-outline"></ion-icon></div>
+                <div>
+                  <a href="{%url 'add_to_cart' product.pk %}"
+                    ><ion-icon name="cart-outline"></ion-icon
+                  ></a>
+                </div>
               </div>
             </div>
           </div>

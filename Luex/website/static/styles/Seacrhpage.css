@@ -61,7 +61,7 @@
   background-color: #0056b3;
 } */
 
-.destinations_row {
+.search_row {
   margin-top: 99px;
   margin-left: 20px;
 }
@@ -84,7 +84,7 @@
 
 .search_item {
   width: 330px;
-  height: fit-content;
+  height: 500px;
   padding: 15px;
   margin-bottom: 33px;
   margin: 10px 20px 33px 20;
