@@ -887,3 +887,75 @@ h4 {
 .footer .Socials-Icons li {
   margin-right: 1.5rem;
 }
+
+@media only screen and (max-width: 600px) {
+  p {
+    font-size: 13px;
+  }
+  .section_title h2 {
+    font-size: 36px;
+  }
+  .text_highlight {
+    font-size: 16px;
+  }
+  .button {
+    width: 141px;
+    height: 40px;
+  }
+  .button a {
+    font-size: 14px;
+    line-height: 40px;
+  }
+  .menu_content ul li a {
+    font-size: 24px;
+  }
+  .home {
+    height: 40vh;
+  }
+  .home_title h2 {
+    font-size: 48px;
+  }
+  .search_input {
+    height: 40px;
+  }
+  .search_input::-webkit-input-placeholder {
+    font-size: 13px !important;
+  }
+  .search_input:-moz-placeholder {
+    font-size: 13px !important;
+  }
+  .search_input::-moz-placeholder {
+    font-size: 13px !important;
+  }
+  .search_input:-ms-input-placeholder {
+    font-size: 13px !important;
+  }
+  .search_input::input-placeholder {
+    font-size: 13px !important;
+  }
+  .home_search_button {
+    height: 42px;
+    font-size: 12px;
+  }
+  .accordion {
+    height: 40px;
+    font-size: 14px;
+    padding-left: 23px;
+  }
+  .tab {
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+  }
+  .accordion_panel p {
+    font-size: 13px;
+  }
+  .milestone_counter {
+    font-size: 48px;
+  }
+  .footer {
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -14,6 +14,15 @@
     />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+    <link
+      rel="stylesheet"
       type="text/css"
       href="{% static 'styles/bootstrap4/bootstrap.min.css' %}"
     />
@@ -41,6 +50,16 @@
       rel="stylesheet"
       type="text/css"
       href="{% static 'plugins/OwlCarousel2-2.2.1/animate.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'styles/bootstrap4/bootstrap.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'styles/bootstrap4/swiper-bundle.min.css' %}"
     />
     <link
       rel="stylesheet"
@@ -84,6 +103,7 @@
       type="text/css"
       href="{% static 'styles/index_responsive.css' %}"
     />
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
   </head>
   <body>
     <div class="super_container">
@@ -116,6 +136,15 @@
                     </ul>
                   </nav>
                   <div class="header_phone ml-auto">Call us: 0576652815</div>
+                  {% if user.is_authenticated %}
+                  <div class="header_phone ml-auto">
+                    <a href="{%url 'Logout'%}">Logout</a>
+                  </div>
+                  {% else %}
+                  <div class="header_phone ml-auto">
+                    <a href="{%url 'Login'%}">Login</a>
+                  </div>
+                  {% endif %}
 
                   <!-- Hamburger -->
                   <div class="hamburger ml-auto">
@@ -171,8 +200,15 @@
             <li><a href="{%url 'Home'%}">Home</a></li>
             <li><a href="{%url 'Products'%}">Product </a></li>
 
-            <li><a href="{%url 'cart'%}">Cart</a></li>
+            <li>
+              <a href="{%url 'cart'%}">Cart</a><span>{{cart_count}}</span>
+            </li>
             <li><a href="{%url 'about'%}">About us</a></li>
+            {% if user.is_authenticated %}
+            <li><a href="{%url 'Logout'%}">Logout</a></li>
+            {%else%}
+            <li><a href="{%url 'Login'%}">Login</a></li>
+            {%endif%}
           </ul>
         </div>
         <div class="menu_social">
@@ -200,7 +236,7 @@
         </div>
       </div>
 
-      <!-- Home -->
+      <!-- Search-Background -->
 
       <div class="home">
         <div class="background_image" style="background-color: #152635"></div>
@@ -243,7 +279,6 @@
         </div>
       </div>
 
-      <!-- Elements -->
       {% block content %}
 
       <h1>Index.html</h1>
@@ -252,136 +287,6 @@
       <!-- Footer -->
 
       <footer class="footer">
-        <!--<div
-          class="background_image"
-          style="background-color: rgb(216, 99, 16)"
-        ></div>
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <div class="newsletter">
-                <div class="newsletter_title_container text-center">
-                  <div class="newsletter_title"></div>
-                  <div class="newsletter_subtitle">Join our database NOW!</div>
-                </div>
-                <div class="newsletter_form_container">
-                  <form
-                    action="#"
-                    class="newsletter_form d-flex flex-md-row flex-column align-items-start justify-content-between"
-                    id="newsletter_form"
-                  >
-                    <div
-                      class="d-flex flex-md-row flex-column align-items-start justify-content-between"
-                    >
-                      <div>
-                        <input
-                          type="text"
-                          class="newsletter_input newsletter_input_name inpt"
-                          id="newsletter_input_name"
-                          placeholder="Name"
-                          required="required"
-                        />
-                        <div class="input_border"></div>
-                      </div>
-                      <div>
-                        <input
-                          type="email"
-                          class="newsletter_input newsletter_input_email inpt"
-                          id="newsletter_input_email"
-                          placeholder="Your e-mail"
-                          required="required"
-                        />
-                        <div class="input_border"></div>
-                      </div>
-                    </div>
-                    <div>
-                      <button class="newsletter_button">subscribe</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row footer_contact_row">
-            <div class="col-xl-10 offset-xl-1">
-              <div class="row"> -->
-        <!-- Footer Contact Item -->
-        <!-- <div class="col-xl-4 footer_contact_col">
-                  <div
-                    class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center"
-                  >
-                    <div class="footer_contact_icon">
-                      <img src="{%static 'images/Contact.svg'%}" alt="" />
-                    </div>
-                    <div class="footer_contact_title">Contact Us</div>
-                    <div class="footer_contact_list">
-                      <ul>
-                        <li>Office phone</li>
-                        <li>Mobile:</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div> -->
-
-        <!-- Footer Media Item -->
-        <!-- <div class="col-xl-4 footer_contact_col">
-                  <div
-                    class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center"
-                  >
-                    <div class="footer_contact_icon">
-                      <img src="{%static 'images/media.svg'%}" alt="" />
-                    </div>
-                    <div class="footer_contact_title">
-                      visit our social media
-                    </div>
-                    <div class="footer_contact_list">
-                      <ul>
-                        <li><a href="#"></a></li>
-                        <li>Mobile:</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>-->
-
-        <!-- Footer Contact Item -->
-        <!-- <div class="col-xl-4 footer_contact_col">
-                  <div
-                    class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center"
-                  >
-                    <div class="footer_contact_icon">
-                      <img src="{%static 'images/location.svg'%}" alt="" />
-                    </div>
-                    <div class="footer_contact_title">Locate Us</div>
-                    <div class="footer_contact_list">
-                      <ul style="max-width: 190px">
-                        <li>community 7, Tema</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div> -->
-
-        <!-- Footer Contact Item -->
-        <!-- <div class="col-xl-4 footer_contact_col">
-                  <div
-                    class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center"
-                  >
-                    <div class="footer_contact_icon">
-                      <img src="{%static 'images/globe.svg'%}" alt="" />
-                    </div>
-                    <div class="footer_contact_title">send us a message</div>
-                    <div class="footer_contact_list">
-                      <ul>
-                        <li>email@gmail.com</li>
-                        <li>Office_email</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div> -->
-        <!-- </div>
-            </div>
-          </div>
-        </div>  -->
-
         <div class="col">
           <h1>LUEX</h1>
         </div>
@@ -430,9 +335,9 @@
         </div>
         <div class="col">
           <h2>My Account</h2>
-          <a href="#">Register</a>
-          <a href="#">Login</a>
-          <a href="#"> My Cart</a>
+          <a href="{%url 'Register'%}">Register</a>
+          <a href="{%url 'Login'%}">Login</a>
+          <a href="{%url 'cart'%}"> My Cart</a>
         </div>
         <div class="col">
           <h2>Payment</h2>
@@ -461,5 +366,6 @@
     <script src="{%static 'js/categorySlider.js'%}"></script>
     <script src="{%static 'js/swiper-bundle.min.js'%}"></script>
     <script src="{%static 'js/script.js'%}"></script>
+    <script src="{%static 'js/CustomerReview.js'%}"></script>
   </body>
 </html>
