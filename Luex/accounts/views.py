@@ -21,10 +21,15 @@ def Register(request):
             messages.success(request, f'Account created for {username}!')
             new_user = authenticate(
                 username=Registration.cleaned_data['username'], password=Registration.cleaned_data['password1'])
-            login(request, new_user)
-            return redirect('Home')
+
+            if new_user is not None:
+                login(request, new_user)
+                return redirect('Home')
+            else:
+                messages.error(
+                    request, 'Authentication failed. Please try logging in.')
         else:
-                messages.error(request, 'Authentication failed. Please try logging in.')
+            messages.error(request, 'Registration failed. ')
     else:
         Registration = UserRegistrationForm()
     context = {'form': Registration}
