@@ -16,11 +16,17 @@ def Register(request):
 
         if Registration.is_valid():
             new_user = Registration.save()
-            username = Registration.cleaned_data.get('username')
+            # username = Registration.cleaned_data.get('username')
+            # password = Registration.cleaned_data.get('password1')
+            # messages.success(request, f'Account created for {username}!')
+            # new_user = authenticate(
+            #     username=Registration.cleaned_data['username'], password=Registration.cleaned_data['password1'])
+
+            Email = Registration.cleaned_data.get('Email')
             password = Registration.cleaned_data.get('password1')
-            messages.success(request, f'Account created for {username}!')
+            messages.success(request, f'Account created for {Email}!')
             new_user = authenticate(
-                username=Registration.cleaned_data['username'], password=Registration.cleaned_data['password1'])
+                username=Registration.cleaned_data['email'], password=Registration.cleaned_data['password1'])
 
             if new_user is not None:
                 login(request, new_user)
@@ -61,5 +67,6 @@ def login_view(request):
 
 def logout_view(request):
     logout(request)
+
     messages.info(request, "You're logged Out!!")
     return redirect('Login')
