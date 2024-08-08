@@ -70,3 +70,7 @@ def logout_view(request):
 
     messages.info(request, "You're logged Out!!")
     return redirect('Login')
+
+
+def forgot_password(request):
+    return render(request, "forgotpassword.html")
