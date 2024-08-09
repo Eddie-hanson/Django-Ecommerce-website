@@ -1,0 +1,457 @@
+/* Container styling */
+
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+.about-container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  background: #ffffff;
+}
+/*********************************
+Meet Our Team section
+*********************************/
+.About-items {
+  width: 700px;
+  height: 10px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  margin-right: 580px;
+}
+.About-body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+}
+
+.About-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.About-section1 h1 {
+  text-align: center;
+}
+
+.About-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  width: calc(25% - 20px);
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.About-items img {
+  width: 100px;
+}
+
+.About-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.About-item p {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #333;
+}
+.slide-container {
+  max-width: 1120px;
+  width: 100%;
+  padding: 40px 0;
+}
+.slide-content {
+  margin: 0 40px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.card {
+  border-radius: 25px;
+  background-color: #fff;
+}
+.image-content,
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+.image-content {
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #707277;
+  border-radius: 25px 25px 0 25px;
+}
+.overlay::before,
+.overlay::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: #707277;
+}
+.overlay::after {
+  border-radius: 0 25px 0 0;
+  background-color: #fff;
+}
+.card-image {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 3px;
+}
+.card-image .card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #3b3b3f;
+}
+.name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+.description {
+  font-size: 14px;
+  color: #707070;
+  text-align: center;
+}
+.button {
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  padding: 8px 16px;
+  background-color: #4070f4;
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button:hover {
+  background: #265df2;
+}
+
+.swiper-navBtn {
+  color: #6e93f7;
+  transition: color 0.3s ease;
+}
+.swiper-navBtn:hover {
+  color: #4070f4;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+  font-size: 35px;
+}
+.swiper-button-next {
+  right: 0;
+}
+.swiper-button-prev {
+  left: 0;
+}
+.swiper-pagination-bullet {
+  background-color: #6e93f7;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background-color: #4070f4;
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content {
+    margin: 0 10px;
+  }
+  .swiper-navBtn {
+    display: none;
+  }
+}
+/*********************************
+Contact Us section
+*********************************/
+
+.contact {
+  width: 100%;
+  padding-top: 95px;
+  padding-bottom: 115px;
+  margin-top: -70px;
+}
+.contact_title {
+  font-family: "Oswald", sans-serif;
+  font-size: 28px;
+  color: #181818;
+}
+.contact_text {
+  margin-top: 30px;
+}
+.contact_list {
+  margin-top: 52px;
+}
+.contact_list ul li:not(:last-child) {
+  margin-bottom: 36px;
+}
+.contact_list ul li > div:first-child {
+  width: 104px;
+  height: 34px;
+  background: #181818;
+  font-family: "Oswald", sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 34px;
+  border-radius: 10px;
+}
+.contact_list ul li > div:last-child {
+  font-size: 14px;
+  color: #2a2a2c;
+  margin-top: 10px;
+  padding-left: 10px;
+}
+.contact_form_container {
+  width: 100%;
+  margin-top: 55px;
+}
+.contact_input {
+  width: 100%;
+  height: 53px;
+  background: #cee2e9;
+  border: none;
+  outline: none;
+  padding-left: 20px;
+}
+.contact_textarea {
+  height: 163px;
+  padding-top: 12px;
+}
+.contact_input::-webkit-input-placeholder {
+  font-family: "Oswald", sans-serif;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: #47474e !important;
+}
+/* .contact_input:-moz-placeholder {
+  font-family: "Oswald", sans-serif;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: #010179 !important;
+}
+.contact_input::-moz-placeholder {
+  font-family: "Oswald", sans-serif;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: #88889d !important;
+}
+.contact_input:-ms-input-placeholder {
+  font-family: "Oswald", sans-serif;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: #88889d !important;
+} */
+.contact_input::input-placeholder {
+  font-family: "Oswald", sans-serif;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: #88889d !important;
+}
+.contact_form .input_border {
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: #181818;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+.contact_button {
+  width: 161px;
+  height: 52px;
+  background: #181818;
+  font-family: "Oswald", sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-top: 35px;
+}
+
+/*********************************
+Who we are section
+*********************************/
+
+#who-we-are {
+  padding: 20px 40px;
+  margin: 5rem 8rem;
+}
+
+.Shop-image {
+  float: left;
+  margin-right: 20px;
+  max-width: 40%;
+  /* height: 70rem; */
+}
+
+.Shop-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+#who-we-are h2 {
+  margin-top: 0;
+  font-size: 1.2em;
+  color: #333;
+  font-size: 62px;
+  /* margin-top: 20px; */
+}
+
+#who-we-are p {
+  text-align: justify;
+  line-height: 1.6;
+  color: #555;
+  font-size: 22px;
+}
+
+/* Clearfix to handle floats */
+#who-we-are::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .Shop-image {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #who-we-are h2 {
+    font-size: 1.2em;
+  }
+}
+
+#About-section4 {
+  margin-top: 20px;
+}
+
+/*********************************
+Customer Section section
+*********************************/
+#About-section4 {
+  background: linear-gradient(to right, #152635, #2a6ba3);
+  min-height: 10vh;
+  margin-bottom: -60px;
+}
+
+#About-section4 .testimonial {
+  font-size: 14px;
+  font-weight: 500;
+  color: #181818;
+}
+.owl-carousel .owl-item {
+  transition: all 0.3s ease-in-out;
+}
+
+.owl-carousel .owl-item .card {
+  padding: 30px;
+  position: relative;
+}
+
+.owl-carousel .owl-stage-outer {
+  overflow-y: auto !important;
+  padding-bottom: 40px;
+}
+
+.owl-carousel .owl-item img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.owl-carousel .owl-item .card .name {
+  position: absolute;
+  bottom: -20px;
+  left: 33%;
+  color: #101c81;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: aquamarine;
+  padding: 0.3rem 0.4rem;
+  border-radius: 5px;
+  box-shadow: 2px 3px 15px #3c405a;
+}
+
+.owl-carousel .owl-item .card {
+  opacity: 0.2;
+  transform: scale3d(0.8, 0.8, 0.8);
+  transition: all 0.3s ease-in-out;
+}
+
+.owl-carousel .owl-item.active.center .card {
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
+}
+
+.owl-carousel .owl-dots {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  height: 20px;
+  background: #2a6ba3 !important;
+  border-radius: 2px !important;
+  opacity: 0.8;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  height: 13px;
+  width: 13px;
+  opacity: 1;
+  transform: translateY(2px);
+  background: #83b8e7 !important;
+}
+
+@media (min-width: 480.6px) and (max-width: 575.5px) {
+  .owl-carousel .owl-item .card .name {
+    left: 24%;
+  }
+}
+
+@media (max-width: 360px) {
+  .owl-carousel .owl-item .card .name {
+    left: 30%;
+  }
+}
