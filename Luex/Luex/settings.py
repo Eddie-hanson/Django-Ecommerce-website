@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-oysak)3bgl6g7vm_fz6rx)*zko(q42rh2l$t5&t@27*so8e*%v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '142.93.46.78']
 
 
 # Application definition
@@ -79,13 +79,24 @@ AUTH_USER_MODEL = 'accounts.User'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'LUEX',
+#         'USER': 'postgres',
+#         'PASSWORD': 'Edwardhans18.',
+#         'HOST': 'Localhost',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'LUEX',
-        'USER': 'postgres',
-        'PASSWORD': 'Edwardhans18.',
+        'NAME': 'luex',
+        'USER': 'DeltaStrike',
+        'PASSWORD': 'swe208.',
         'HOST': 'Localhost',
+        'PORT':''
     }
 }
 
