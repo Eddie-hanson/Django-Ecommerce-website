@@ -462,6 +462,10 @@
   .newsletter_subtitle {
     font-size: 16px;
   }
+  .footer {
+    padding: 20px;
+    display: flex;
+  }
 }
 
 /************
@@ -534,13 +538,9 @@
     font-size: 48px;
   }
   .footer {
-    padding: 2px;
+    padding: 40px;
     display: flex;
-    flex-direction: column;
-    /* flex-wrap: wrap;
-    justify-content: space-between;
-    background-color: #152635;
-    margin-top: 60px; */
+    margin: 0 auto;
   }
 }
 
@@ -570,4 +570,9 @@
 ************/
 
 @media only screen and (max-width: 400px) {
+  .footer {
+    padding: 20px;
+    display: flex;
+    margin: 0 auto;
+  }
 }

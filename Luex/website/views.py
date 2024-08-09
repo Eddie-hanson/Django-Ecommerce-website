@@ -3,8 +3,7 @@ from .models import Product, Category, Cart, Cart_Item
 from django.http import HttpResponse
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth.decorators import login_required
-# from website.forms import UserFeedbackForm
-# Create your views here.
+from website.forms import UserFeedbackForm
 
 
 @login_required(login_url='Login')
@@ -85,6 +84,7 @@ def add_to_cart(request, pk):
         cart_Item = Cart_Item.objects.get(product=product)
         cart_Item.quantity += 1
         cart_Item.save()
+
     except Cart_Item.DoesNotExist:
         cart_Item = Cart_Item.objects.create(
             product=product,
@@ -122,14 +122,18 @@ def Delete_from_cart(request, pk):
 
 
 def About(request):
-
-    return render(request, 'About.html')
+    User_feedback = UserFeedbackForm()
+    if request.method == "POST":
+        User_feedback = UserFeedbackForm(request.POST)
+        if User_feedback.is_valid():
+            User_feedback.save()
+        return redirect('about')
+    context = {'FeedbackForm': User_feedback}
+    return render(request, 'About.html', context)
 
 
 @login_required(login_url='Login')
 def ProductDetails(request, pk):
-
     Apparels = Product.objects.get(id=pk)
-
     context = {'Apparel': Apparels}
     return render(request, 'ProductDetails.html', context)

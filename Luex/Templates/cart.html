@@ -356,20 +356,5 @@
     </div>
   </div>
 </section>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-  function incrementItem(productId) {
-    $.ajax({
-      url: "/add_to_cart/" + cart_item.product.pk + "/",
-      method: "POST",
-      data: {
-        csrfmiddlewaretoken: "{{ csrf_token }}",
-      },
-      success: function (response) {
-        $("#cart").html(response.cart_html);
-      },
-    });
-  }
-</script>
 
 {%endblock%}
