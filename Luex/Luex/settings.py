@@ -96,7 +96,7 @@ DATABASES = {
         'USER': 'DeltaStrike',
         'PASSWORD': 'swe208.',
         'HOST': 'Localhost',
-        'PORT':''
+        'PORT': ''
     }
 }
 
