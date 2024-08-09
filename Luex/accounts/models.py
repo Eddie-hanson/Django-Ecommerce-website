@@ -7,7 +7,7 @@ class User(AbstractUser):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     email = models.EmailField(max_length=50, unique=True)
-    phone = models.CharField(max_length=50)
+    phone = models.CharField(max_length=50, null=True, blank=True)
     username = models.CharField(max_length=50, unique=True)
 
     USERNAME_FIELD = 'email'
@@ -15,3 +15,11 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.email
+
+
+class User_Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='Profile_PICS')
+
+    def __str__(self):
+        return f"{self.user.username} - {self.user.email}"

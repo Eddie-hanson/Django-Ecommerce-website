@@ -645,15 +645,7 @@ section {
 .search_input_1 {
   width: 75%;
 }
-/* .search_input_2 {
-  width: 15%;
-}
-.search_input_3 {
-  width: 15%;
-}
-.search_input_4 {
-  width: 20%;
-} */
+
 .search_input::-webkit-input-placeholder {
   font-family: "Oswald", sans-serif;
   font-size: 14px !important;
@@ -698,6 +690,10 @@ section {
   outline: none;
   cursor: pointer;
 }
+
+/*********************************
+7. Messages
+*********************************/
 
 /*********************************
 8. Footer
