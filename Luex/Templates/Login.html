@@ -4,11 +4,6 @@
 <!-- zxdcfvgbhnm, -->
 {% block content %}
 <body class="login-page">
-  <div style="margin: 20px 25%px; font: 20px; color: #d41212">
-    {%for message in messages%}
-    <div class="alert alert-{{message}}" role="alert">{{message}}</div>
-    {%endfor%}
-  </div>
   <section class="vh-100" style="background-color: #ccd5d2">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
@@ -31,7 +26,6 @@
                   <form method="POST" action="">
                     {%csrf_token%}
                     <div class="d-flex align-items-center mb-3 pb-1">
-                      <!-- <i class="fas" style="color: #ff6219"> Welcomre to </i> -->
                       <span
                         class="h1 fw-bold mb-0"
                         style="
