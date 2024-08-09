@@ -94,8 +94,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'luex',
         'USER': 'DeltaStrike',
-        'PASSWORD': 'swe208.',
-        'HOST': 'Localhost',
+        'PASSWORD': 'Edwardhans18.',
+        'HOST': 'localhost',
         'PORT': ''
     }
 }
