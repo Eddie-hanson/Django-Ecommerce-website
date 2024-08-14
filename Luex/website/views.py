@@ -64,6 +64,7 @@ def _CartID(request):
     cart = request.session.session_key
     if not cart:
         cart = request.session.create()
+        print('ID: ', cart)
     return cart
 
 
@@ -81,7 +82,7 @@ def add_to_cart(request, pk):
         cart.save()
 
     try:
-        cart_Item = Cart_Item.objects.get(product=product)
+        cart_Item = Cart_Item.objects.get(product=product, cart=cart)
         cart_Item.quantity += 1
         cart_Item.save()
 
