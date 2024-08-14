@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-oysak)3bgl6g7vm_fz6rx)*zko(q42rh2l$t5&t@27*so8e*%v
 DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '142.93.46.78']
-#localhost', '127.0.0.1', '142.93.46.78
+# localhost', '127.0.0.1', '142.93.46.78
 
 
 # Application definition
@@ -90,6 +90,7 @@ AUTH_USER_MODEL = 'accounts.User'
 #     }
 # }
 
+# remote database configuration
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -100,7 +101,10 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
+# username = doadmin
+# password = AVNS_IRujAnhzXgCgzlbvneT hide
+# host = db-postgresql-nyc3-99246-do-user-17422026-0.m.db.ondigitalocean.com
+# port = 25060
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
