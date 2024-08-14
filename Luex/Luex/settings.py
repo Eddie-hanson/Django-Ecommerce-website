@@ -94,7 +94,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'luex',
-        'USER': 'DeltaStrike',
+        'USER': 'deltaStrike',
         'PASSWORD': 'Edwardhans18.',  # Updated password
         'HOST': 'localhost',
         'PORT': '5432',
