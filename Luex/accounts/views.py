@@ -39,7 +39,7 @@ def Register(request):
     else:
         Registration = UserRegistrationForm()
     context = {'form': Registration}
-    return render(request, 'Signup.html', context)
+    return render(request, 'SignUp.html', context)
 
 
 def login_view(request):
