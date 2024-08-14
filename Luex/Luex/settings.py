@@ -80,26 +80,26 @@ AUTH_USER_MODEL = 'accounts.User'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'LUEX',
-        'USER': 'postgres',
-        'PASSWORD': 'Edwardhans18.',
-        'HOST': 'Localhost',
-    }
-}
-
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'luex',
-#         'USER': 'DeltaStrike',
+#         'NAME': 'LUEX',
+#         'USER': 'postgres',
 #         'PASSWORD': 'Edwardhans18.',
-#         'HOST': 'localhost',
-#         'PORT': ''
+#         'HOST': 'Localhost',
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'luex',
+        'USER': 'DeltaStrike',
+        'PASSWORD': 'Edwardhans18.',  # Updated password
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
 
 
 # Password validation
