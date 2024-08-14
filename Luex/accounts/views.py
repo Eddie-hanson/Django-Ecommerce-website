@@ -54,8 +54,13 @@ def login_view(request):
             user = authenticate(request, email=email, password=password)
             if user is not None:
                 login(request, user)
+                request.session['user'] = user.id
+                request.session['email'] = email
+
                 messages.success(request, f'Welcome {user.username}!')
+                print('You are ', request.session['email'])
                 return redirect('Home')
+
             else:
                 messages.warning(request, 'Invalid Email or Password')
         except User.DoesNotExist:
