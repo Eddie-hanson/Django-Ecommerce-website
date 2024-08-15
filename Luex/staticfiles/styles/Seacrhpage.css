@@ -1,113 +1,442 @@
-/* .Search-product-list {
-  display: flex;
-  flex-wrap: wrap;
-} */
-
 .Search h1 {
   color: black;
   text-align: center;
-}
-/* .Search-product {
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px;
-  width: calc(33.333% - 20px);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
-
-/* .Search-product-image img {
-  max-width: 100%;
-  height: auto;
+  font-size: 65px;
+  font-style: italic;
+  font-weight: 400;
 }
 
-.Search-product-details {
-  text-align: center;
-}
-
-.Search-product-list .Search-product-details h2 {
-  font-size: 1.25em;
-  margin: 10px 0;
-  color: #152935;
-}
-
-.Search-product-details p {
-  font-size: 1em;
-  margin: 10px 0;
-}
-
-.Search-product-details span {
-  font-size: 1.1em;
-  color: #007bff;
-}
-
-.Search-product-details .btn,
-.Search-product-details .cart-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  margin: 10px 0;
-  background-color: #007bff;
-  color: #1b1818;
-  text-decoration: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.Search-product-details .btn:hover,
-.Search-product-details .cart-btn:hover {
-  background-color: #0056b3;
-} */
-
-.search_row {
-  margin-top: 99px;
-  margin-left: 20px;
+* {
+  box-sizing: border-box;
 }
 
 .grid-item {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  gap: 30px;
+  gap: 3px;
   margin: 10px 5px;
   padding: 30px;
-  gap: 20px;
-}
-
-.search_image {
-  width: 100%;
-}
-.search_image img {
-  max-width: 100%;
 }
 
 .search_item {
-  width: 330px;
-  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 470px;
   padding: 15px;
   margin-bottom: 33px;
-  margin: 10px 20px 33px 20;
+  margin: 10px 2px 33px 20px;
   background: #add1d8;
   border-radius: 5px;
 }
-.destination_content {
-  width: 300px;
+
+.search_image {
+  flex: 1 1 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search_image img {
+  max-width: 100%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.search_content {
+  flex: 0 1 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.search_item .search_content .product-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #181818;
+  margin-bottom: 10px;
 }
 
 .Search_title {
   margin-top: 15px;
 }
+
 .Search_title .product-title {
   font-family: "Oswald", sans-serif;
   font-size: 30px;
   font-weight: 400;
   color: #181818;
+  margin-bottom: 10px;
 }
 
-.destination_price {
-  font-size: 16px;
-  font-weight: 700;
-  color: #c20101;
+.search_content .price {
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  color: #e9ab38;
   margin-top: 16px;
+}
+
+.search_content .instock_offer .offer {
+  font-size: 18px;
+  font-family: "Oswald", sans-serif;
+  color: rgb(7, 7, 7);
+}
+
+/********************************
+SCREEN RESPONSIVENESS 
+*********************************/
+/* For screens with max width 959px */
+@media only screen and (max-width: 1120px) {
+  .grid-item {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 3px;
+    margin: 0 auto;
+    padding: 3px;
+  }
+
+  .search_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 85%;
+    height: 450px;
+    padding: 10px;
+    background: #add1d8;
+    border-radius: 5px;
+    align-self: center;
+  }
+  .Search h1 {
+    color: black;
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 200;
+  }
+  .search_item .search_content .instock_offer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .instock_badge {
+    background: #ff6347;
+    color: #fff;
+    padding: 2px 4px;
+    border-radius: 5px;
+    height: 12px;
+    font-size: 10px;
+  }
+
+  .search_item .search_content .product-title {
+    font-family: "Oswald", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: #181818;
+    margin-bottom: 3px;
+  }
+  .search_content .instock_offer .offer {
+    font-size: 13px;
+    font-family: "Oswald", sans-serif;
+    color: rgb(7, 7, 7);
+  }
+
+  .search_content .instock_offer a {
+    color: aliceblue;
+    font-size: 13px;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .search_content .price {
+    font-size: 15px;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    color: #e9ab38;
+    margin-top: 6px;
+  }
+}
+
+@media only screen and (max-width: 959px) {
+  .grid-item {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 3px;
+    margin: 0 auto;
+    padding: 3px;
+  }
+
+  .search_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 85%;
+    height: 370px;
+    padding: 10px;
+    background: #add1d8;
+    border-radius: 5px;
+    align-self: center;
+  }
+  .Search h1 {
+    color: black;
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 200;
+  }
+  .search_item .search_content .instock_offer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .instock_badge {
+    background: #ff6347;
+    color: #fff;
+    padding: 2px 4px;
+    border-radius: 5px;
+    height: 12px;
+    font-size: 10px;
+  }
+
+  .search_item .search_content .product-title {
+    font-family: "Oswald", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: #181818;
+    margin-bottom: 3px;
+  }
+  .search_content .instock_offer .offer {
+    font-size: 12px;
+    font-family: "Oswald", sans-serif;
+    color: rgb(7, 7, 7);
+  }
+
+  .search_content .instock_offer a {
+    color: aliceblue;
+    font-size: 12px;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .search_content .price {
+    font-size: 15px;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    color: #e9ab38;
+    margin-top: 6px;
+  }
+}
+
+/* For screens with max width 600px */
+@media only screen and (max-width: 600px) {
+  .grid-item {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 3px;
+    margin: 0 auto;
+    padding: 3px;
+  }
+
+  .search_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 85%;
+    height: 280px;
+    padding: 10px;
+    background: #add1d8;
+    border-radius: 5px;
+    align-self: center;
+  }
+  .Search h1 {
+    color: black;
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 200;
+  }
+  .search_item .search_content .instock_offer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .instock_badge {
+    background: #ff6347;
+    color: #fff;
+    padding: 2px 4px;
+    border-radius: 5px;
+    height: 12px;
+    font-size: 10px;
+  }
+
+  .search_item .search_content .product-title {
+    font-family: "Oswald", sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    color: #181818;
+    margin-bottom: 3px;
+  }
+  .search_content .instock_offer .offer {
+    font-size: 11px;
+    font-family: "Oswald", sans-serif;
+    color: rgb(7, 7, 7);
+  }
+
+  .search_content .instock_offer a {
+    color: aliceblue;
+    font-size: 12px;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .search_content .price {
+    font-size: 10px;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    color: #e9ab38;
+    margin-top: 6px;
+  }
+}
+
+/* For screens with max width 400px */
+@media only screen and (max-width: 400px) {
+  .grid-item {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 3px;
+    margin: 0 auto;
+    padding: 3px;
+  }
+
+  .search_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 85%;
+    height: 250px;
+    padding: 10px;
+    background: #add1d8;
+    border-radius: 5px;
+    align-self: center;
+  }
+  .Search h1 {
+    color: black;
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 200;
+  }
+  .instock_offer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .instock_badge {
+    background: #ff6347;
+    color: #fff;
+    padding: 2px 4px;
+    border-radius: 5px;
+    height: 12px;
+    font-size: 10px;
+  }
+
+  .search_item .search_content .product-title {
+    font-family: "Oswald", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    color: #181818;
+    margin-bottom: 3px;
+  }
+  .search_content .instock_offer .offer {
+    font-size: 8px;
+    font-family: "Oswald", sans-serif;
+    color: rgb(7, 7, 7);
+  }
+
+  .search_content .instock_offer a {
+    color: aliceblue;
+    font-size: 8px;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .search_content .price {
+    font-size: 10px;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    color: #e9ab38;
+    margin-top: 6px;
+  }
+}
+
+/* For screens with max width 300px */
+@media only screen and (max-width: 300px) {
+  .grid-item {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 3px;
+    margin: 0 auto;
+    padding: 3px;
+  }
+
+  .search_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 160px;
+    height: 250px;
+    padding: 10px;
+    background: #add1d8;
+    border-radius: 5px;
+  }
+  .Search h1 {
+    color: black;
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 200;
+  }
+  .instock_offer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .instock_badge {
+    background: #ff6347;
+    color: #fff;
+    padding: 2px 4px;
+    border-radius: 5px;
+    height: 7px;
+    font-size: 3px;
+  }
+
+  .search_item .search_content .product-title {
+    font-family: "Oswald", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    color: #181818;
+    margin-bottom: 3px;
+  }
+  .search_content .instock_offer .offer {
+    font-size: 8px;
+    font-family: "Oswald", sans-serif;
+    color: rgb(7, 7, 7);
+  }
+
+  .search_content .instock_offer a {
+    color: aliceblue;
+    font-size: 8px;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .search_content .price {
+    font-size: 10px;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    color: #e9ab38;
+    margin-top: 6px;
+  }
 }
