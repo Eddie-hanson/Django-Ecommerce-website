@@ -111,10 +111,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-# username = doadmin
-# password = AVNS_IRujAnhzXgCgzlbvneT hide
-# host = db-postgresql-nyc3-99246-do-user-17422026-0.m.db.ondigitalocean.com
-# port = 25060
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
