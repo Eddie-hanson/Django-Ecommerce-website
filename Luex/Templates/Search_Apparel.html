@@ -7,7 +7,11 @@
 <!-- asdfghjk -->
 {% block content %}
 <main class="Search">
+  {% if Item %}
   <h1>Search Results for {{Searched}}</h1>
+  {% else %}
+  <h1>Search Results for {{Searched}} not found</h1>
+  {% endif %}
 
   <!-- dfg -->
   <div class="row search_row">
