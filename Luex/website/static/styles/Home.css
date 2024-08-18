@@ -1,6 +1,5 @@
-*{
+* {
   box-sizing: border-box;
-
 }
 
 /* Explore our categories text*/
@@ -10,13 +9,13 @@
   margin: 60px 0 60px 60px;
   font-size: 70px;
   font-weight: 600;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-.categories a{
+.categories a {
   color: #01000a;
-  
 }
-.categories a:hover{
+.categories a:hover {
   color: #1c1946;
 }
 /* Text for category items */
@@ -51,25 +50,23 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
   overflow: hidden;
   position: relative;
   width: 100%;
-   align-items: center;
-  }
+  align-items: center;
+}
 
-  .bigContainer {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    
-  }
+.bigContainer {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
 
-  /* Arrows for scrolling the categories */
-    .arrow {
-      display: flex;
-      position: absolute;
-      width: 100%;
-    justify-content: space-between;
-    top: 50%;
-    transform: translateY(-50%);
-    
-  }
+/* Arrows for scrolling the categories */
+.arrow {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  justify-content: space-between;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 .arrow button {
   font-size: 45px;
@@ -79,18 +76,15 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
   border-radius: 50%;
   background-color: transparent;
   outline: none;
-  
 }
 .arrow :active {
   background-color: #4242e0;
   transition: ease-in;
   transition-duration: 0.15s;
   opacity: 0.5;
-  
 }
 
 .clotheText {
-
   font-size: 20px;
   text-align: center;
   color: #000000;
@@ -120,7 +114,7 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
   opacity: 0;
   transition: opacity 2s;
 }
- /* Text on slideshow */
+/* Text on slideshow */
 .text {
   display: flex;
   background-color: rgba(0, 0, 0, 0.8);
@@ -130,41 +124,58 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 
 .text p {
   font-size: 43px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #fff;
   padding: 10px;
 }
 
 /* The new arrivals conatiner */
-.new-arrivals-container{
+.new-arrivals #new-arrivals {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 20px;
+  justify-content: space-around;
+  padding: 10px 40px;
+}
+
+.new-arrivals-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.new-arrivals-header h3 {
+  font-size: 50px;
+}
+
+.new-arrivals-container {
   display: inline-block;
   justify-content: center;
-  background-color: rgb(238, 238, 238);;
-  margin:10px;
+  background-color: rgb(238, 238, 238);
+  margin: 10px;
   border-radius: 10px;
   box-shadow: 0 2px 2px 0 rgb(172, 172, 171);
+  width: 300px;
 }
-.new-arrivals-container:hover{
+.new-arrivals-container:hover {
   transform: scale(1.02);
   transition: ease-in;
   box-shadow: 0 2px 2px 0 rgb(172, 172, 171);
 }
 /* Images for new arrivals */
-.new-arrivals-container img{
+.new-arrivals-container img {
   width: 300px;
   height: 280px;
   border-radius: 20px;
   padding: 20px;
 }
-.new-arrivals-container .description{
+.new-arrivals-container .description {
   font-size: 16px;
   text-align: center;
-  color:#000000;
-  font-family:Arial, Helvetica, sans-serif;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
 }
 /* Add to cart button */
-.new-arrivals-container button{
+.new-arrivals-container button {
   background-color: #698ea2;
   color: white;
   font-weight: bold;
@@ -175,17 +186,15 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
   border: none;
   padding: 10px;
   outline: none;
-  
 }
 
-.new-arrivals-container button:active{
+.new-arrivals-container button:active {
   opacity: 0.15;
   transition-duration: 0.15s;
   transition: ease-in;
-  
 }
 
-.button-controller{
+.button-controller {
   display: flex;
   justify-self: flex-end;
   padding: 5px;
@@ -193,24 +202,27 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 }
 
 /* Text for the specs of new arrivals */
-.specifics{
-  display: flex; 
+
+.specifics {
+  display: flex;
   justify-self: flex-start;
   padding-left: 10px;
   font-size: 14px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 500;
-  color:#01012c;
+  color: #01012c;
 }
 
 /* Styling for new arrivals text */
-.new-arrivals-header{
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.new-arrivals-header {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-.new-arrivals-header h2{
+.new-arrivals-header h2 {
   color: #01012c;
-font-size: 80px;
-text-align: center;
+  font-size: 80px;
+  text-align: center;
 }
 
 /* ========Media queries=========== */
@@ -230,36 +242,36 @@ text-align: center;
 12. 479px
 13. 400px*/
 
-@media only screen and (max-width:959px) {
+@media only screen and (max-width: 959px) {
   .text p {
     font-size: 37px;
-    text-align: center;   
-}
+    text-align: center;
+  }
 }
 
-@media only screen and (max-width:1024px) {
+@media only screen and (max-width: 1024px) {
   .text p {
     font-size: 38px;
-    text-align: center;   
-}
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 880px) {
   .text {
-      width: 30%;
+    width: 30%;
   }
 
   .text p {
-      font-size: 26px;
-      line-height: 55px;
-      text-align: center;
+    font-size: 26px;
+    line-height: 55px;
+    text-align: center;
   }
 
   .control {
-      display: flex;
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
-  .new-arrivals-container{
+  .new-arrivals-container {
     .new-arrivals-container {
       display: grid;
       grid-template-rows: repeat(2, 1fr);
@@ -269,7 +281,6 @@ text-align: center;
       align-items: center;
       width: 300px;
       height: 300px;
-      
     }
 
     .new-arrivals-container img {
@@ -281,43 +292,43 @@ text-align: center;
 }
 
 @media only screen and (max-width: 576px) {
-  .categories, .new-arrivals-header, .new-arrivals-header h2{
+  .categories,
+  .new-arrivals-header,
+  .new-arrivals-header h2 {
     font-size: 40px;
   }
   .text {
-      width: 30%;
+    width: 30%;
   }
 
   .text p {
-      font-size: 16px;
-      text-align: center;
-      line-height: 50px;
-      margin-top:40px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 40px;
   }
 
   .control {
-      display: flex;
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
 
   .slideshow {
-    
-      margin-left: 30px;
+    margin-left: 30px;
   }
-  .arrow{
-    width:100%
-    }
-    .bigContainerWrapper {
-      overflow: hidden;
-      position: relative;
-      width: 100%;
-      align-items: center;
-     }
+  .arrow {
+    width: 100%;
+  }
+  .bigContainerWrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    align-items: center;
+  }
 
-     .new-arrivals-container{
-      display: inline-block;
-      justify-content: center;
-      margin-left: 50px;
-    }
-    
+  .new-arrivals-container {
+    display: inline-block;
+    justify-content: center;
+    margin-left: 50px;
+  }
 }
