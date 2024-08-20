@@ -7,11 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // Calculate the max position to stop at the last item before wrapping
   const maxPosition = -(controls.length - 1) * controlWidth;
 
-  document.getElementById("leftBtn").addEventListener("click", () => {
+  document.getElementById("left").addEventListener("click", () => {
     scrollLeft();
   });
 
-  document.getElementById("rightBtn").addEventListener("click", () => {
+  document.getElementById("right").addEventListener("click", () => {
     scrollRight();
   });
 
@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function updateButtonState() {
-    document.getElementById("leftBtn").disabled = currentPosition === 0;
-    document.getElementById("rightBtn").disabled =
+    document.getElementById("left").disabled = currentPosition === 0;
+    document.getElementById("right").disabled =
       currentPosition === maxPosition;
   }
 
