@@ -36,53 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function updateButtonState() {
     document.getElementById("left").disabled = currentPosition === 0;
-    document.getElementById("right").disabled = currentPosition === maxPosition;
-  }
-
-  updateButtonState();
-});*/
-
-/***********************
-document.addEventListener("DOMContentLoaded", () => {
-  const bigContainer = document.querySelector(".bigContainer");
-  const controls = document.querySelectorAll(".control");
-  const controlWidth = controls[0].offsetWidth + 40; // width + margin
-  const visibleCards = 4; // Number of cards to display at once
-  const containerWidth = visibleCards * controlWidth; // Total width of visible container
-  let currentPosition = 0;
-
-  // Calculate the max position to stop at the last set of visible cards before wrapping
-  const maxPosition = -(controls.length - visibleCards) * controlWidth;
-
-  document.getElementById("left").addEventListener("click", () => {
-    scrollLeft();
-  });
-
-  document.getElementById("right").addEventListener("click", () => {
-    scrollRight();
-  });
-
-  function scrollLeft() {
-    currentPosition += containerWidth;
-    if (currentPosition > 0) {
-      currentPosition = 0; // Stop at the first set of visible cards
-    }
-    bigContainer.style.transform = `translateX(${currentPosition}px)`;
-    updateButtonState();
-  }
-
-  function scrollRight() {
-    currentPosition -= containerWidth;
-    if (currentPosition < maxPosition) {
-      currentPosition = maxPosition; // Stop at the last set of visible cards
-    }
-    bigContainer.style.transform = `translateX(${currentPosition}px)`;
-    updateButtonState();
-  }
-
-  function updateButtonState() {
-    document.getElementById("left").disabled = currentPosition === 0;
-    document.getElementById("right").disabled = currentPosition === maxPosition;
+    document.getElementById("right").disabled =
+      currentPosition === maxPosition;
   }
 
   updateButtonState();
