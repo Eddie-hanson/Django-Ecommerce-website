@@ -24,6 +24,9 @@
   width: 200px;
   border-radius: 40px;
 }
+.control {
+  flex-shrink: 0;
+}
 
 /* Container containing the category items */
 .control {
@@ -52,12 +55,13 @@
   align-self: center;
   width: 80%;
   margin-left: 8%;
-  
 }
 
 .bigContainer {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  /* transition: transform 0.5s ease-in-out; */
+  transition: transform 0.5s ease;
+  width: 800px;
 }
 
 /* Arrows for scrolling the categories */
@@ -80,7 +84,7 @@
   outline: none;
 }
 .arrow :active {
-  background-color:none;
+  background-color: none;
   transition: ease-in;
   transition-duration: 0.15s;
   opacity: 0.5;
@@ -309,10 +313,9 @@
   }
 
   .text p {
-    font-size:16px;
+    font-size: 16px;
     text-align: center;
     line-height: 230%;
- 
   }
 
   .control {
@@ -327,11 +330,9 @@
     width: 100%;
   }
   .bigContainerWrapper {
-    
-      overflow: hidden;
-      width: 92%;
-      margin-left: 5%;
-    
+    overflow: hidden;
+    width: 92%;
+    margin-left: 5%;
   }
 
   .new-arrivals-container {
@@ -341,44 +342,44 @@
   }
 
   /* Image for category items */
-.clothes {
-  height: 160px;
-  width: 140px;
-  border-radius: 20px;
-}
+  .clothes {
+    height: 160px;
+    width: 140px;
+    border-radius: 20px;
+  }
 
-/* Container containing the category items */
-.control {
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(238, 238, 238);
-  box-shadow: 1px 2px 2px 1px rgb(143, 142, 142);
-  margin: 5px;
-  padding: 20px;
-  height: 220px;
-  border-radius: 20px;
-}
+  /* Container containing the category items */
+  .control {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(238, 238, 238);
+    box-shadow: 1px 2px 2px 1px rgb(143, 142, 142);
+    margin: 5px;
+    padding: 20px;
+    height: 220px;
+    border-radius: 20px;
+  }
 
-/* Slideshow styling */
-.slideshow {
-  display: flex;
-  position: relative;
-  width: 80%;
-  height: 350px;
-  overflow: hidden;
-  margin: 80px 90px 100px 40px;
-}
+  /* Slideshow styling */
+  .slideshow {
+    display: flex;
+    position: relative;
+    width: 80%;
+    height: 350px;
+    overflow: hidden;
+    margin: 80px 90px 100px 40px;
+  }
 
-.slideshow img {
-  position: absolute;
-  top: -1px;
-  left: 1px;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 2s;
-}
-/* Text on slideshow
+  .slideshow img {
+    position: absolute;
+    top: -1px;
+    left: 1px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 2s;
+  }
+  /* Text on slideshow
 .text {
   display: flex;
   background-color: rgba(0, 0, 0, 0.8);

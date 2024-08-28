@@ -115,6 +115,8 @@
       href="{% static 'styles/index_responsive.css' %}"
     />
     <link rel="stylesheet" type="text/css" href="{% static 'signup.css' %}" />
+
+    <link rel="stylesheet" type="text/css" href="{% static 'Profile.css' %}" />
   </head>
   <body>
     <div class="super_container">
@@ -156,23 +158,6 @@
                     <a href="{%url 'Login'%}">Login</a>
                   </div>
                   {% endif %}
-                  <div class="Userprofile">
-                    <a href="{%url 'profile'%}">
-                      {% if user_profile.image == None %}<img
-                        src="{%static 'images/Profile.png'%}"
-                        width="30px"
-                        height="30px"
-                        alt=""
-                      />
-                      {%else%}
-                      <img
-                        src="{{user_profile.image.url}}"
-                        alt="Profile Picture"
-                        class="profile-image"
-                      />
-                      {%endif%}</a
-                    >
-                  </div>
 
                   <!-- Hamburger -->
                   <div class="hamburger ml-auto">
@@ -232,7 +217,6 @@
               <a href="{%url 'cart'%}">Cart</a><span>{{cart_count}}</span>
             </li>
             <li><a href="{%url 'about'%}">About us</a></li>
-            <li><a href="{%url 'profile'%}">Profile</a></li>
             {% if user.is_authenticated %}
             <li><a href="{%url 'Logout'%}">Logout</a></li>
             {%else%}
@@ -265,48 +249,13 @@
         </div>
       </div>
 
-      <!-- Search-Background -->
-
       <div class="home">
-        <div class="background_image" style="background-color: #152635"></div>
+        <div
+          class="background_image"
+          style="background-color: #152635; height: 50vh"
+        ></div>
       </div>
 
-      <!-- Search -->
-
-      <div class="home_search">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <div class="home_search_container">
-                <div class="home_search_title">Search apparel</div>
-                <div class="home_search_content">
-                  <form
-                    action="{%url 'Search' %}"
-                    class="home_search_form"
-                    id="home_search_form"
-                    method="post"
-                  >
-                    <div
-                      class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start"
-                    >
-                      <input
-                        type="text"
-                        class="search_input search_input_1"
-                        placeholder=""
-                        required="required"
-                        name="Searched"
-                      />
-
-                      <button class="home_search_button">search</button>
-                    </div>
-                    {% csrf_token %}
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <!-- MESSAGES -->
       <div class="Messages" id="Message">
         <div class="alert">
@@ -328,10 +277,7 @@
         </div>
       </div>
 
-      {% block content %}
-
-      <h1>Index.html</h1>
-      {% endblock %}
+      {% block content %} Base.html {% endblock %}
 
       <!-- Footer -->
 
@@ -404,16 +350,16 @@
     <script src="{%static 'plugins/greensock/TweenMax.min.js'%}"></script>
     <script src="{%static 'plugins/greensock/TimelineMax.min.js'%}"></script>
     <script src="{%static 'plugins/scrollmagic/ScrollMagic.min.js'%}"></script>
-    {% comment %}
+
     <script src="{%static 'plugins/greensock/animation.gsap.min.js'%}"></script>
     <script src="{%static 'plugins/greensock/ScrollToPlugin.min.js'%}"></script>
-    {% endcomment %}
+
     <script src="{%static 'plugins/OwlCarousel2-2.2.1/owl.carousel.js'%}"></script>
     <script src="{%static 'plugins/easing/easing.js'%}"></script>
-    {% comment %}
+
     <script src="{%static 'plugins/progressbar/progressbar.min.js'%}"></script>
     <script src="{%static 'plugins/parallax-js-master/parallax.min.js'%}"></script>
-    {% endcomment %}
+
     <script src="{%static 'js/elements.js'%}"></script>
     <script src="{%static 'js/Slideshow.js'%}"></script>
     <script src="{%static 'js/categorySlider.js'%}"></script>

@@ -1,0 +1,98 @@
+{% extends "Base.html" %} {% comment %} fdasghvkj {% endcomment %}
+<!-- sdfghjk -->
+{% load static %} {% block title %} Edit Profile page {% endblock %}
+<!-- zxdcfvgbhnm, -->
+{% block content %}
+<div class="profile">
+  <form action="" method="post" enctype="multipart/form-data">
+    <div class="profile-container">
+      <div class="sidebar">
+        <div class="profile-info">
+          {% if user_profile.image %}
+          <img
+            src="{{user_profile.image.url}}"
+            alt="Profile Picture"
+            class="profile-image"
+          />
+          {%else%}
+          <img
+            src="{% static 'image/Profile.png' %}"
+            alt="Profile Picture"
+            class="profile-image"
+          />
+          {% endif %}
+          <div class="profile-name">
+            {{user.first_name}} {{ user.last_name}}
+          </div>
+        </div>
+        <ul>
+          <li><a href="{%url 'Home'%}">Home</a></li>
+          <li><a href="{%url 'cart'%}">cart</a></li>
+          <li><a href="{%url 'Products'%}">Product</a></li>
+          <li><a href="{%url 'profile'%}">My Profile</a></li>
+        </ul>
+      </div>
+      <div class="main">
+        <h1>My Profile</h1>
+        <p>Add information about yourself</p>
+        <div class="section">
+          <div class="section-title">Basics:</div>
+          {% comment %}
+          <input
+            type="text"
+            placeholder="First Name"
+            value="{{user.first_name}}"
+            required
+          />
+          {% endcomment %} {{form.first_name}} {% comment %}
+          <input
+            type="text"
+            placeholder="Last Name"
+            value="{{user.last_name}}"
+            required
+          />
+          {% endcomment %} {{form.last_name}} {% comment %}
+          <input
+            type="text"
+            placeholder="Username"
+            value="{{user.username}}"
+            required
+          />
+          {% endcomment %} {{form.email}} {% comment %}
+          <input
+            type="text"
+            placeholder="Email"
+            value="{{user.email}}"
+            required
+          />
+          {% endcomment %} {{form.phone}}
+        </div>
+        <div class="section">
+          <div class="section-title"></div>
+          {% comment %}
+          <input
+            type="text"
+            placeholder="Phone number"
+            value="{{user.phone}}"
+            required
+          />
+          {% endcomment %} {% comment %}
+          <input type="text" placeholder="Digital Address" value="" required />
+          {% endcomment %} {% comment %} sdfgh {% endcomment %}
+          {{form.Digital_address}} {% comment %}
+          <input type="text" placeholder="City" value="" required /> {%
+          endcomment %} {% comment %} sdfghjk {% endcomment %} {{form.address}}
+          {% comment %}
+          <input type="text" placeholder="Town" value="" required />
+          <input type="text" placeholder="Street name" value="" required /> {%
+          endcomment %} {% comment %}
+          <input type="text" placeholder="Region" value="" required /> {%
+          endcomment %} {% comment %} sdfghjk {% endcomment %} {{form.Region}}
+        </div>
+        <div mb-3>{{form.image}}</div>
+        <button type="submit">Save</button>
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock %}

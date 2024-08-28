@@ -1,9 +1,10 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
-from .models import User
-from accounts.forms import UserRegistrationForm
+from .models import User, User_Profile
+from accounts.forms import UserRegistrationForm, UserProfileForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 # from django.conf import settings
 
 # Reg_User = settings.AUTH_USER_MODEL
@@ -79,3 +80,28 @@ def logout_view(request):
 
 def forgot_password(request):
     return render(request, "forgotpassword.html")
+
+
+# @login_required
+def UserProfile(request):
+    user_profile = User_Profile.objects.get(user=request.user)
+    context = {'user_profile': user_profile}
+    # print('Your User profile is ', user_profile)
+    return render(request, "Profile.html", context)
+
+
+# def edit_profile(request):
+#     user_Profile = User_Profile.objects.get(user=request.user)
+#     if request.method == 'POST':
+#         form = UserProfileForm(
+#             request.POST, request.FILES, instance=user_Profile)
+#         if form.is_valid():
+#             profile = form.save(commit=False)
+#             profile.user = request.user
+#             profile.save()
+#             messages.success(request, 'Profile Updated successfully')
+#             return redirect('Edit-profile')
+#     else:
+#         form = UserProfileForm(instance=user_Profile)
+#     context = {'form': form,  'user_Profile':  user_Profile}
+#     return render(request, 'editprofile.html', context)
