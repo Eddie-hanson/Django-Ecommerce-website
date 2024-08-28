@@ -1,10 +1,10 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Product, Category, Cart, Cart_Item
+from accounts.models import User_Profile
 from django.http import HttpResponse, JsonResponse
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth.decorators import login_required
 from website.forms import UserFeedbackForm
-
 
 
 @login_required(login_url='Login')
