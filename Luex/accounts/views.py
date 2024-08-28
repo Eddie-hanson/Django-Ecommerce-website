@@ -90,18 +90,18 @@ def UserProfile(request):
     return render(request, "Profile.html", context)
 
 
-def edit_profile(request):
-    user_Profile = User_Profile.objects.get(user=request.user)
-    if request.method == 'POST':
-        form = UserProfileForm(
-            request.POST, request.FILES, instance=user_Profile)
-        if form.is_valid():
-            profile = form.save(commit=False)
-            profile.user = request.user
-            profile.save()
-            messages.success(request, 'Profile Updated successfully')
-            return redirect('Edit-profile')
-    else:
-        form = UserProfileForm(instance=user_Profile)
-    context = {'form': form,  'user_Profile':  user_Profile}
-    return render(request, 'editprofile.html', context)
+# def edit_profile(request):
+#     user_Profile = User_Profile.objects.get(user=request.user)
+#     if request.method == 'POST':
+#         form = UserProfileForm(
+#             request.POST, request.FILES, instance=user_Profile)
+#         if form.is_valid():
+#             profile = form.save(commit=False)
+#             profile.user = request.user
+#             profile.save()
+#             messages.success(request, 'Profile Updated successfully')
+#             return redirect('Edit-profile')
+#     else:
+#         form = UserProfileForm(instance=user_Profile)
+#     context = {'form': form,  'user_Profile':  user_Profile}
+#     return render(request, 'editprofile.html', context)

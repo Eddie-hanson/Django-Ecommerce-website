@@ -46,13 +46,18 @@ textarea {
   outline: none;
 }
 
-button {
+.Profile-button {
   background-color: #4caf50;
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.Profile-button a {
+  text-decoration: none;
+  color: white;
 }
 
 .profile-image {
