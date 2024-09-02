@@ -84,7 +84,10 @@ def forgot_password(request):
 
 # @login_required
 def UserProfile(request):
-    user_profile = User_Profile.objects.get(user=request.user)
+    try:
+        user_profile = User_Profile.objects.get(user=request.user)
+    except User_Profile.DoesNotExist:
+        user_profile = None
     context = {'user_profile': user_profile}
     # print('Your User profile is ', user_profile)
     return render(request, "Profile.html", context)
