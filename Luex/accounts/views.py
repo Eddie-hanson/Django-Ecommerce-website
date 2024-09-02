@@ -14,8 +14,15 @@ from django.contrib.auth.decorators import login_required
 def Register(request):
     if request.method == 'POST':
         Registration = UserRegistrationForm(request.POST)
+
         if Registration.is_valid():
             new_user = Registration.save()
+            # username = Registration.cleaned_data.get('username')
+            # password = Registration.cleaned_data.get('password1')
+            # messages.success(request, f'Account created for {username}!')
+            # new_user = authenticate(
+            #     username=Registration.cleaned_data['username'], password=Registration.cleaned_data['password1'])
+
             Email = Registration.cleaned_data.get('Email')
             password = Registration.cleaned_data.get('password1')
             messages.success(request, f'Account created for {Email}!')
@@ -39,6 +46,7 @@ def Register(request):
 def login_view(request):
     if request.user.is_authenticated:
         return redirect('Home')
+
     if request.method == 'POST':
         email = request.POST.get('email')
         password = request.POST.get('password')
@@ -76,11 +84,7 @@ def forgot_password(request):
 
 # @login_required
 def UserProfile(request):
-    try:
-        user_profile = User_Profile.objects.get(user=request.user)
-    except User_Profile.DoesNotExist:
-        pass
-
+    user_profile = User_Profile.objects.get(user=request.user)
     context = {'user_profile': user_profile}
     # print('Your User profile is ', user_profile)
     return render(request, "Profile.html", context)
