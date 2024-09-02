@@ -100,7 +100,7 @@ AUTH_USER_MODEL = 'accounts.User'
 #     }
 # }
 
-remote database configuration
+#remote database configuration
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
