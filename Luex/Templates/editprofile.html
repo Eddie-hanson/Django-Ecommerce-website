@@ -5,6 +5,7 @@
 {% block content %}
 <div class="profile">
   <form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
     <div class="profile-container">
       <div class="sidebar">
         <div class="profile-info">
@@ -51,7 +52,7 @@
             value="{{user.last_name}}"
             required
           />
-          {% endcomment %} {{form.last_name}} {% comment %}
+          {% endcomment %}{{form.last_name}}{% comment %}
           <input
             type="text"
             placeholder="Username"
@@ -79,15 +80,27 @@
           {% endcomment %} {% comment %}
           <input type="text" placeholder="Digital Address" value="" required />
           {% endcomment %} {% comment %} sdfgh {% endcomment %}
-          {{form.Digital_address}} {% comment %}
-          <input type="text" placeholder="City" value="" required /> {%
-          endcomment %} {% comment %} sdfghjk {% endcomment %} {{form.address}}
+          <!-- sdfghjk -->
+          {{form.Digital_address}}
+          <!-- sdfghjk -->
           {% comment %}
+          <input type="text" placeholder="City" value="" required /> {%
+          endcomment %} {% comment %} sdfghjk {% endcomment %}
+          <!-- sdfghjk -->
+          {{form.City}}
+          <!-- sdfghjk -->
+          {%comment %}
           <input type="text" placeholder="Town" value="" required />
           <input type="text" placeholder="Street name" value="" required /> {%
           endcomment %} {% comment %}
-          <input type="text" placeholder="Region" value="" required /> {%
-          endcomment %} {% comment %} sdfghjk {% endcomment %} {{form.Region}}
+          <input type="text" placeholder="Region" value="" required /> sdfghjk
+          {% endcomment %}
+          <!-- sdfghjk -->
+          {{form.Town}}
+          <!-- sdfghjk -->
+          {{form.address}}
+          <!-- sdfghjk -->
+          {{form.Region}}
         </div>
         <div mb-3>{{form.image}}</div>
         <button type="submit">Save</button>

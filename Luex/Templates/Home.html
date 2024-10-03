@@ -6,27 +6,27 @@
 <div>
     <h2 class="categories" ><a  href="{% url 'Products' %}">Explore our categories</a></h2>
 </div>
-<div class="bigContainerWrapper">
-    <div class="bigContainer">
-        {% for Category in  CategoryItems %}
-        <div class="control">
-           
-            <a href="{% url 'Categorylisting' Category.CID %}"><img class="clothes" src="{{Category.image.url}}" alt="Shirts" /></a>
-            <b class="clotheText"><a href="{% url 'Categorylisting' Category.CID %}">{{ Category.Name }} </a></b>
-        </div>
-        {% endfor %}
-        
-    </div>
-    <div class="arrow">
-        <button onclick="scrollLeft()" class="left" id="left"> < </button>
-        <button onclick="scrollRight()" class="right" id="right"> > </button>
-        
-    </div>
+
+<div class="swiper mySwiper">
+
+   <div class="bigContainerWrapper swiper ">
     
-
-    <div class="swiperpagination"></div>
+      <div class="bigContainer swiper-wrapper">
+         {% for Category in  CategoryItems %}
+           <div class="control swiper-slide">
+                <a href="{% url 'Categorylisting' Category.CID %}"><img class="clothes" src="{{Category.image.url}}" alt="" /></a>
+                <div class="clotheText">
+                    <b ><a href="{% url 'Categorylisting' Category.CID %}">{{ Category.Name }} </a></b>
+                </div>
+            </div>
+         {% endfor %}
+      </div>
+      
+    </div>
+    <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
 </div>
-
+   
 <div class="slideshow">
     
     <img id="image1" src="{% static 'images/image14.jpg' %}" alt="image1">
