@@ -365,15 +365,15 @@ Who we are section
 }
 
 /*********************************
-Customer Section section
+Customer Review section
 *********************************/
 #About-section4 {
   background: linear-gradient(to right, #152635, #2a6ba3);
   min-height: 10vh;
-  margin-bottom: -60px;
+  /* margin-bottom: -60px; */
 }
 
-#About-section4 .testimonial {
+/* #About-section4 #card-Review {
   font-size: 14px;
   font-weight: 500;
   color: #181818;
@@ -454,4 +454,4 @@ Customer Section section
   .owl-carousel .owl-item .card .name {
     left: 30%;
   }
-}
+} */

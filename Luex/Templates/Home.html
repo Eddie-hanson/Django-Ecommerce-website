@@ -1,67 +1,71 @@
-{% extends "index.html" %}
-{% load static %}
-{% block title %} Home page {% endblock %}
-
+{% extends "index.html" %} {% load static %}
+<!-- dsfghjkl -->
+{% block title %} Home page {%endblock %}
+<!-- dsfghjkl -->
 {% block content %}
-<div>
+<!-- <div>
     <h2 class="categories" ><a  href="{% url 'Products' %}">Explore our categories</a></h2>
 </div>
-<div class="bigContainerWrapper">
-    <div class="bigContainer">
-        {% for Category in  CategoryItems %}
-        <div class="control">
-           
-            <a href="{% url 'Categorylisting' Category.CID %}"><img class="clothes" src="{{Category.image.url}}" alt="Shirts" /></a>
-            <b class="clotheText"><a href="{% url 'Categorylisting' Category.CID %}">{{ Category.Name }} </a></b>
-        </div>
-        {% endfor %}
-        
-    </div>
-    <div class="arrow">
-        <button onclick="scrollLeft()" class="left" id="left"> < </button>
-        <button onclick="scrollRight()" class="right" id="right"> > </button>
-        
-    </div>
-    
 
-    <div class="swiperpagination"></div>
-</div>
+<div class="swiper mySwiper">
 
-<div class="slideshow">
+   <div class="bigContainerWrapper swiper ">
     
-    <img id="image1" src="{% static 'images/image14.jpg' %}" alt="image1">
-    <img id="image2" src="{% static 'images/image11.png' %}" alt="image2">
-    <img id="image3" src="{% static 'images/image13.png' %}" alt="image3">
-    <img id="image4" src="{% static 'images/image12.png' %}" alt="image4">
-    <img id="image5" src="{% static 'images/image9.png' %}" alt="image5">
-    <img id="image3" src="{% static 'images/image16.jpg' %}" alt="image3">
-    <img id="image4" src="{% static 'images/image18.jpg' %}" alt="image4">
-    <img id="image5" src="{% static 'images/image10.png' %}" alt="image5">
-    </a>
-    <div class="text">
-        <p>Checkout the outfits of the month and get up to 25% discount off purchases. </p>
+      <div class="bigContainer swiper-wrapper">
+         {% for Category in  CategoryItems %}
+           <div class="control swiper-slide">
+                <a href="{% url 'Categorylisting' Category.CID %}"><img class="clothes" src="{{Category.image.url}}" alt="" /></a>
+                <div class="clotheText">
+                    <b ><a href="{% url 'Categorylisting' Category.CID %}">{{ Category.Name }} </a></b>
+                </div>
+            </div>
+         {% endfor %}
+      </div>
+      
     </div>
-</div>
-</div> 
+    <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+</div> -->
+<div class="banner">
+  <div class="slideshow">
+      
+      <img id="image1" src="{% static 'images/image14.jpg' %}" alt="image1">
+      <img id="image2" src="{% static 'images/image11.png' %}" alt="image2">
+      <img id="image3" src="{% static 'images/image13.png' %}" alt="image3">
+      <img id="image4" src="{% static 'images/image12.png' %}" alt="image4">
+      <img id="image5" src="{% static 'images/image9.png' %}" alt="image5">
+      <img id="image3" src="{% static 'images/image16.jpg' %}" alt="image3">
+      <img id="image4" src="{% static 'images/image18.jpg' %}" alt="image4">
+      <img id="image5" src="{% static 'images/image10.png' %}" alt="image5">
+      </a>
+      <div class="text">
+          <p>Checkout the outfits of the month and get up to 25% discount off purchases. </p>
+      </div>
+  </div>
+</div>  
 
 <section class="new-arrivals">
-
-
-<div class="new-arrivals-header" > <h3 >New Arrivals</h3></div>
-<div id="new-arrivals">
-{% for Apparel in  Apparels %}
-{% if Apparel.New_Arrival == True %}
-<div class="new-arrivals-container">
-    <img  id="{{Apparel.pk}}" src="{{Apparel.image.url}}" alt="{{Apparel.name}}">
-    <div class="description">{{Apparel.name}}</div>
-    <div class="rating">{{Apparel.Rating}}</div>
-   <div class="specifics">Size: {{Apparel.size}} </div>
-   <div class="specifics">Price: Gh₵ {{Apparel.price}}</div>
-  <div class="button-controller"> <button > <a  href="{%url 'add_to_cart' Apparel.pk %}"> Add to cart </a></button>  </div>
-</div>
-{% endif %}
-{% endfor %}
-</div>
+  <div class="new-arrivals-header"><h3>New Arrivals</h3></div>
+  <div id="new-arrivals">
+    {% for Apparel in Apparels %} {% if Apparel.New_Arrival == True %}
+    <div class="new-arrivals-container">
+      <img
+        id="{{Apparel.pk}}"
+        src="{{Apparel.image.url}}"
+        alt="{{Apparel.name}}"
+      />
+      <div class="description">{{Apparel.name}}</div>
+      <div class="rating">{{Apparel.Rating}}</div>
+      <div class="specifics">Size: {{Apparel.size}}</div>
+      <div class="specifics">Price: Gh₵ {{Apparel.price}}</div>
+      <div class="button-controller">
+        <button>
+          <a href="{%url 'add_to_cart' Apparel.pk %}"> Add to cart </a>
+        </button>
+      </div>
+    </div>
+    {% endif %} {% endfor %}
+  </div>
 </section>
 
 {% endblock %}

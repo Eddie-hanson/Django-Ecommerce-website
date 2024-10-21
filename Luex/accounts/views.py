@@ -17,11 +17,6 @@ def Register(request):
 
         if Registration.is_valid():
             new_user = Registration.save()
-            # username = Registration.cleaned_data.get('username')
-            # password = Registration.cleaned_data.get('password1')
-            # messages.success(request, f'Account created for {username}!')
-            # new_user = authenticate(
-            #     username=Registration.cleaned_data['username'], password=Registration.cleaned_data['password1'])
 
             Email = Registration.cleaned_data.get('Email')
             password = Registration.cleaned_data.get('password1')
@@ -93,18 +88,18 @@ def UserProfile(request):
     return render(request, "Profile.html", context)
 
 
-# def edit_profile(request):
-#     user_Profile = User_Profile.objects.get(user=request.user)
-#     if request.method == 'POST':
-#         form = UserProfileForm(
-#             request.POST, request.FILES, instance=user_Profile)
-#         if form.is_valid():
-#             profile = form.save(commit=False)
-#             profile.user = request.user
-#             profile.save()
-#             messages.success(request, 'Profile Updated successfully')
-#             return redirect('Edit-profile')
-#     else:
-#         form = UserProfileForm(instance=user_Profile)
-#     context = {'form': form,  'user_Profile':  user_Profile}
-#     return render(request, 'editprofile.html', context)
+def edit_profile(request):
+    user_Profile = User_Profile.objects.get(user=request.user)
+    if request.method == 'POST':
+        form = UserProfileForm(
+            request.POST, request.FILES, instance=user_Profile)
+        if form.is_valid():
+            profile = form.save(commit=False)
+            profile.user = request.user
+            profile.save()
+            messages.success(request, 'Profile Updated successfully')
+            return redirect('profile')
+    else:
+        form = UserProfileForm(instance=user_Profile)
+    context = {'form': form,  'user_Profile':  user_Profile}
+    return render(request, 'editprofile.html', context)

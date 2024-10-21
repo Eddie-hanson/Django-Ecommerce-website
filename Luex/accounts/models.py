@@ -25,6 +25,8 @@ class User_Profile(models.Model):
     Digital_address = models.CharField(max_length=20, default='')
     address = models.CharField(max_length=20, default='')
     Region = models.CharField(max_length=20, default='')
+    City = models.CharField(max_length=20, default='')
+    Town = models.CharField(max_length=20, default='')
 
     def __str__(self):
         return f"{self.user.username} - {self.user.email}"
@@ -35,7 +37,7 @@ def create_user_profile(sender, instance, created, **kwargs):
         User_Profile.objects.create(user=instance)
 
 
-def save_user_profile(sender, instance, created, **kwargs):
+def save_user_profile(sender, instance, **kwargs):
     instance.profile.save()
 
 

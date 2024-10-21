@@ -2,7 +2,32 @@
   box-sizing: border-box;
 }
 
+/* .control {
+  flex-shrink: 0;
+} */
+
+/***************************** 
+CATEGORY SLIDER
+******************************/
+
 /* Explore our categories text*/
+/* Container that contains the category container */
+.bigContainerWrapper {
+  display: flex;
+  overflow: hidden;
+  align-self: center;
+  width: 80%;
+  margin-left: 8%;
+}
+
+/* Container containing the category items */
+.bigContainer {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease;
+  width: 800px;
+}
+
 .categories {
   text-align: center;
   flex-direction: column;
@@ -18,6 +43,7 @@
 .categories a:hover {
   color: #1c1946;
 }
+
 /* Text for category items */
 .clothes {
   height: 200px;
@@ -25,19 +51,16 @@
   border-radius: 40px;
 }
 .control {
-  flex-shrink: 0;
-}
-
-/* Container containing the category items */
-.control {
   display: flex;
   flex-direction: column;
-  background-color: rgb(238, 238, 238);
+  background-color: #fde5d6;
   box-shadow: 1px 2px 2px 1px rgb(143, 142, 142);
   margin: 10px;
   padding: 20px;
   height: 285px;
   border-radius: 20px;
+  width: 250px;
+  align-items: center;
 }
 
 .control:hover {
@@ -45,52 +68,10 @@
   animation: ease-in;
   animation-duration: 1s;
   box-shadow: 2px 1px 1px 1px #0808085e;
-  transition-duration: 0.15s;
-}
-
-/* Container that contains the category container */
-.bigContainerWrapper {
-  display: flex;
-  overflow: hidden;
-  align-self: center;
-  width: 80%;
-  margin-left: 8%;
-}
-
-.bigContainer {
-  display: flex;
-  /* transition: transform 0.5s ease-in-out; */
-  transition: transform 0.5s ease;
-  width: 800px;
-}
-
-/* Arrows for scrolling the categories */
-.arrow {
-  display: flex;
-  position: absolute;
-  width: 100%;
-  justify-content: space-between;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.arrow button {
-  font-size: 45px;
-  font-weight: bold;
-  color: rgb(33, 4, 161);
-  border: none;
-  border-radius: 50%;
-  background-color: transparent;
-  outline: none;
-}
-.arrow :active {
-  background-color: none;
-  transition: ease-in;
-  transition-duration: 0.15s;
-  opacity: 0.5;
 }
 
 .clotheText {
+  margin-top: 15px;
   font-size: 20px;
   text-align: center;
   color: #000000;
@@ -101,6 +82,20 @@
   color: #fff;
 }
 
+/* Arrows for scrolling the categories */
+
+/* .swiper-button-prev,
+.swiper-button-next {
+  color: black;
+  display: block;
+  top: 50%; 
+  z-index: 10;
+  cursor: pointer;
+} */
+
+/***************************** 
+BANNER SLIDESHOW
+******************************/
 /* Slideshow styling */
 .slideshow {
   display: flex;
