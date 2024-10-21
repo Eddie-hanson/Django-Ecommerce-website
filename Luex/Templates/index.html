@@ -176,23 +176,6 @@
                     <a href="{%url 'Login'%}">Login</a>
                   </div>
                   {% endif %}
-                  <div class="Userprofile">
-                    <a href="{%url 'profile'%}">
-                      {% if user_profile.image == None %}<img
-                        src="{%static 'images/Profile.png'%}"
-                        width="30px"
-                        height="30px"
-                        alt=""
-                      />
-                      {%else%}
-                      <img
-                        src="{{user_profile.image.url}}"
-                        alt="Profile Picture"
-                        class="profile-image"
-                      />
-                      {%endif%}</a
-                    >
-                  </div>
 
                   <!-- Hamburger -->
                   <div class="hamburger ml-auto">
@@ -202,30 +185,6 @@
               </div>
             </div>
           </div>
-        </div>
-        <div
-          class="header_social d-flex flex-row align-items-center justify-content-start"
-        >
-          <ul class="d-flex flex-row align-items-start justify-content-start">
-            <li>
-              <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-            </li>
-          </ul>
         </div>
       </header>
 
