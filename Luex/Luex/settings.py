@@ -101,16 +101,16 @@ AUTH_USER_MODEL = 'accounts.User'
 # }
 
 # remote database configuration
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'luex',
-#         'USER': 'deltastrike',
-#         'PASSWORD': 'Edwardhans18.',  # Updated password
-#         'HOST': 'localhost',
-#         'PORT': '5432',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'luex',
+        'USER': 'deltastrike',
+        'PASSWORD': 'Edwardhans18.',  # Updated password
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
 
 
 # Password validation

@@ -382,7 +382,7 @@ section {
 .main_nav ul li:hover .Category-submenu ul {
   display: block;
   margin: 10px;
-  overflow: scroll;
+  overflow-x: auto;
   height: 200px;
 }
 
