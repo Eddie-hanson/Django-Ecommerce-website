@@ -7,6 +7,11 @@ from django.contrib.auth.decorators import login_required
 from website.forms import UserFeedbackForm
 
 
+def index(request):
+    CategoryItems = Category.objects.all()
+    return render(request, 'index.html', {'CategoryItems': CategoryItems})
+
+
 @login_required(login_url='Login')
 def home(request):
     CategoryItems = Category.objects.all()
@@ -17,6 +22,7 @@ def home(request):
 
 @login_required(login_url='Login')
 def Category_Product_listing(request, foo):
+
     foo = foo.replace('-', '')
     category = Category.objects.get(CID=foo)
     products = Product.objects.filter(category=category)
@@ -26,11 +32,13 @@ def Category_Product_listing(request, foo):
 
 @login_required(login_url='Login')
 def Search_Apparel(request):
+    CategoryItems = Category.objects.all()
     if request.method == 'POST':
         Search = request.POST['Searched']
 
         Items = Product.objects.filter(name__icontains=Search,)
-        context = {'Searched': Search, 'Item': Items}
+        context = {'Searched': Search, 'Item': Items,
+                   'CategoryItems': CategoryItems}
         return render(request, 'Search_Apparel.html', context)
     else:
         return render(request, 'Search_Apparel.html')
@@ -38,8 +46,9 @@ def Search_Apparel(request):
 
 @login_required(login_url='Login')
 def Products_Page(request):
+    CategoryItems = Category.objects.all()
     Apparel = Product.objects.all().order_by('?')
-    context = {'Apparels': Apparel}
+    context = {'Apparels': Apparel, 'CategoryItems': CategoryItems}
     return render(request, 'Products.html', context)
 
 
@@ -71,6 +80,7 @@ def _CartID(request):
 
 @login_required(login_url='Login')
 def add_to_cart(request, pk):
+    CategoryItems = Category.objects.all()
     product = Product.objects.get(id=pk)
 
     try:
@@ -94,7 +104,7 @@ def add_to_cart(request, pk):
             cart=cart,
         )
         cart_Item.save()
-    return redirect('cart')
+    return redirect('cart', {'CategoryItems': CategoryItems})
 
     # return render(request, 'cart.html')
 
@@ -124,18 +134,20 @@ def Delete_from_cart(request, pk):
 
 
 def About(request):
+    CategoryItems = Category.objects.all()
     User_feedback = UserFeedbackForm()
     if request.method == "POST":
         User_feedback = UserFeedbackForm(request.POST)
         if User_feedback.is_valid():
             User_feedback.save()
         return redirect('about')
-    context = {'FeedbackForm': User_feedback}
+    context = {'FeedbackForm': User_feedback, 'CategoryItems': CategoryItems}
     return render(request, 'About.html', context)
 
 
 @login_required(login_url='Login')
 def ProductDetails(request, pk):
+    CategoryItems = Category.objects.all()
     Apparels = Product.objects.get(id=pk)
-    context = {'Apparel': Apparels}
+    context = {'Apparel': Apparels, 'CategoryItems': CategoryItems}
     return render(request, 'ProductDetails.html', context)

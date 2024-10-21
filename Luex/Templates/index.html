@@ -145,6 +145,21 @@
                       <li><a href="{%url 'Products'%}">Products</a></li>
 
                       <li>
+                        <a href="">Category </a>
+                        <div class="Category-submenu">
+                          <ul>
+                            {% for Category in CategoryItems %}
+                            <li>
+                              <a href="{%url 'Categorylisting' Category.CID %}"
+                                >{{Category.Name}}</a
+                              >
+                            </li>
+                            {% endfor %}
+                          </ul>
+                        </div>
+                      </li>
+
+                      <li>
                         <a href="{%url 'cart'%}">Cart </a
                         ><span>{{cart_count}}</span>
                       </li>
