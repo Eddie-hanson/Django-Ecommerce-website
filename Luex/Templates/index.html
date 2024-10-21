@@ -176,7 +176,23 @@
                     <a href="{%url 'Login'%}">Login</a>
                   </div>
                   {% endif %}
-
+                  <div class="Userprofile">
+                    <a href="{%url 'profile'%}">
+                      {% if user_profile.image == None %}<img
+                        src="{%static 'images/Profile.png'%}"
+                        width="30px"
+                        height="30px"
+                        alt=""
+                      />
+                      {%else%}
+                      <img
+                        src="{{user_profile.image.url}}"
+                        alt="Profile Picture"
+                        class="profile-image"
+                      />
+                      {%endif%}</a
+                    >
+                  </div>
                   <!-- Hamburger -->
                   <div class="hamburger ml-auto">
                     <i class="fa fa-bars" aria-hidden="true"></i>
