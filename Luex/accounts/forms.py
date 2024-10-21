@@ -20,26 +20,26 @@ class UserRegistrationForm(UserCreationForm):
                    }
 
 
-class UserProfileForm(forms.ModelForm):
-    first_name = forms.CharField(widget=forms.TextInput(
-        attrs={'class': 'section', 'type': 'text', 'placeholder': 'First Name'}))
+# class UserProfileForm(forms.ModelForm):
+#     first_name = forms.CharField(widget=forms.TextInput(
+#         attrs={'class': 'section', 'type': 'text', 'placeholder': 'First Name'}))
 
-    last_name = forms.CharField(widget=forms.TimeInput(
-        attrs={'class': 'section', 'type': 'text', 'placeholder': 'last Name'}))
+#     last_name = forms.CharField(widget=forms.TimeInput(
+#         attrs={'class': 'section', 'type': 'text', 'placeholder': 'last Name'}))
 
-    email = forms.EmailField(widget=forms.EmailInput(
-        attrs={'class': 'section', 'type': 'email', 'placeholder': 'Email', }))
-    phone = forms.EmailField(widget=forms.EmailInput(
-        attrs={'class': 'section', 'type': 'text', 'placeholder': 'Telephone number'}))
+#     email = forms.EmailField(widget=forms.EmailInput(
+#         attrs={'class': 'section', 'type': 'email', 'placeholder': 'Email', }))
+#     phone = forms.EmailField(widget=forms.EmailInput(
+#         attrs={'class': 'section', 'type': 'text', 'placeholder': 'Telephone number'}))
 
-    class Meta:
-        model = User_Profile
-        fields = ('image', 'Digital_address',
-                  'address', 'Region', 'City', 'Town')
-        widgets = {
-            'Digital_address': forms.TextInput(attrs={'class': 'section', 'type': 'text', 'placeholder': 'Digital Address', 'required': "required"}),
-            'address': forms.EmailInput(attrs={'class': 'section', 'type': 'text', 'placeholder': 'Street Name', 'required': "required"}),
-            'Region': forms.TextInput(attrs={'class': 'section', 'type': "text", 'placeholder': 'Region', 'required': "required"}),
-            'City': forms.TextInput(attrs={'class': 'section', 'type': "text", 'placeholder': 'City', 'required': "required"}),
-            'Town': forms.TextInput(attrs={'class': 'section', 'type': "text", 'placeholder': 'Town', 'required': "required"}),
-        }
+#     class Meta:
+#         model = User_Profile
+#         fields = ('image', 'Digital_address',
+#                   'address', 'Region', 'City', 'Town')
+#         widgets = {
+#             'Digital_address': forms.TextInput(attrs={'class': 'section', 'type': 'text', 'placeholder': 'Digital Address', 'required': "required"}),
+#             'address': forms.EmailInput(attrs={'class': 'section', 'type': 'text', 'placeholder': 'Street Name', 'required': "required"}),
+#             'Region': forms.TextInput(attrs={'class': 'section', 'type': "text", 'placeholder': 'Region', 'required': "required"}),
+#             'City': forms.TextInput(attrs={'class': 'section', 'type': "text", 'placeholder': 'City', 'required': "required"}),
+#             'Town': forms.TextInput(attrs={'class': 'section', 'type': "text", 'placeholder': 'Town', 'required': "required"}),
+#         }
