@@ -78,28 +78,28 @@ def forgot_password(request):
 
 
 # @login_required
-# def UserProfile(request):
-#     try:
-#         user_profile = User_Profile.objects.get(user=request.user)
-#     except User_Profile.DoesNotExist:
-#         user_profile = None
-#     context = {'user_profile': user_profile}
-#     # print('Your User profile is ', user_profile)
-#     return render(request, "Profile.html", context)
+def UserProfile(request):
+    try:
+        user_profile = User_Profile.objects.get(user=request.user)
+    except User_Profile.DoesNotExist:
+        user_profile = None
+    context = {'user_profile': user_profile}
+    # print('Your User profile is ', user_profile)
+    return render(request, "Profile.html", context)
 
 
-# def edit_profile(request):
-#     user_Profile = User_Profile.objects.get(user=request.user)
-#     if request.method == 'POST':
-#         form = UserProfileForm(
-#             request.POST, request.FILES, instance=user_Profile)
-#         if form.is_valid():
-#             profile = form.save(commit=False)
-#             profile.user = request.user
-#             profile.save()
-#             messages.success(request, 'Profile Updated successfully')
-#             return redirect('profile')
-#     else:
-#         form = UserProfileForm(instance=user_Profile)
-#     context = {'form': form,  'user_Profile':  user_Profile}
-#     return render(request, 'editprofile.html', context)
+def edit_profile(request):
+    user_Profile = User_Profile.objects.get(user=request.user)
+    if request.method == 'POST':
+        form = UserProfileForm(
+            request.POST, request.FILES, instance=user_Profile)
+        if form.is_valid():
+            profile = form.save(commit=False)
+            profile.user = request.user
+            profile.save()
+            messages.success(request, 'Profile Updated successfully')
+            return redirect('profile')
+    else:
+        form = UserProfileForm(instance=user_Profile)
+    context = {'form': form,  'user_Profile':  user_Profile}
+    return render(request, 'editprofile.html', context)
