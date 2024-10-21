@@ -17,11 +17,6 @@ def Register(request):
 
         if Registration.is_valid():
             new_user = Registration.save()
-            # username = Registration.cleaned_data.get('username')
-            # password = Registration.cleaned_data.get('password1')
-            # messages.success(request, f'Account created for {username}!')
-            # new_user = authenticate(
-            #     username=Registration.cleaned_data['username'], password=Registration.cleaned_data['password1'])
 
             Email = Registration.cleaned_data.get('Email')
             password = Registration.cleaned_data.get('password1')
