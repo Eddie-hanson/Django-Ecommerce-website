@@ -552,11 +552,12 @@ section {
 }
 
 .Userprofile a img {
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   object-fit: cover;
-  padding: 2px;
-  background-color: blanchedalmond;
 }
+
 .menu_content ul li span {
   display: inline-block;
   width: 15px;
