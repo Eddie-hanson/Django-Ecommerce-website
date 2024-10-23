@@ -51,9 +51,9 @@ class UserUpdateForm(forms.ModelForm):
                   'address', 'Region', 'City', 'Town', 'phone')
         widgets = {
             'Digital_address': forms.TextInput(attrs={'class': 'section', 'type': 'text', 'placeholder': 'Digital Address', 'required': "required"}),
-            'address': forms.EmailInput(attrs={'class': 'section', 'type': 'text', 'placeholder': 'Street Name', 'required': "required"}),
+            'address': forms.TextInput(attrs={'class': 'section', 'type': 'text', 'placeholder': 'Street Name', 'required': "required"}),
             'Region': forms.TextInput(attrs={'class': 'section', 'type': "text", 'placeholder': 'Region', 'required': "required"}),
             'City': forms.TextInput(attrs={'class': 'section', 'type': "text", 'placeholder': 'City', 'required': "required"}),
             'Town': forms.TextInput(attrs={'class': 'section', 'type': "text", 'placeholder': 'Town', 'required': "required"}),
-            'phone': forms.NumberInput(attrs={'class': 'section', 'type': "text", 'placeholder': 'Town', 'required': "required"}),
+            'phone': forms.TextInput(attrs={'class': 'section', 'type': "tel", 'placeholder': 'Town', 'required': "required"}),
         }
