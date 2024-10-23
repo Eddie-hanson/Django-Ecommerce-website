@@ -9,9 +9,9 @@
     <div class="profile-container">
       <div class="sidebar">
         <div class="profile-info">
-          {% if user_profile.image %}
+          {% if user_Profile.image %}
           <img
-            src="{{user_profile.image.url}}"
+            src="{{user_Profile.image.url}}"
             alt="Profile Picture"
             class="profile-image"
           />
@@ -38,48 +38,45 @@
         <p>Add information about yourself</p>
         <div class="section">
           <div class="section-title">Basics:</div>
-          {% comment %}
+
           <input
             type="text"
             placeholder="First Name"
             value="{{user.first_name}}"
-            required
+            readonly
           />
-          {% endcomment %} {{form.first_name}} {% comment %}
+
           <input
             type="text"
             placeholder="Last Name"
             value="{{user.last_name}}"
-            required
+            readonly
           />
-          {% endcomment %}{{form.last_name}}{% comment %}
+
           <input
             type="text"
             placeholder="Username"
             value="{{user.username}}"
-            required
+            readonly
           />
-          {% endcomment %} {{form.email}} {% comment %}
+
           <input
             type="text"
             placeholder="Email"
             value="{{user.email}}"
-            required
+            readonly
           />
-          {% endcomment %} {{form.phone}}
+          {{form.phone}}
         </div>
         <div class="section">
-          <div class="section-title"></div>
           {% comment %}
-          <input
-            type="text"
-            placeholder="Phone number"
-            value="{{user.phone}}"
-            required
-          />
-          {% endcomment %} {% comment %}
+
+          <input type="text" placeholder="Phone number" value="" required /> {%
+          endcomment %} {% comment %}
           <input type="text" placeholder="Digital Address" value="" required />
           {% endcomment %} {% comment %} sdfgh {% endcomment %}
+          <!-- sdfghjk -->
+
           <!-- sdfghjk -->
           {{form.Digital_address}}
           <!-- sdfghjk -->
@@ -102,8 +99,11 @@
           <!-- sdfghjk -->
           {{form.Region}}
         </div>
-        <div mb-3>{{form.image}}</div>
-        <button type="submit">Save</button>
+        <div mb-3>
+          <h1>Update your profile Picture</h1>
+          {{form.image}}
+        </div>
+        <button class="Profile-button" type="submit">Save</button>
       </div>
     </div>
   </form>

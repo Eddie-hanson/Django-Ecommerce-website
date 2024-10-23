@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from .models import User, User_Profile
-from accounts.forms import UserRegistrationForm, UserProfileForm
+from accounts.forms import UserRegistrationForm, UserProfileForm, UserUpdateForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -91,7 +91,7 @@ def UserProfile(request):
 def edit_profile(request):
     user_Profile = User_Profile.objects.get(user=request.user)
     if request.method == 'POST':
-        form = UserProfileForm(
+        form = UserUpdateForm(
             request.POST, request.FILES, instance=user_Profile)
         if form.is_valid():
             profile = form.save(commit=False)

@@ -66,29 +66,47 @@
       <div class="section">
         <div class="section-title"></div>
         <input
-          type="text"
+          type="tel"
           placeholder="Phone number"
-          value="{{user.phone}}"
+          value="{{user_profile.phone}}"
           readonly
           required
         />
         <input
           type="text"
           placeholder="Digital Address"
-          value=""
+          value="{{user_profile.Digital_address}}"
           readonly
           required
         />
-        <input type="text" placeholder="City" value="" readonly required />
-        <input type="text" placeholder="Town" value="" readonly required />
+        <input
+          type="text"
+          placeholder="City"
+          value="{{user_profile.City}}"
+          readonly
+          required
+        />
+        <input
+          type="text"
+          placeholder="Town"
+          value="{{user_profile.Town}}"
+          readonly
+          required
+        />
         <input
           type="text"
           placeholder="Street name"
-          value=""
+          value="{{user_profile.address}}"
           readonly
           required
         />
-        <input type="text" placeholder="Region" value="" readonly required />
+        <input
+          type="text"
+          placeholder="Region"
+          value="{{user_profile.Region}}"
+          readonly
+          required
+        />
       </div>
       <button class="Profile-button">
         <a href="{% url 'Edit-profile' %}">Edit</a>

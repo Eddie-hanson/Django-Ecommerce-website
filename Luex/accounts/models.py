@@ -8,7 +8,6 @@ class User(AbstractUser):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     email = models.EmailField(max_length=50, unique=True)
-    phone = models.CharField(max_length=50, null=True, blank=True)
     username = models.CharField(max_length=50, unique=True)
 
     USERNAME_FIELD = 'email'
@@ -23,6 +22,7 @@ class User_Profile(models.Model):
         User, on_delete=models.CASCADE, related_name='profile')
     image = models.ImageField(upload_to='Profile_PICS')
     Digital_address = models.CharField(max_length=20, default='')
+    phone = models.CharField(max_length=50, null=True, blank=True)
     address = models.CharField(max_length=20, default='')
     Region = models.CharField(max_length=20, default='')
     City = models.CharField(max_length=20, default='')
