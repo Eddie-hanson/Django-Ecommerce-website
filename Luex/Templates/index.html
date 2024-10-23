@@ -178,7 +178,7 @@
                   {% endif %}
                   <div class="Userprofile">
                     <a href="{%url 'profile'%}">
-                      {% if user_profile.image == None %}
+                      {% if not user_profile.image %}
                       <!-- asdfgh -->
                       <img
                         src="{%static 'images/Profile.png'%}"
